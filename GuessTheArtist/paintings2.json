@@ -1,0 +1,89 @@
+ [{
+        "title": "A Cotton Office in New Orleans",
+        "year": "1873",
+        "owner": "Musee des Beaux-Arts, Pau",
+        "image": "91.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Gustave Caillebotte"
+      },
+      {
+        "title": "The Ballet Class",
+        "year": "1874",
+        "owner": "Musée d'Orsay, Paris",
+        "image": "92.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Georges Seurat, Edouard Manet"
+      },
+      {
+        "title": "Place de la Concorde",
+        "year": "1875",
+        "owner": "Hermitage, St. Petersburg",
+        "image": "93.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Edouard Manet"
+      },
+      {
+        "title": "The Absinthe Drinker",
+        "year": "1876",
+        "owner": "Musée d'Orsay, Paris",
+        "image": "94.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Edouard Manet"
+      },
+      {
+        "title": "Ballet Dancers in the Wings",
+        "year": "1900",
+        "owner": "St. Louis Art Museum, St. Louis",
+        "image": "95.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Camille Pissarro"
+      },
+      {
+        "title": "Dancers",
+        "year": "1899",
+        "owner": "The Toledo Museum of Art",
+        "image": "96.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Camille Pissarro"
+      },
+      {
+        "title": "At the Races in the Countryside",
+        "year": "1869",
+        "owner": "Museum of Fine Arts, Boston",
+        "image": "97.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Edouard Manet"
+      },
+      {
+        "title": "Spartan Girls Challenging Boys",
+        "year": "1860",
+        "owner": "National Gallery, London",
+        "image": "98.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism"
+      },
+      {
+        "title": "Women Combing Their Hair",
+        "year": "1876",
+        "owner": "The Phillips Collection, Washington, DC",
+        "image": "99.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Paul Gauguin"
+      },
+      {
+        "title": "Two Dancers",
+        "year": "1898",
+        "owner": "Galerie Neue Meister, Staatliche Kunstsammlungen Dresden",
+        "image": "100.png",
+        "artist": "Edgar Degas",
+        "style": "Impressionism",
+        "similarity": "Claude Monet"
+      }]

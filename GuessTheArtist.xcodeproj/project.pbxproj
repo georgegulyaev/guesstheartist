@@ -7,20 +7,219 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6A7FBF19A944B00055CC68 /* Artist+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */; };
+		5E6A7FC119ABA6460055CC68 /* paintings2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E6A7FC019ABA6460055CC68 /* paintings2.json */; };
+		5E6A80BF19ADF3630055CC68 /* all-painters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E6A80BE19ADF3630055CC68 /* all-painters.json */; };
+		5E6A81AB19AF7E860055CC68 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A81AA19AF7E860055CC68 /* Importer.m */; };
+		5E78F4B419B61E49003AE978 /* GTAHomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */; };
+		5E78F4B719B80519003AE978 /* GTALoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4B619B80519003AE978 /* GTALoadingViewController.m */; };
+		5E78F4BA19B9EA4D003AE978 /* GTAGuessedArtistsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4B919B9EA4D003AE978 /* GTAGuessedArtistsTVC.m */; };
+		5E78F4C019BA3202003AE978 /* GTAGuessedPaintingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4BF19BA3202003AE978 /* GTAGuessedPaintingsTVC.m */; };
+		5E78F4C319BA95FF003AE978 /* GTAShowGuessedPaintingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */; };
+		5E78F4C519BBDF7C003AE978 /* MyriadPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4C419BBDEF2003AE978 /* MyriadPro-BoldIt.otf */; };
+		5E78F4C719C1ED4E003AE978 /* all-painters2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4C619C1ED4E003AE978 /* all-painters2.json */; };
+		5E78F54A19C1ED80003AE978 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4C819C1ED80003AE978 /* 1.jpg */; };
+		5E78F54B19C1ED80003AE978 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4C919C1ED80003AE978 /* 2.jpg */; };
+		5E78F54C19C1ED80003AE978 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4CA19C1ED80003AE978 /* 3.jpg */; };
+		5E78F54D19C1ED80003AE978 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4CB19C1ED80003AE978 /* 4.jpg */; };
+		5E78F54E19C1ED80003AE978 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4CC19C1ED80003AE978 /* 5.jpg */; };
+		5E78F54F19C1ED80003AE978 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4CD19C1ED80003AE978 /* 6.jpg */; };
+		5E78F55019C1ED80003AE978 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4CE19C1ED80003AE978 /* 7.jpg */; };
+		5E78F55119C1ED80003AE978 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4CF19C1ED80003AE978 /* 8.jpg */; };
+		5E78F55219C1ED80003AE978 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D019C1ED80003AE978 /* 9.jpg */; };
+		5E78F55319C1ED80003AE978 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D119C1ED80003AE978 /* 10.jpg */; };
+		5E78F55419C1ED80003AE978 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D219C1ED80003AE978 /* 11.jpg */; };
+		5E78F55519C1ED80003AE978 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D319C1ED80003AE978 /* 12.jpg */; };
+		5E78F55619C1ED80003AE978 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D419C1ED80003AE978 /* 13.jpg */; };
+		5E78F55719C1ED80003AE978 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D519C1ED80003AE978 /* 14.jpg */; };
+		5E78F55819C1ED80003AE978 /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D619C1ED80003AE978 /* 15.jpg */; };
+		5E78F55919C1ED80003AE978 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D719C1ED80003AE978 /* 16.jpg */; };
+		5E78F55A19C1ED80003AE978 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D819C1ED80003AE978 /* 17.jpg */; };
+		5E78F55B19C1ED80003AE978 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4D919C1ED80003AE978 /* 18.jpg */; };
+		5E78F55C19C1ED80003AE978 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4DA19C1ED80003AE978 /* 19.jpg */; };
+		5E78F55D19C1ED80003AE978 /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4DB19C1ED80003AE978 /* 20.jpg */; };
+		5E78F55E19C1ED80003AE978 /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4DC19C1ED80003AE978 /* 21.jpg */; };
+		5E78F55F19C1ED80003AE978 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4DD19C1ED80003AE978 /* 22.jpg */; };
+		5E78F56019C1ED80003AE978 /* 23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4DE19C1ED80003AE978 /* 23.jpg */; };
+		5E78F56119C1ED80003AE978 /* 24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4DF19C1ED80003AE978 /* 24.jpg */; };
+		5E78F56219C1ED80003AE978 /* 25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E019C1ED80003AE978 /* 25.jpg */; };
+		5E78F56319C1ED80003AE978 /* 26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E119C1ED80003AE978 /* 26.jpg */; };
+		5E78F56419C1ED80003AE978 /* 27.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E219C1ED80003AE978 /* 27.jpg */; };
+		5E78F56519C1ED80003AE978 /* 28.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E319C1ED80003AE978 /* 28.jpg */; };
+		5E78F56619C1ED80003AE978 /* 29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E419C1ED80003AE978 /* 29.jpg */; };
+		5E78F56719C1ED80003AE978 /* 30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E519C1ED80003AE978 /* 30.jpg */; };
+		5E78F56819C1ED80003AE978 /* 31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E619C1ED80003AE978 /* 31.jpg */; };
+		5E78F56919C1ED80003AE978 /* 32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E719C1ED80003AE978 /* 32.jpg */; };
+		5E78F56A19C1ED80003AE978 /* 33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E819C1ED80003AE978 /* 33.jpg */; };
+		5E78F56B19C1ED80003AE978 /* 34.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4E919C1ED80003AE978 /* 34.jpg */; };
+		5E78F56C19C1ED80003AE978 /* 35.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4EA19C1ED80003AE978 /* 35.jpg */; };
+		5E78F56D19C1ED80003AE978 /* 36.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4EB19C1ED80003AE978 /* 36.jpg */; };
+		5E78F56E19C1ED80003AE978 /* 37.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4EC19C1ED80003AE978 /* 37.jpg */; };
+		5E78F56F19C1ED80003AE978 /* 38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4ED19C1ED80003AE978 /* 38.jpg */; };
+		5E78F57019C1ED80003AE978 /* 39.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4EE19C1ED80003AE978 /* 39.jpg */; };
+		5E78F57119C1ED80003AE978 /* 40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4EF19C1ED80003AE978 /* 40.jpg */; };
+		5E78F57219C1ED80003AE978 /* 41.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F019C1ED80003AE978 /* 41.jpg */; };
+		5E78F57319C1ED80003AE978 /* 42.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F119C1ED80003AE978 /* 42.jpg */; };
+		5E78F57419C1ED80003AE978 /* 43.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F219C1ED80003AE978 /* 43.jpg */; };
+		5E78F57519C1ED80003AE978 /* 44.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F319C1ED80003AE978 /* 44.jpg */; };
+		5E78F57619C1ED80003AE978 /* 45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F419C1ED80003AE978 /* 45.jpg */; };
+		5E78F57719C1ED80003AE978 /* 46.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F519C1ED80003AE978 /* 46.jpg */; };
+		5E78F57819C1ED80003AE978 /* 47.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F619C1ED80003AE978 /* 47.jpg */; };
+		5E78F57919C1ED80003AE978 /* 48.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F719C1ED80003AE978 /* 48.jpg */; };
+		5E78F57A19C1ED80003AE978 /* 49.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F819C1ED80003AE978 /* 49.jpg */; };
+		5E78F57B19C1ED80003AE978 /* 50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4F919C1ED80003AE978 /* 50.jpg */; };
+		5E78F57C19C1ED80003AE978 /* 51.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4FA19C1ED80003AE978 /* 51.jpg */; };
+		5E78F57D19C1ED80003AE978 /* 52.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4FB19C1ED80003AE978 /* 52.jpg */; };
+		5E78F57E19C1ED80003AE978 /* 53.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4FC19C1ED80003AE978 /* 53.jpg */; };
+		5E78F57F19C1ED80003AE978 /* 54.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4FD19C1ED80003AE978 /* 54.jpg */; };
+		5E78F58019C1ED80003AE978 /* 55.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4FE19C1ED80003AE978 /* 55.jpg */; };
+		5E78F58119C1ED80003AE978 /* 56.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4FF19C1ED80003AE978 /* 56.jpg */; };
+		5E78F58219C1ED80003AE978 /* 57.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50019C1ED80003AE978 /* 57.jpg */; };
+		5E78F58319C1ED80003AE978 /* 58.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50119C1ED80003AE978 /* 58.jpg */; };
+		5E78F58419C1ED80003AE978 /* 59.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50219C1ED80003AE978 /* 59.jpg */; };
+		5E78F58519C1ED80003AE978 /* 60.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50319C1ED80003AE978 /* 60.jpg */; };
+		5E78F58619C1ED80003AE978 /* 61.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50419C1ED80003AE978 /* 61.jpg */; };
+		5E78F58719C1ED80003AE978 /* 62.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50519C1ED80003AE978 /* 62.jpg */; };
+		5E78F58819C1ED80003AE978 /* 63.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50619C1ED80003AE978 /* 63.jpg */; };
+		5E78F58919C1ED80003AE978 /* 64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50719C1ED80003AE978 /* 64.jpg */; };
+		5E78F58A19C1ED80003AE978 /* 65.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50819C1ED80003AE978 /* 65.jpg */; };
+		5E78F58B19C1ED80003AE978 /* 66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50919C1ED80003AE978 /* 66.jpg */; };
+		5E78F58C19C1ED80003AE978 /* 67.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50A19C1ED80003AE978 /* 67.jpg */; };
+		5E78F58D19C1ED80003AE978 /* 68.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50B19C1ED80003AE978 /* 68.jpg */; };
+		5E78F58E19C1ED80003AE978 /* 69.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50C19C1ED80003AE978 /* 69.jpg */; };
+		5E78F58F19C1ED80003AE978 /* 70.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50D19C1ED80003AE978 /* 70.jpg */; };
+		5E78F59019C1ED80003AE978 /* 71.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50E19C1ED80003AE978 /* 71.jpg */; };
+		5E78F59119C1ED80003AE978 /* 72.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F50F19C1ED80003AE978 /* 72.jpg */; };
+		5E78F59219C1ED80003AE978 /* 73.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51019C1ED80003AE978 /* 73.jpg */; };
+		5E78F59319C1ED80003AE978 /* 74.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51119C1ED80003AE978 /* 74.jpg */; };
+		5E78F59419C1ED80003AE978 /* 75.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51219C1ED80003AE978 /* 75.jpg */; };
+		5E78F59519C1ED80003AE978 /* 76.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51319C1ED80003AE978 /* 76.jpg */; };
+		5E78F59619C1ED80003AE978 /* 77.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51419C1ED80003AE978 /* 77.jpg */; };
+		5E78F59719C1ED80003AE978 /* 78.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51519C1ED80003AE978 /* 78.jpg */; };
+		5E78F59819C1ED80003AE978 /* 79.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51619C1ED80003AE978 /* 79.jpg */; };
+		5E78F59919C1ED80003AE978 /* 80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51719C1ED80003AE978 /* 80.jpg */; };
+		5E78F59A19C1ED80003AE978 /* 81.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51819C1ED80003AE978 /* 81.jpg */; };
+		5E78F59B19C1ED80003AE978 /* 82.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51919C1ED80003AE978 /* 82.jpg */; };
+		5E78F59C19C1ED80003AE978 /* 83.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51A19C1ED80003AE978 /* 83.jpg */; };
+		5E78F59D19C1ED80003AE978 /* 84.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51B19C1ED80003AE978 /* 84.jpg */; };
+		5E78F59E19C1ED80003AE978 /* 85.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51C19C1ED80003AE978 /* 85.jpg */; };
+		5E78F59F19C1ED80003AE978 /* 86.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51D19C1ED80003AE978 /* 86.jpg */; };
+		5E78F5A019C1ED80003AE978 /* 87.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51E19C1ED80003AE978 /* 87.jpg */; };
+		5E78F5A119C1ED80003AE978 /* 88.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F51F19C1ED80003AE978 /* 88.jpg */; };
+		5E78F5A219C1ED80003AE978 /* 89.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52019C1ED80003AE978 /* 89.jpg */; };
+		5E78F5A319C1ED80003AE978 /* 90.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52119C1ED80003AE978 /* 90.jpg */; };
+		5E78F5A419C1ED80003AE978 /* 91.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52219C1ED80003AE978 /* 91.jpg */; };
+		5E78F5A519C1ED80003AE978 /* 92.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52319C1ED80003AE978 /* 92.jpg */; };
+		5E78F5A619C1ED80003AE978 /* 93.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52419C1ED80003AE978 /* 93.jpg */; };
+		5E78F5A719C1ED80003AE978 /* 94.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52519C1ED80003AE978 /* 94.jpg */; };
+		5E78F5A819C1ED80003AE978 /* 95.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52619C1ED80003AE978 /* 95.jpg */; };
+		5E78F5A919C1ED80003AE978 /* 96.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52719C1ED80003AE978 /* 96.jpg */; };
+		5E78F5AA19C1ED80003AE978 /* 97.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52819C1ED80003AE978 /* 97.jpg */; };
+		5E78F5AB19C1ED80003AE978 /* 98.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52919C1ED80003AE978 /* 98.jpg */; };
+		5E78F5AC19C1ED80003AE978 /* 99.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52A19C1ED80003AE978 /* 99.jpg */; };
+		5E78F5AD19C1ED80003AE978 /* 100.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52B19C1ED80003AE978 /* 100.jpg */; };
+		5E78F5AE19C1ED80003AE978 /* 101.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52C19C1ED80003AE978 /* 101.jpg */; };
+		5E78F5AF19C1ED80003AE978 /* 102.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52D19C1ED80003AE978 /* 102.jpg */; };
+		5E78F5B019C1ED80003AE978 /* 103.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52E19C1ED80003AE978 /* 103.jpg */; };
+		5E78F5B119C1ED80003AE978 /* 104.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F52F19C1ED80003AE978 /* 104.jpg */; };
+		5E78F5B219C1ED80003AE978 /* 105.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53019C1ED80003AE978 /* 105.jpg */; };
+		5E78F5B319C1ED80003AE978 /* 106.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53119C1ED80003AE978 /* 106.jpg */; };
+		5E78F5B419C1ED80003AE978 /* 107.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53219C1ED80003AE978 /* 107.jpg */; };
+		5E78F5B519C1ED80003AE978 /* 108.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53319C1ED80003AE978 /* 108.jpg */; };
+		5E78F5B619C1ED80003AE978 /* 109.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53419C1ED80003AE978 /* 109.jpg */; };
+		5E78F5B719C1ED80003AE978 /* 110.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53519C1ED80003AE978 /* 110.jpg */; };
+		5E78F5B819C1ED80003AE978 /* 111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53619C1ED80003AE978 /* 111.jpg */; };
+		5E78F5B919C1ED80003AE978 /* 112.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53719C1ED80003AE978 /* 112.jpg */; };
+		5E78F5BA19C1ED80003AE978 /* 113.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53819C1ED80003AE978 /* 113.jpg */; };
+		5E78F5BB19C1ED80003AE978 /* 114.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53919C1ED80003AE978 /* 114.jpg */; };
+		5E78F5BC19C1ED80003AE978 /* 115.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53A19C1ED80003AE978 /* 115.jpg */; };
+		5E78F5BD19C1ED80003AE978 /* 116.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53B19C1ED80003AE978 /* 116.jpg */; };
+		5E78F5BE19C1ED80003AE978 /* 117.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53C19C1ED80003AE978 /* 117.jpg */; };
+		5E78F5BF19C1ED80003AE978 /* 118.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53D19C1ED80003AE978 /* 118.jpg */; };
+		5E78F5C019C1ED80003AE978 /* 119.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53E19C1ED80003AE978 /* 119.jpg */; };
+		5E78F5C119C1ED80003AE978 /* 120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F53F19C1ED80003AE978 /* 120.jpg */; };
+		5E78F5C219C1ED80003AE978 /* 121.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54019C1ED80003AE978 /* 121.jpg */; };
+		5E78F5C319C1ED80003AE978 /* 122.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54119C1ED80003AE978 /* 122.jpg */; };
+		5E78F5C419C1ED80003AE978 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54219C1ED80003AE978 /* 123.jpg */; };
+		5E78F5C519C1ED80003AE978 /* 124.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54319C1ED80003AE978 /* 124.jpg */; };
+		5E78F5C619C1ED80003AE978 /* 125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54419C1ED80003AE978 /* 125.jpg */; };
+		5E78F5C719C1ED80003AE978 /* 126.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54519C1ED80003AE978 /* 126.jpg */; };
+		5E78F5C819C1ED80003AE978 /* 127.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54619C1ED80003AE978 /* 127.jpg */; };
+		5E78F5C919C1ED80003AE978 /* 128.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54719C1ED80003AE978 /* 128.jpg */; };
+		5E78F5CA19C1ED80003AE978 /* 129.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54819C1ED80003AE978 /* 129.jpg */; };
+		5E78F5CB19C1ED80003AE978 /* 130.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F54919C1ED80003AE978 /* 130.jpg */; };
+		5E78F60019C33FD4003AE978 /* Alexei Savrasov.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5CE19C33FD4003AE978 /* Alexei Savrasov.png */; };
+		5E78F60119C33FD4003AE978 /* Alfred Sisley.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5CF19C33FD4003AE978 /* Alfred Sisley.png */; };
+		5E78F60219C33FD4003AE978 /* Amedeo Modigliani.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D019C33FD4003AE978 /* Amedeo Modigliani.png */; };
+		5E78F60319C33FD4003AE978 /* Andy Warhol.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D119C33FD4003AE978 /* Andy Warhol.png */; };
+		5E78F60419C33FD4003AE978 /* Bouguereau.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D219C33FD4003AE978 /* Bouguereau.png */; };
+		5E78F60519C33FD4003AE978 /* Camille Pissarro.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D319C33FD4003AE978 /* Camille Pissarro.png */; };
+		5E78F60619C33FD4003AE978 /* Caravaggio.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D419C33FD4003AE978 /* Caravaggio.png */; };
+		5E78F60719C33FD4003AE978 /* Claude Monet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D519C33FD4003AE978 /* Claude Monet.png */; };
+		5E78F60819C33FD4003AE978 /* Diego Velazquez.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D619C33FD4003AE978 /* Diego Velazquez.png */; };
+		5E78F60919C33FD4003AE978 /* Edgar Degas.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D719C33FD4003AE978 /* Edgar Degas.png */; };
+		5E78F60A19C33FD4003AE978 /* Edouard Manet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D819C33FD4003AE978 /* Edouard Manet.png */; };
+		5E78F60B19C33FD4003AE978 /* Edvard Munch.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5D919C33FD4003AE978 /* Edvard Munch.png */; };
+		5E78F60C19C33FD4003AE978 /* Eugene Delacroix.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5DA19C33FD4003AE978 /* Eugene Delacroix.png */; };
+		5E78F60D19C33FD4003AE978 /* Francisco Goya.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5DB19C33FD4003AE978 /* Francisco Goya.png */; };
+		5E78F60E19C33FD4003AE978 /* Frida Kahlo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5DC19C33FD4003AE978 /* Frida Kahlo.png */; };
+		5E78F60F19C33FD4003AE978 /* Georges Seurat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5DD19C33FD4003AE978 /* Georges Seurat.png */; };
+		5E78F61019C33FD4003AE978 /* Gustav Klimt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5DE19C33FD4003AE978 /* Gustav Klimt.png */; };
+		5E78F61119C33FD4003AE978 /* Gustave Caillebotte.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5DF19C33FD4003AE978 /* Gustave Caillebotte.png */; };
+		5E78F61219C33FD4003AE978 /* Gustave Courbet.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E019C33FD4003AE978 /* Gustave Courbet.png */; };
+		5E78F61319C33FD4003AE978 /* Henri Matisse.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E119C33FD4003AE978 /* Henri Matisse.png */; };
+		5E78F61419C33FD4003AE978 /* Henri-Edmond Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E219C33FD4003AE978 /* Henri-Edmond Cross.png */; };
+		5E78F61519C33FD4003AE978 /* Hieronymus Bosch.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E319C33FD4003AE978 /* Hieronymus Bosch.png */; };
+		5E78F61619C33FD4003AE978 /* Ivan Aivazovsky.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E419C33FD4003AE978 /* Ivan Aivazovsky.png */; };
+		5E78F61719C33FD4003AE978 /* J. A. Dominique Ingres.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E519C33FD4003AE978 /* J. A. Dominique Ingres.png */; };
+		5E78F61819C33FD4003AE978 /* J. M. W. Turner.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E619C33FD4003AE978 /* J. M. W. Turner.png */; };
+		5E78F61919C33FD4003AE978 /* Jackson Pollock.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E719C33FD4003AE978 /* Jackson Pollock.png */; };
+		5E78F61A19C33FD4003AE978 /* Jacques-Louis David.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E819C33FD4003AE978 /* Jacques-Louis David.png */; };
+		5E78F61B19C33FD4003AE978 /* James McNeill Whistler.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5E919C33FD4003AE978 /* James McNeill Whistler.png */; };
+		5E78F61C19C33FD4003AE978 /* Johannes Vermeer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5EA19C33FD4003AE978 /* Johannes Vermeer.png */; };
+		5E78F61D19C33FD4003AE978 /* John Constable.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5EB19C33FD4003AE978 /* John Constable.png */; };
+		5E78F61E19C33FD4003AE978 /* Katsushika Hokusai.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5EC19C33FD4003AE978 /* Katsushika Hokusai.png */; };
+		5E78F61F19C33FD4003AE978 /* Leonardo da Vinci.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5ED19C33FD4003AE978 /* Leonardo da Vinci.png */; };
+		5E78F62019C33FD4003AE978 /* Mark Rothko.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5EE19C33FD4003AE978 /* Mark Rothko.png */; };
+		5E78F62119C33FD4003AE978 /* Michelangelo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5EF19C33FD4003AE978 /* Michelangelo.png */; };
+		5E78F62219C33FD4003AE978 /* Mikhail Vrubel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F019C33FD4003AE978 /* Mikhail Vrubel.png */; };
+		5E78F62319C33FD4003AE978 /* Pablo Picasso.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F119C33FD4003AE978 /* Pablo Picasso.png */; };
+		5E78F62419C33FD4003AE978 /* Paul Cezanne.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F219C33FD4003AE978 /* Paul Cezanne.png */; };
+		5E78F62519C33FD4003AE978 /* Paul Gauguin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F319C33FD4003AE978 /* Paul Gauguin.png */; };
+		5E78F62619C33FD4003AE978 /* Paul Signac.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F419C33FD4003AE978 /* Paul Signac.png */; };
+		5E78F62719C33FD4003AE978 /* Peter Paul Rubens.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F519C33FD4003AE978 /* Peter Paul Rubens.png */; };
+		5E78F62819C33FD4003AE978 /* Pierre-Auguste Renoir.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F619C33FD4003AE978 /* Pierre-Auguste Renoir.png */; };
+		5E78F62919C33FD4003AE978 /* Pieter Bruegel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F719C33FD4003AE978 /* Pieter Bruegel.png */; };
+		5E78F62A19C33FD4003AE978 /* Raphael.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F819C33FD4003AE978 /* Raphael.png */; };
+		5E78F62B19C33FD4003AE978 /* Rembrandt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5F919C33FD4003AE978 /* Rembrandt.png */; };
+		5E78F62C19C33FD4003AE978 /* Rene Magritte.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5FA19C33FD4003AE978 /* Rene Magritte.png */; };
+		5E78F62D19C33FD4003AE978 /* Salvador Dali.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5FB19C33FD4003AE978 /* Salvador Dali.png */; };
+		5E78F62E19C33FD4003AE978 /* Sandro Botticelli.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5FC19C33FD4003AE978 /* Sandro Botticelli.png */; };
+		5E78F62F19C33FD4003AE978 /* Vincent van Gogh.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5FD19C33FD4003AE978 /* Vincent van Gogh.png */; };
+		5E78F63019C33FD4003AE978 /* Wassily Kandinsky.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5FE19C33FD4003AE978 /* Wassily Kandinsky.png */; };
+		5E78F63119C33FD4003AE978 /* William Blake.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F5FF19C33FD4003AE978 /* William Blake.png */; };
+		5E78F63319C3594F003AE978 /* MyriadPro-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F63219C3592D003AE978 /* MyriadPro-SemiboldIt.otf */; };
+		5E78F63519C3B489003AE978 /* MyriadPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F63419C3B3C0003AE978 /* MyriadPro-It.otf */; };
+		5E78F63819C3C031003AE978 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F63719C3C031003AE978 /* Artist.m */; };
+		5E78F63B19C3C031003AE978 /* Painting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F63A19C3C031003AE978 /* Painting.m */; };
+		5E78F63D19C7B874003AE978 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F63C19C7B85A003AE978 /* MyriadPro-Regular.otf */; };
+		5EB9067E19929BFE0030FCB7 /* Painting+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */; };
+		5EB906801992A0C50030FCB7 /* painters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9067F1992A0C50030FCB7 /* painters.json */; };
+		5EBC86851992DE0C00FBA34A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBC86841992DE0C00FBA34A /* CoreData.framework */; };
 		5EE561A7198EE90D00D33E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561A6198EE90D00D33E2B /* Foundation.framework */; };
-		5EE561A9198EE90D00D33E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561A8198EE90D00D33E2B /* CoreGraphics.framework */; };
 		5EE561AB198EE90D00D33E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561AA198EE90D00D33E2B /* UIKit.framework */; };
 		5EE561B1198EE90D00D33E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561AF198EE90D00D33E2B /* InfoPlist.strings */; };
 		5EE561B3198EE90D00D33E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE561B2198EE90D00D33E2B /* main.m */; };
 		5EE561B7198EE90D00D33E2B /* GTAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE561B6198EE90D00D33E2B /* GTAAppDelegate.m */; };
 		5EE561BA198EE90D00D33E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561B8198EE90D00D33E2B /* Main.storyboard */; };
-		5EE561BD198EE90D00D33E2B /* GTAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE561BC198EE90D00D33E2B /* GTAViewController.m */; };
+		5EE561BD198EE90D00D33E2B /* GTAGameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE561BC198EE90D00D33E2B /* GTAGameplayViewController.m */; };
 		5EE561BF198EE90D00D33E2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561BE198EE90D00D33E2B /* Images.xcassets */; };
 		5EE561C6198EE90D00D33E2B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561C5198EE90D00D33E2B /* XCTest.framework */; };
 		5EE561C7198EE90E00D33E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561A6198EE90D00D33E2B /* Foundation.framework */; };
 		5EE561C8198EE90E00D33E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561AA198EE90D00D33E2B /* UIKit.framework */; };
 		5EE561D0198EE90E00D33E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561CE198EE90E00D33E2B /* InfoPlist.strings */; };
 		5EE561D2198EE90E00D33E2B /* GuessTheArtistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE561D1198EE90E00D33E2B /* GuessTheArtistTests.m */; };
+		5EE561DD1990F67D00D33E2B /* Paintings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EE561DB1990F67D00D33E2B /* Paintings.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +233,215 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E6A7FBD19A944B00055CC68 /* Artist+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Artist+Helper.h"; sourceTree = "<group>"; };
+		5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Artist+Helper.m"; sourceTree = "<group>"; };
+		5E6A7FC019ABA6460055CC68 /* paintings2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paintings2.json; sourceTree = "<group>"; };
+		5E6A80BE19ADF3630055CC68 /* all-painters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "all-painters.json"; sourceTree = "<group>"; };
+		5E6A81A919AF7E860055CC68 /* Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Importer.h; sourceTree = "<group>"; };
+		5E6A81AA19AF7E860055CC68 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Importer.m; sourceTree = "<group>"; };
+		5E78F4B219B61E49003AE978 /* GTAHomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAHomeScreenViewController.h; sourceTree = "<group>"; };
+		5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAHomeScreenViewController.m; sourceTree = "<group>"; };
+		5E78F4B519B80519003AE978 /* GTALoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTALoadingViewController.h; sourceTree = "<group>"; };
+		5E78F4B619B80519003AE978 /* GTALoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTALoadingViewController.m; sourceTree = "<group>"; };
+		5E78F4B819B9EA4D003AE978 /* GTAGuessedArtistsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAGuessedArtistsTVC.h; sourceTree = "<group>"; };
+		5E78F4B919B9EA4D003AE978 /* GTAGuessedArtistsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAGuessedArtistsTVC.m; sourceTree = "<group>"; };
+		5E78F4BE19BA3202003AE978 /* GTAGuessedPaintingsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTAGuessedPaintingsTVC.h; path = ../GTAGuessedPaintingsTVC.h; sourceTree = "<group>"; };
+		5E78F4BF19BA3202003AE978 /* GTAGuessedPaintingsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTAGuessedPaintingsTVC.m; path = ../GTAGuessedPaintingsTVC.m; sourceTree = "<group>"; };
+		5E78F4C119BA95FF003AE978 /* GTAShowGuessedPaintingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAShowGuessedPaintingVC.h; sourceTree = "<group>"; };
+		5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAShowGuessedPaintingVC.m; sourceTree = "<group>"; };
+		5E78F4C419BBDEF2003AE978 /* MyriadPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-BoldIt.otf"; sourceTree = "<group>"; };
+		5E78F4C619C1ED4E003AE978 /* all-painters2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "all-painters2.json"; sourceTree = "<group>"; };
+		5E78F4C819C1ED80003AE978 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		5E78F4C919C1ED80003AE978 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		5E78F4CA19C1ED80003AE978 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		5E78F4CB19C1ED80003AE978 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		5E78F4CC19C1ED80003AE978 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		5E78F4CD19C1ED80003AE978 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		5E78F4CE19C1ED80003AE978 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		5E78F4CF19C1ED80003AE978 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		5E78F4D019C1ED80003AE978 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		5E78F4D119C1ED80003AE978 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		5E78F4D219C1ED80003AE978 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		5E78F4D319C1ED80003AE978 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		5E78F4D419C1ED80003AE978 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		5E78F4D519C1ED80003AE978 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		5E78F4D619C1ED80003AE978 /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		5E78F4D719C1ED80003AE978 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
+		5E78F4D819C1ED80003AE978 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
+		5E78F4D919C1ED80003AE978 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
+		5E78F4DA19C1ED80003AE978 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		5E78F4DB19C1ED80003AE978 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
+		5E78F4DC19C1ED80003AE978 /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
+		5E78F4DD19C1ED80003AE978 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		5E78F4DE19C1ED80003AE978 /* 23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 23.jpg; sourceTree = "<group>"; };
+		5E78F4DF19C1ED80003AE978 /* 24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 24.jpg; sourceTree = "<group>"; };
+		5E78F4E019C1ED80003AE978 /* 25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 25.jpg; sourceTree = "<group>"; };
+		5E78F4E119C1ED80003AE978 /* 26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 26.jpg; sourceTree = "<group>"; };
+		5E78F4E219C1ED80003AE978 /* 27.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 27.jpg; sourceTree = "<group>"; };
+		5E78F4E319C1ED80003AE978 /* 28.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 28.jpg; sourceTree = "<group>"; };
+		5E78F4E419C1ED80003AE978 /* 29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 29.jpg; sourceTree = "<group>"; };
+		5E78F4E519C1ED80003AE978 /* 30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 30.jpg; sourceTree = "<group>"; };
+		5E78F4E619C1ED80003AE978 /* 31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 31.jpg; sourceTree = "<group>"; };
+		5E78F4E719C1ED80003AE978 /* 32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 32.jpg; sourceTree = "<group>"; };
+		5E78F4E819C1ED80003AE978 /* 33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 33.jpg; sourceTree = "<group>"; };
+		5E78F4E919C1ED80003AE978 /* 34.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 34.jpg; sourceTree = "<group>"; };
+		5E78F4EA19C1ED80003AE978 /* 35.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 35.jpg; sourceTree = "<group>"; };
+		5E78F4EB19C1ED80003AE978 /* 36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 36.jpg; sourceTree = "<group>"; };
+		5E78F4EC19C1ED80003AE978 /* 37.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 37.jpg; sourceTree = "<group>"; };
+		5E78F4ED19C1ED80003AE978 /* 38.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 38.jpg; sourceTree = "<group>"; };
+		5E78F4EE19C1ED80003AE978 /* 39.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 39.jpg; sourceTree = "<group>"; };
+		5E78F4EF19C1ED80003AE978 /* 40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 40.jpg; sourceTree = "<group>"; };
+		5E78F4F019C1ED80003AE978 /* 41.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 41.jpg; sourceTree = "<group>"; };
+		5E78F4F119C1ED80003AE978 /* 42.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 42.jpg; sourceTree = "<group>"; };
+		5E78F4F219C1ED80003AE978 /* 43.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 43.jpg; sourceTree = "<group>"; };
+		5E78F4F319C1ED80003AE978 /* 44.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44.jpg; sourceTree = "<group>"; };
+		5E78F4F419C1ED80003AE978 /* 45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 45.jpg; sourceTree = "<group>"; };
+		5E78F4F519C1ED80003AE978 /* 46.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 46.jpg; sourceTree = "<group>"; };
+		5E78F4F619C1ED80003AE978 /* 47.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 47.jpg; sourceTree = "<group>"; };
+		5E78F4F719C1ED80003AE978 /* 48.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 48.jpg; sourceTree = "<group>"; };
+		5E78F4F819C1ED80003AE978 /* 49.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 49.jpg; sourceTree = "<group>"; };
+		5E78F4F919C1ED80003AE978 /* 50.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 50.jpg; sourceTree = "<group>"; };
+		5E78F4FA19C1ED80003AE978 /* 51.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 51.jpg; sourceTree = "<group>"; };
+		5E78F4FB19C1ED80003AE978 /* 52.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 52.jpg; sourceTree = "<group>"; };
+		5E78F4FC19C1ED80003AE978 /* 53.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 53.jpg; sourceTree = "<group>"; };
+		5E78F4FD19C1ED80003AE978 /* 54.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 54.jpg; sourceTree = "<group>"; };
+		5E78F4FE19C1ED80003AE978 /* 55.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 55.jpg; sourceTree = "<group>"; };
+		5E78F4FF19C1ED80003AE978 /* 56.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 56.jpg; sourceTree = "<group>"; };
+		5E78F50019C1ED80003AE978 /* 57.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 57.jpg; sourceTree = "<group>"; };
+		5E78F50119C1ED80003AE978 /* 58.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 58.jpg; sourceTree = "<group>"; };
+		5E78F50219C1ED80003AE978 /* 59.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 59.jpg; sourceTree = "<group>"; };
+		5E78F50319C1ED80003AE978 /* 60.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 60.jpg; sourceTree = "<group>"; };
+		5E78F50419C1ED80003AE978 /* 61.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 61.jpg; sourceTree = "<group>"; };
+		5E78F50519C1ED80003AE978 /* 62.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 62.jpg; sourceTree = "<group>"; };
+		5E78F50619C1ED80003AE978 /* 63.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 63.jpg; sourceTree = "<group>"; };
+		5E78F50719C1ED80003AE978 /* 64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 64.jpg; sourceTree = "<group>"; };
+		5E78F50819C1ED80003AE978 /* 65.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 65.jpg; sourceTree = "<group>"; };
+		5E78F50919C1ED80003AE978 /* 66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 66.jpg; sourceTree = "<group>"; };
+		5E78F50A19C1ED80003AE978 /* 67.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 67.jpg; sourceTree = "<group>"; };
+		5E78F50B19C1ED80003AE978 /* 68.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 68.jpg; sourceTree = "<group>"; };
+		5E78F50C19C1ED80003AE978 /* 69.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 69.jpg; sourceTree = "<group>"; };
+		5E78F50D19C1ED80003AE978 /* 70.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 70.jpg; sourceTree = "<group>"; };
+		5E78F50E19C1ED80003AE978 /* 71.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 71.jpg; sourceTree = "<group>"; };
+		5E78F50F19C1ED80003AE978 /* 72.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 72.jpg; sourceTree = "<group>"; };
+		5E78F51019C1ED80003AE978 /* 73.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 73.jpg; sourceTree = "<group>"; };
+		5E78F51119C1ED80003AE978 /* 74.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 74.jpg; sourceTree = "<group>"; };
+		5E78F51219C1ED80003AE978 /* 75.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 75.jpg; sourceTree = "<group>"; };
+		5E78F51319C1ED80003AE978 /* 76.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 76.jpg; sourceTree = "<group>"; };
+		5E78F51419C1ED80003AE978 /* 77.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 77.jpg; sourceTree = "<group>"; };
+		5E78F51519C1ED80003AE978 /* 78.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 78.jpg; sourceTree = "<group>"; };
+		5E78F51619C1ED80003AE978 /* 79.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 79.jpg; sourceTree = "<group>"; };
+		5E78F51719C1ED80003AE978 /* 80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 80.jpg; sourceTree = "<group>"; };
+		5E78F51819C1ED80003AE978 /* 81.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 81.jpg; sourceTree = "<group>"; };
+		5E78F51919C1ED80003AE978 /* 82.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 82.jpg; sourceTree = "<group>"; };
+		5E78F51A19C1ED80003AE978 /* 83.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 83.jpg; sourceTree = "<group>"; };
+		5E78F51B19C1ED80003AE978 /* 84.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 84.jpg; sourceTree = "<group>"; };
+		5E78F51C19C1ED80003AE978 /* 85.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 85.jpg; sourceTree = "<group>"; };
+		5E78F51D19C1ED80003AE978 /* 86.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 86.jpg; sourceTree = "<group>"; };
+		5E78F51E19C1ED80003AE978 /* 87.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 87.jpg; sourceTree = "<group>"; };
+		5E78F51F19C1ED80003AE978 /* 88.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 88.jpg; sourceTree = "<group>"; };
+		5E78F52019C1ED80003AE978 /* 89.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 89.jpg; sourceTree = "<group>"; };
+		5E78F52119C1ED80003AE978 /* 90.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 90.jpg; sourceTree = "<group>"; };
+		5E78F52219C1ED80003AE978 /* 91.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 91.jpg; sourceTree = "<group>"; };
+		5E78F52319C1ED80003AE978 /* 92.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 92.jpg; sourceTree = "<group>"; };
+		5E78F52419C1ED80003AE978 /* 93.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 93.jpg; sourceTree = "<group>"; };
+		5E78F52519C1ED80003AE978 /* 94.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 94.jpg; sourceTree = "<group>"; };
+		5E78F52619C1ED80003AE978 /* 95.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 95.jpg; sourceTree = "<group>"; };
+		5E78F52719C1ED80003AE978 /* 96.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 96.jpg; sourceTree = "<group>"; };
+		5E78F52819C1ED80003AE978 /* 97.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 97.jpg; sourceTree = "<group>"; };
+		5E78F52919C1ED80003AE978 /* 98.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 98.jpg; sourceTree = "<group>"; };
+		5E78F52A19C1ED80003AE978 /* 99.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 99.jpg; sourceTree = "<group>"; };
+		5E78F52B19C1ED80003AE978 /* 100.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 100.jpg; sourceTree = "<group>"; };
+		5E78F52C19C1ED80003AE978 /* 101.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 101.jpg; sourceTree = "<group>"; };
+		5E78F52D19C1ED80003AE978 /* 102.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 102.jpg; sourceTree = "<group>"; };
+		5E78F52E19C1ED80003AE978 /* 103.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 103.jpg; sourceTree = "<group>"; };
+		5E78F52F19C1ED80003AE978 /* 104.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 104.jpg; sourceTree = "<group>"; };
+		5E78F53019C1ED80003AE978 /* 105.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 105.jpg; sourceTree = "<group>"; };
+		5E78F53119C1ED80003AE978 /* 106.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 106.jpg; sourceTree = "<group>"; };
+		5E78F53219C1ED80003AE978 /* 107.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 107.jpg; sourceTree = "<group>"; };
+		5E78F53319C1ED80003AE978 /* 108.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 108.jpg; sourceTree = "<group>"; };
+		5E78F53419C1ED80003AE978 /* 109.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 109.jpg; sourceTree = "<group>"; };
+		5E78F53519C1ED80003AE978 /* 110.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 110.jpg; sourceTree = "<group>"; };
+		5E78F53619C1ED80003AE978 /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpg; sourceTree = "<group>"; };
+		5E78F53719C1ED80003AE978 /* 112.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 112.jpg; sourceTree = "<group>"; };
+		5E78F53819C1ED80003AE978 /* 113.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 113.jpg; sourceTree = "<group>"; };
+		5E78F53919C1ED80003AE978 /* 114.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 114.jpg; sourceTree = "<group>"; };
+		5E78F53A19C1ED80003AE978 /* 115.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 115.jpg; sourceTree = "<group>"; };
+		5E78F53B19C1ED80003AE978 /* 116.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 116.jpg; sourceTree = "<group>"; };
+		5E78F53C19C1ED80003AE978 /* 117.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 117.jpg; sourceTree = "<group>"; };
+		5E78F53D19C1ED80003AE978 /* 118.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 118.jpg; sourceTree = "<group>"; };
+		5E78F53E19C1ED80003AE978 /* 119.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 119.jpg; sourceTree = "<group>"; };
+		5E78F53F19C1ED80003AE978 /* 120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 120.jpg; sourceTree = "<group>"; };
+		5E78F54019C1ED80003AE978 /* 121.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 121.jpg; sourceTree = "<group>"; };
+		5E78F54119C1ED80003AE978 /* 122.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 122.jpg; sourceTree = "<group>"; };
+		5E78F54219C1ED80003AE978 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
+		5E78F54319C1ED80003AE978 /* 124.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 124.jpg; sourceTree = "<group>"; };
+		5E78F54419C1ED80003AE978 /* 125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 125.jpg; sourceTree = "<group>"; };
+		5E78F54519C1ED80003AE978 /* 126.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 126.jpg; sourceTree = "<group>"; };
+		5E78F54619C1ED80003AE978 /* 127.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 127.jpg; sourceTree = "<group>"; };
+		5E78F54719C1ED80003AE978 /* 128.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 128.jpg; sourceTree = "<group>"; };
+		5E78F54819C1ED80003AE978 /* 129.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129.jpg; sourceTree = "<group>"; };
+		5E78F54919C1ED80003AE978 /* 130.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 130.jpg; sourceTree = "<group>"; };
+		5E78F5CE19C33FD4003AE978 /* Alexei Savrasov.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alexei Savrasov.png"; sourceTree = "<group>"; };
+		5E78F5CF19C33FD4003AE978 /* Alfred Sisley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alfred Sisley.png"; sourceTree = "<group>"; };
+		5E78F5D019C33FD4003AE978 /* Amedeo Modigliani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Amedeo Modigliani.png"; sourceTree = "<group>"; };
+		5E78F5D119C33FD4003AE978 /* Andy Warhol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Andy Warhol.png"; sourceTree = "<group>"; };
+		5E78F5D219C33FD4003AE978 /* Bouguereau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bouguereau.png; sourceTree = "<group>"; };
+		5E78F5D319C33FD4003AE978 /* Camille Pissarro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camille Pissarro.png"; sourceTree = "<group>"; };
+		5E78F5D419C33FD4003AE978 /* Caravaggio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Caravaggio.png; sourceTree = "<group>"; };
+		5E78F5D519C33FD4003AE978 /* Claude Monet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Claude Monet.png"; sourceTree = "<group>"; };
+		5E78F5D619C33FD4003AE978 /* Diego Velazquez.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Diego Velazquez.png"; sourceTree = "<group>"; };
+		5E78F5D719C33FD4003AE978 /* Edgar Degas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edgar Degas.png"; sourceTree = "<group>"; };
+		5E78F5D819C33FD4003AE978 /* Edouard Manet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edouard Manet.png"; sourceTree = "<group>"; };
+		5E78F5D919C33FD4003AE978 /* Edvard Munch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edvard Munch.png"; sourceTree = "<group>"; };
+		5E78F5DA19C33FD4003AE978 /* Eugene Delacroix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Eugene Delacroix.png"; sourceTree = "<group>"; };
+		5E78F5DB19C33FD4003AE978 /* Francisco Goya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Francisco Goya.png"; sourceTree = "<group>"; };
+		5E78F5DC19C33FD4003AE978 /* Frida Kahlo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Frida Kahlo.png"; sourceTree = "<group>"; };
+		5E78F5DD19C33FD4003AE978 /* Georges Seurat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Georges Seurat.png"; sourceTree = "<group>"; };
+		5E78F5DE19C33FD4003AE978 /* Gustav Klimt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gustav Klimt.png"; sourceTree = "<group>"; };
+		5E78F5DF19C33FD4003AE978 /* Gustave Caillebotte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gustave Caillebotte.png"; sourceTree = "<group>"; };
+		5E78F5E019C33FD4003AE978 /* Gustave Courbet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gustave Courbet.png"; sourceTree = "<group>"; };
+		5E78F5E119C33FD4003AE978 /* Henri Matisse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Henri Matisse.png"; sourceTree = "<group>"; };
+		5E78F5E219C33FD4003AE978 /* Henri-Edmond Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Henri-Edmond Cross.png"; sourceTree = "<group>"; };
+		5E78F5E319C33FD4003AE978 /* Hieronymus Bosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hieronymus Bosch.png"; sourceTree = "<group>"; };
+		5E78F5E419C33FD4003AE978 /* Ivan Aivazovsky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ivan Aivazovsky.png"; sourceTree = "<group>"; };
+		5E78F5E519C33FD4003AE978 /* J. A. Dominique Ingres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "J. A. Dominique Ingres.png"; sourceTree = "<group>"; };
+		5E78F5E619C33FD4003AE978 /* J. M. W. Turner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "J. M. W. Turner.png"; sourceTree = "<group>"; };
+		5E78F5E719C33FD4003AE978 /* Jackson Pollock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jackson Pollock.png"; sourceTree = "<group>"; };
+		5E78F5E819C33FD4003AE978 /* Jacques-Louis David.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jacques-Louis David.png"; sourceTree = "<group>"; };
+		5E78F5E919C33FD4003AE978 /* James McNeill Whistler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "James McNeill Whistler.png"; sourceTree = "<group>"; };
+		5E78F5EA19C33FD4003AE978 /* Johannes Vermeer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Johannes Vermeer.png"; sourceTree = "<group>"; };
+		5E78F5EB19C33FD4003AE978 /* John Constable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "John Constable.png"; sourceTree = "<group>"; };
+		5E78F5EC19C33FD4003AE978 /* Katsushika Hokusai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Katsushika Hokusai.png"; sourceTree = "<group>"; };
+		5E78F5ED19C33FD4003AE978 /* Leonardo da Vinci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leonardo da Vinci.png"; sourceTree = "<group>"; };
+		5E78F5EE19C33FD4003AE978 /* Mark Rothko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mark Rothko.png"; sourceTree = "<group>"; };
+		5E78F5EF19C33FD4003AE978 /* Michelangelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Michelangelo.png; sourceTree = "<group>"; };
+		5E78F5F019C33FD4003AE978 /* Mikhail Vrubel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mikhail Vrubel.png"; sourceTree = "<group>"; };
+		5E78F5F119C33FD4003AE978 /* Pablo Picasso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pablo Picasso.png"; sourceTree = "<group>"; };
+		5E78F5F219C33FD4003AE978 /* Paul Cezanne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paul Cezanne.png"; sourceTree = "<group>"; };
+		5E78F5F319C33FD4003AE978 /* Paul Gauguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paul Gauguin.png"; sourceTree = "<group>"; };
+		5E78F5F419C33FD4003AE978 /* Paul Signac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paul Signac.png"; sourceTree = "<group>"; };
+		5E78F5F519C33FD4003AE978 /* Peter Paul Rubens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Peter Paul Rubens.png"; sourceTree = "<group>"; };
+		5E78F5F619C33FD4003AE978 /* Pierre-Auguste Renoir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pierre-Auguste Renoir.png"; sourceTree = "<group>"; };
+		5E78F5F719C33FD4003AE978 /* Pieter Bruegel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pieter Bruegel.png"; sourceTree = "<group>"; };
+		5E78F5F819C33FD4003AE978 /* Raphael.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Raphael.png; sourceTree = "<group>"; };
+		5E78F5F919C33FD4003AE978 /* Rembrandt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rembrandt.png; sourceTree = "<group>"; };
+		5E78F5FA19C33FD4003AE978 /* Rene Magritte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rene Magritte.png"; sourceTree = "<group>"; };
+		5E78F5FB19C33FD4003AE978 /* Salvador Dali.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Salvador Dali.png"; sourceTree = "<group>"; };
+		5E78F5FC19C33FD4003AE978 /* Sandro Botticelli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sandro Botticelli.png"; sourceTree = "<group>"; };
+		5E78F5FD19C33FD4003AE978 /* Vincent van Gogh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vincent van Gogh.png"; sourceTree = "<group>"; };
+		5E78F5FE19C33FD4003AE978 /* Wassily Kandinsky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wassily Kandinsky.png"; sourceTree = "<group>"; };
+		5E78F5FF19C33FD4003AE978 /* William Blake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "William Blake.png"; sourceTree = "<group>"; };
+		5E78F63219C3592D003AE978 /* MyriadPro-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-SemiboldIt.otf"; sourceTree = "<group>"; };
+		5E78F63419C3B3C0003AE978 /* MyriadPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-It.otf"; sourceTree = "<group>"; };
+		5E78F63619C3C031003AE978 /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		5E78F63719C3C031003AE978 /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		5E78F63919C3C031003AE978 /* Painting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Painting.h; sourceTree = "<group>"; };
+		5E78F63A19C3C031003AE978 /* Painting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Painting.m; sourceTree = "<group>"; };
+		5E78F63C19C7B85A003AE978 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
+		5EB9067C19929BFE0030FCB7 /* Painting+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Painting+Helper.h"; sourceTree = "<group>"; };
+		5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Painting+Helper.m"; sourceTree = "<group>"; };
+		5EB9067F1992A0C50030FCB7 /* painters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = painters.json; sourceTree = "<group>"; };
+		5EBC86841992DE0C00FBA34A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5EE561A3198EE90D00D33E2B /* GuessTheArtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheArtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE561A6198EE90D00D33E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EE561A8198EE90D00D33E2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +453,15 @@
 		5EE561B5198EE90D00D33E2B /* GTAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTAAppDelegate.h; sourceTree = "<group>"; };
 		5EE561B6198EE90D00D33E2B /* GTAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAAppDelegate.m; sourceTree = "<group>"; };
 		5EE561B9198EE90D00D33E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5EE561BB198EE90D00D33E2B /* GTAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTAViewController.h; sourceTree = "<group>"; };
-		5EE561BC198EE90D00D33E2B /* GTAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAViewController.m; sourceTree = "<group>"; };
+		5EE561BB198EE90D00D33E2B /* GTAGameplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTAGameplayViewController.h; sourceTree = "<group>"; };
+		5EE561BC198EE90D00D33E2B /* GTAGameplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAGameplayViewController.m; sourceTree = "<group>"; };
 		5EE561BE198EE90D00D33E2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5EE561C4198EE90D00D33E2B /* GuessTheArtistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheArtistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE561C5198EE90D00D33E2B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5EE561CD198EE90E00D33E2B /* GuessTheArtistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessTheArtistTests-Info.plist"; sourceTree = "<group>"; };
 		5EE561CF198EE90E00D33E2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5EE561D1198EE90E00D33E2B /* GuessTheArtistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessTheArtistTests.m; sourceTree = "<group>"; };
+		5EE561DC1990F67D00D33E2B /* Paintings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paintings.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +469,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE561A9198EE90D00D33E2B /* CoreGraphics.framework in Frameworks */,
+				5EBC86851992DE0C00FBA34A /* CoreData.framework in Frameworks */,
 				5EE561AB198EE90D00D33E2B /* UIKit.framework in Frameworks */,
 				5EE561A7198EE90D00D33E2B /* Foundation.framework in Frameworks */,
 			);
@@ -79,6 +488,207 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E6A7FDF19ADF1D00055CC68 /* painters */ = {
+			isa = PBXGroup;
+			children = (
+				5E78F4C819C1ED80003AE978 /* 1.jpg */,
+				5E78F4C919C1ED80003AE978 /* 2.jpg */,
+				5E78F4CA19C1ED80003AE978 /* 3.jpg */,
+				5E78F4CB19C1ED80003AE978 /* 4.jpg */,
+				5E78F4CC19C1ED80003AE978 /* 5.jpg */,
+				5E78F4CD19C1ED80003AE978 /* 6.jpg */,
+				5E78F4CE19C1ED80003AE978 /* 7.jpg */,
+				5E78F4CF19C1ED80003AE978 /* 8.jpg */,
+				5E78F4D019C1ED80003AE978 /* 9.jpg */,
+				5E78F4D119C1ED80003AE978 /* 10.jpg */,
+				5E78F4D219C1ED80003AE978 /* 11.jpg */,
+				5E78F4D319C1ED80003AE978 /* 12.jpg */,
+				5E78F4D419C1ED80003AE978 /* 13.jpg */,
+				5E78F4D519C1ED80003AE978 /* 14.jpg */,
+				5E78F4D619C1ED80003AE978 /* 15.jpg */,
+				5E78F4D719C1ED80003AE978 /* 16.jpg */,
+				5E78F4D819C1ED80003AE978 /* 17.jpg */,
+				5E78F4D919C1ED80003AE978 /* 18.jpg */,
+				5E78F4DA19C1ED80003AE978 /* 19.jpg */,
+				5E78F4DB19C1ED80003AE978 /* 20.jpg */,
+				5E78F4DC19C1ED80003AE978 /* 21.jpg */,
+				5E78F4DD19C1ED80003AE978 /* 22.jpg */,
+				5E78F4DE19C1ED80003AE978 /* 23.jpg */,
+				5E78F4DF19C1ED80003AE978 /* 24.jpg */,
+				5E78F4E019C1ED80003AE978 /* 25.jpg */,
+				5E78F4E119C1ED80003AE978 /* 26.jpg */,
+				5E78F4E219C1ED80003AE978 /* 27.jpg */,
+				5E78F4E319C1ED80003AE978 /* 28.jpg */,
+				5E78F4E419C1ED80003AE978 /* 29.jpg */,
+				5E78F4E519C1ED80003AE978 /* 30.jpg */,
+				5E78F4E619C1ED80003AE978 /* 31.jpg */,
+				5E78F4E719C1ED80003AE978 /* 32.jpg */,
+				5E78F4E819C1ED80003AE978 /* 33.jpg */,
+				5E78F4E919C1ED80003AE978 /* 34.jpg */,
+				5E78F4EA19C1ED80003AE978 /* 35.jpg */,
+				5E78F4EB19C1ED80003AE978 /* 36.jpg */,
+				5E78F4EC19C1ED80003AE978 /* 37.jpg */,
+				5E78F4ED19C1ED80003AE978 /* 38.jpg */,
+				5E78F4EE19C1ED80003AE978 /* 39.jpg */,
+				5E78F4EF19C1ED80003AE978 /* 40.jpg */,
+				5E78F4F019C1ED80003AE978 /* 41.jpg */,
+				5E78F4F119C1ED80003AE978 /* 42.jpg */,
+				5E78F4F219C1ED80003AE978 /* 43.jpg */,
+				5E78F4F319C1ED80003AE978 /* 44.jpg */,
+				5E78F4F419C1ED80003AE978 /* 45.jpg */,
+				5E78F4F519C1ED80003AE978 /* 46.jpg */,
+				5E78F4F619C1ED80003AE978 /* 47.jpg */,
+				5E78F4F719C1ED80003AE978 /* 48.jpg */,
+				5E78F4F819C1ED80003AE978 /* 49.jpg */,
+				5E78F4F919C1ED80003AE978 /* 50.jpg */,
+				5E78F4FA19C1ED80003AE978 /* 51.jpg */,
+				5E78F4FB19C1ED80003AE978 /* 52.jpg */,
+				5E78F4FC19C1ED80003AE978 /* 53.jpg */,
+				5E78F4FD19C1ED80003AE978 /* 54.jpg */,
+				5E78F4FE19C1ED80003AE978 /* 55.jpg */,
+				5E78F4FF19C1ED80003AE978 /* 56.jpg */,
+				5E78F50019C1ED80003AE978 /* 57.jpg */,
+				5E78F50119C1ED80003AE978 /* 58.jpg */,
+				5E78F50219C1ED80003AE978 /* 59.jpg */,
+				5E78F50319C1ED80003AE978 /* 60.jpg */,
+				5E78F50419C1ED80003AE978 /* 61.jpg */,
+				5E78F50519C1ED80003AE978 /* 62.jpg */,
+				5E78F50619C1ED80003AE978 /* 63.jpg */,
+				5E78F50719C1ED80003AE978 /* 64.jpg */,
+				5E78F50819C1ED80003AE978 /* 65.jpg */,
+				5E78F50919C1ED80003AE978 /* 66.jpg */,
+				5E78F50A19C1ED80003AE978 /* 67.jpg */,
+				5E78F50B19C1ED80003AE978 /* 68.jpg */,
+				5E78F50C19C1ED80003AE978 /* 69.jpg */,
+				5E78F50D19C1ED80003AE978 /* 70.jpg */,
+				5E78F50E19C1ED80003AE978 /* 71.jpg */,
+				5E78F50F19C1ED80003AE978 /* 72.jpg */,
+				5E78F51019C1ED80003AE978 /* 73.jpg */,
+				5E78F51119C1ED80003AE978 /* 74.jpg */,
+				5E78F51219C1ED80003AE978 /* 75.jpg */,
+				5E78F51319C1ED80003AE978 /* 76.jpg */,
+				5E78F51419C1ED80003AE978 /* 77.jpg */,
+				5E78F51519C1ED80003AE978 /* 78.jpg */,
+				5E78F51619C1ED80003AE978 /* 79.jpg */,
+				5E78F51719C1ED80003AE978 /* 80.jpg */,
+				5E78F51819C1ED80003AE978 /* 81.jpg */,
+				5E78F51919C1ED80003AE978 /* 82.jpg */,
+				5E78F51A19C1ED80003AE978 /* 83.jpg */,
+				5E78F51B19C1ED80003AE978 /* 84.jpg */,
+				5E78F51C19C1ED80003AE978 /* 85.jpg */,
+				5E78F51D19C1ED80003AE978 /* 86.jpg */,
+				5E78F51E19C1ED80003AE978 /* 87.jpg */,
+				5E78F51F19C1ED80003AE978 /* 88.jpg */,
+				5E78F52019C1ED80003AE978 /* 89.jpg */,
+				5E78F52119C1ED80003AE978 /* 90.jpg */,
+				5E78F52219C1ED80003AE978 /* 91.jpg */,
+				5E78F52319C1ED80003AE978 /* 92.jpg */,
+				5E78F52419C1ED80003AE978 /* 93.jpg */,
+				5E78F52519C1ED80003AE978 /* 94.jpg */,
+				5E78F52619C1ED80003AE978 /* 95.jpg */,
+				5E78F52719C1ED80003AE978 /* 96.jpg */,
+				5E78F52819C1ED80003AE978 /* 97.jpg */,
+				5E78F52919C1ED80003AE978 /* 98.jpg */,
+				5E78F52A19C1ED80003AE978 /* 99.jpg */,
+				5E78F52B19C1ED80003AE978 /* 100.jpg */,
+				5E78F52C19C1ED80003AE978 /* 101.jpg */,
+				5E78F52D19C1ED80003AE978 /* 102.jpg */,
+				5E78F52E19C1ED80003AE978 /* 103.jpg */,
+				5E78F52F19C1ED80003AE978 /* 104.jpg */,
+				5E78F53019C1ED80003AE978 /* 105.jpg */,
+				5E78F53119C1ED80003AE978 /* 106.jpg */,
+				5E78F53219C1ED80003AE978 /* 107.jpg */,
+				5E78F53319C1ED80003AE978 /* 108.jpg */,
+				5E78F53419C1ED80003AE978 /* 109.jpg */,
+				5E78F53519C1ED80003AE978 /* 110.jpg */,
+				5E78F53619C1ED80003AE978 /* 111.jpg */,
+				5E78F53719C1ED80003AE978 /* 112.jpg */,
+				5E78F53819C1ED80003AE978 /* 113.jpg */,
+				5E78F53919C1ED80003AE978 /* 114.jpg */,
+				5E78F53A19C1ED80003AE978 /* 115.jpg */,
+				5E78F53B19C1ED80003AE978 /* 116.jpg */,
+				5E78F53C19C1ED80003AE978 /* 117.jpg */,
+				5E78F53D19C1ED80003AE978 /* 118.jpg */,
+				5E78F53E19C1ED80003AE978 /* 119.jpg */,
+				5E78F53F19C1ED80003AE978 /* 120.jpg */,
+				5E78F54019C1ED80003AE978 /* 121.jpg */,
+				5E78F54119C1ED80003AE978 /* 122.jpg */,
+				5E78F54219C1ED80003AE978 /* 123.jpg */,
+				5E78F54319C1ED80003AE978 /* 124.jpg */,
+				5E78F54419C1ED80003AE978 /* 125.jpg */,
+				5E78F54519C1ED80003AE978 /* 126.jpg */,
+				5E78F54619C1ED80003AE978 /* 127.jpg */,
+				5E78F54719C1ED80003AE978 /* 128.jpg */,
+				5E78F54819C1ED80003AE978 /* 129.jpg */,
+				5E78F54919C1ED80003AE978 /* 130.jpg */,
+			);
+			name = painters;
+			sourceTree = "<group>";
+		};
+		5E6A81A819AE555D0055CC68 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		5E78F5CD19C33FC6003AE978 /* artists */ = {
+			isa = PBXGroup;
+			children = (
+				5E78F5CE19C33FD4003AE978 /* Alexei Savrasov.png */,
+				5E78F5CF19C33FD4003AE978 /* Alfred Sisley.png */,
+				5E78F5D019C33FD4003AE978 /* Amedeo Modigliani.png */,
+				5E78F5D119C33FD4003AE978 /* Andy Warhol.png */,
+				5E78F5D219C33FD4003AE978 /* Bouguereau.png */,
+				5E78F5D319C33FD4003AE978 /* Camille Pissarro.png */,
+				5E78F5D419C33FD4003AE978 /* Caravaggio.png */,
+				5E78F5D519C33FD4003AE978 /* Claude Monet.png */,
+				5E78F5D619C33FD4003AE978 /* Diego Velazquez.png */,
+				5E78F5D719C33FD4003AE978 /* Edgar Degas.png */,
+				5E78F5D819C33FD4003AE978 /* Edouard Manet.png */,
+				5E78F5D919C33FD4003AE978 /* Edvard Munch.png */,
+				5E78F5DA19C33FD4003AE978 /* Eugene Delacroix.png */,
+				5E78F5DB19C33FD4003AE978 /* Francisco Goya.png */,
+				5E78F5DC19C33FD4003AE978 /* Frida Kahlo.png */,
+				5E78F5DD19C33FD4003AE978 /* Georges Seurat.png */,
+				5E78F5DE19C33FD4003AE978 /* Gustav Klimt.png */,
+				5E78F5DF19C33FD4003AE978 /* Gustave Caillebotte.png */,
+				5E78F5E019C33FD4003AE978 /* Gustave Courbet.png */,
+				5E78F5E119C33FD4003AE978 /* Henri Matisse.png */,
+				5E78F5E219C33FD4003AE978 /* Henri-Edmond Cross.png */,
+				5E78F5E319C33FD4003AE978 /* Hieronymus Bosch.png */,
+				5E78F5E419C33FD4003AE978 /* Ivan Aivazovsky.png */,
+				5E78F5E519C33FD4003AE978 /* J. A. Dominique Ingres.png */,
+				5E78F5E619C33FD4003AE978 /* J. M. W. Turner.png */,
+				5E78F5E719C33FD4003AE978 /* Jackson Pollock.png */,
+				5E78F5E819C33FD4003AE978 /* Jacques-Louis David.png */,
+				5E78F5E919C33FD4003AE978 /* James McNeill Whistler.png */,
+				5E78F5EA19C33FD4003AE978 /* Johannes Vermeer.png */,
+				5E78F5EB19C33FD4003AE978 /* John Constable.png */,
+				5E78F5EC19C33FD4003AE978 /* Katsushika Hokusai.png */,
+				5E78F5ED19C33FD4003AE978 /* Leonardo da Vinci.png */,
+				5E78F5EE19C33FD4003AE978 /* Mark Rothko.png */,
+				5E78F5EF19C33FD4003AE978 /* Michelangelo.png */,
+				5E78F5F019C33FD4003AE978 /* Mikhail Vrubel.png */,
+				5E78F5F119C33FD4003AE978 /* Pablo Picasso.png */,
+				5E78F5F219C33FD4003AE978 /* Paul Cezanne.png */,
+				5E78F5F319C33FD4003AE978 /* Paul Gauguin.png */,
+				5E78F5F419C33FD4003AE978 /* Paul Signac.png */,
+				5E78F5F519C33FD4003AE978 /* Peter Paul Rubens.png */,
+				5E78F5F619C33FD4003AE978 /* Pierre-Auguste Renoir.png */,
+				5E78F5F719C33FD4003AE978 /* Pieter Bruegel.png */,
+				5E78F5F819C33FD4003AE978 /* Raphael.png */,
+				5E78F5F919C33FD4003AE978 /* Rembrandt.png */,
+				5E78F5FA19C33FD4003AE978 /* Rene Magritte.png */,
+				5E78F5FB19C33FD4003AE978 /* Salvador Dali.png */,
+				5E78F5FC19C33FD4003AE978 /* Sandro Botticelli.png */,
+				5E78F5FD19C33FD4003AE978 /* Vincent van Gogh.png */,
+				5E78F5FE19C33FD4003AE978 /* Wassily Kandinsky.png */,
+				5E78F5FF19C33FD4003AE978 /* William Blake.png */,
+			);
+			name = artists;
+			sourceTree = "<group>";
+		};
 		5EE5619A198EE90D00D33E2B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +711,7 @@
 		5EE561A5198EE90D00D33E2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5EBC86841992DE0C00FBA34A /* CoreData.framework */,
 				5EE561A6198EE90D00D33E2B /* Foundation.framework */,
 				5EE561A8198EE90D00D33E2B /* CoreGraphics.framework */,
 				5EE561AA198EE90D00D33E2B /* UIKit.framework */,
@@ -112,12 +723,38 @@
 		5EE561AC198EE90D00D33E2B /* GuessTheArtist */ = {
 			isa = PBXGroup;
 			children = (
+				5E6A81A819AE555D0055CC68 /* iPad */,
+				5EE561B8198EE90D00D33E2B /* Main.storyboard */,
+				5E6A81A919AF7E860055CC68 /* Importer.h */,
+				5E6A81AA19AF7E860055CC68 /* Importer.m */,
+				5E78F63619C3C031003AE978 /* Artist.h */,
+				5E78F63719C3C031003AE978 /* Artist.m */,
+				5E78F63919C3C031003AE978 /* Painting.h */,
+				5E78F63A19C3C031003AE978 /* Painting.m */,
+				5E6A7FBD19A944B00055CC68 /* Artist+Helper.h */,
+				5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */,
+				5EB9067C19929BFE0030FCB7 /* Painting+Helper.h */,
+				5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */,
 				5EE561B5198EE90D00D33E2B /* GTAAppDelegate.h */,
 				5EE561B6198EE90D00D33E2B /* GTAAppDelegate.m */,
-				5EE561B8198EE90D00D33E2B /* Main.storyboard */,
-				5EE561BB198EE90D00D33E2B /* GTAViewController.h */,
-				5EE561BC198EE90D00D33E2B /* GTAViewController.m */,
+				5E78F4B519B80519003AE978 /* GTALoadingViewController.h */,
+				5E78F4B619B80519003AE978 /* GTALoadingViewController.m */,
+				5E78F4B219B61E49003AE978 /* GTAHomeScreenViewController.h */,
+				5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */,
+				5EE561BB198EE90D00D33E2B /* GTAGameplayViewController.h */,
+				5EE561BC198EE90D00D33E2B /* GTAGameplayViewController.m */,
+				5E78F4B819B9EA4D003AE978 /* GTAGuessedArtistsTVC.h */,
+				5E78F4B919B9EA4D003AE978 /* GTAGuessedArtistsTVC.m */,
+				5E78F4BE19BA3202003AE978 /* GTAGuessedPaintingsTVC.h */,
+				5E78F4BF19BA3202003AE978 /* GTAGuessedPaintingsTVC.m */,
+				5E78F4C119BA95FF003AE978 /* GTAShowGuessedPaintingVC.h */,
+				5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */,
 				5EE561BE198EE90D00D33E2B /* Images.xcassets */,
+				5E6A80BE19ADF3630055CC68 /* all-painters.json */,
+				5E78F4C619C1ED4E003AE978 /* all-painters2.json */,
+				5EB9067F1992A0C50030FCB7 /* painters.json */,
+				5E6A7FC019ABA6460055CC68 /* paintings2.json */,
+				5EE561DB1990F67D00D33E2B /* Paintings.xcdatamodeld */,
 				5EE561AD198EE90D00D33E2B /* Supporting Files */,
 			);
 			path = GuessTheArtist;
@@ -126,10 +763,16 @@
 		5EE561AD198EE90D00D33E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E78F5CD19C33FC6003AE978 /* artists */,
+				5E6A7FDF19ADF1D00055CC68 /* painters */,
 				5EE561AE198EE90D00D33E2B /* GuessTheArtist-Info.plist */,
 				5EE561AF198EE90D00D33E2B /* InfoPlist.strings */,
 				5EE561B2198EE90D00D33E2B /* main.m */,
 				5EE561B4198EE90D00D33E2B /* GuessTheArtist-Prefix.pch */,
+				5E78F63C19C7B85A003AE978 /* MyriadPro-Regular.otf */,
+				5E78F63419C3B3C0003AE978 /* MyriadPro-It.otf */,
+				5E78F63219C3592D003AE978 /* MyriadPro-SemiboldIt.otf */,
+				5E78F4C419BBDEF2003AE978 /* MyriadPro-BoldIt.otf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +843,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Georgiy Gulyaev";
 				TargetAttributes = {
+					5EE561A2198EE90D00D33E2B = {
+						DevelopmentTeam = H5C5ZKZ36N;
+					};
 					5EE561C3198EE90D00D33E2B = {
 						TestTargetID = 5EE561A2198EE90D00D33E2B;
 					};
@@ -229,9 +875,197 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78F63D19C7B874003AE978 /* MyriadPro-Regular.otf in Resources */,
+				5E78F63519C3B489003AE978 /* MyriadPro-It.otf in Resources */,
+				5E78F63319C3594F003AE978 /* MyriadPro-SemiboldIt.otf in Resources */,
+				5E78F62619C33FD4003AE978 /* Paul Signac.png in Resources */,
+				5E78F5C819C1ED80003AE978 /* 127.jpg in Resources */,
+				5E78F5C219C1ED80003AE978 /* 121.jpg in Resources */,
+				5E78F58219C1ED80003AE978 /* 57.jpg in Resources */,
+				5E78F57D19C1ED80003AE978 /* 52.jpg in Resources */,
+				5E78F5A819C1ED80003AE978 /* 95.jpg in Resources */,
+				5E78F5AD19C1ED80003AE978 /* 100.jpg in Resources */,
+				5E78F5B419C1ED80003AE978 /* 107.jpg in Resources */,
+				5E78F5A219C1ED80003AE978 /* 89.jpg in Resources */,
+				5E78F56419C1ED80003AE978 /* 27.jpg in Resources */,
+				5E78F55B19C1ED80003AE978 /* 18.jpg in Resources */,
+				5E78F5C519C1ED80003AE978 /* 124.jpg in Resources */,
+				5E78F60A19C33FD4003AE978 /* Edouard Manet.png in Resources */,
+				5E78F58E19C1ED80003AE978 /* 69.jpg in Resources */,
+				5E78F60D19C33FD4003AE978 /* Francisco Goya.png in Resources */,
+				5E78F5C119C1ED80003AE978 /* 120.jpg in Resources */,
+				5E78F62819C33FD4003AE978 /* Pierre-Auguste Renoir.png in Resources */,
+				5E78F5AC19C1ED80003AE978 /* 99.jpg in Resources */,
+				5E78F57219C1ED80003AE978 /* 41.jpg in Resources */,
+				5E78F60219C33FD4003AE978 /* Amedeo Modigliani.png in Resources */,
+				5E78F59019C1ED80003AE978 /* 71.jpg in Resources */,
+				5E78F59219C1ED80003AE978 /* 73.jpg in Resources */,
+				5E78F60419C33FD4003AE978 /* Bouguereau.png in Resources */,
+				5E78F5C319C1ED80003AE978 /* 122.jpg in Resources */,
+				5E78F5B219C1ED80003AE978 /* 105.jpg in Resources */,
+				5E78F58C19C1ED80003AE978 /* 67.jpg in Resources */,
+				5E78F58619C1ED80003AE978 /* 61.jpg in Resources */,
+				5E78F55519C1ED80003AE978 /* 12.jpg in Resources */,
+				5E78F57A19C1ED80003AE978 /* 49.jpg in Resources */,
+				5E78F56C19C1ED80003AE978 /* 35.jpg in Resources */,
+				5E78F59C19C1ED80003AE978 /* 83.jpg in Resources */,
+				5E78F57E19C1ED80003AE978 /* 53.jpg in Resources */,
+				5E78F54F19C1ED80003AE978 /* 6.jpg in Resources */,
+				5E78F60919C33FD4003AE978 /* Edgar Degas.png in Resources */,
+				5E78F58819C1ED80003AE978 /* 63.jpg in Resources */,
+				5E78F56E19C1ED80003AE978 /* 37.jpg in Resources */,
+				5E78F59419C1ED80003AE978 /* 75.jpg in Resources */,
+				5E78F5CB19C1ED80003AE978 /* 130.jpg in Resources */,
+				5E78F5A519C1ED80003AE978 /* 92.jpg in Resources */,
+				5E78F61119C33FD4003AE978 /* Gustave Caillebotte.png in Resources */,
+				5E78F60019C33FD4003AE978 /* Alexei Savrasov.png in Resources */,
+				5E78F57C19C1ED80003AE978 /* 51.jpg in Resources */,
+				5E78F59A19C1ED80003AE978 /* 81.jpg in Resources */,
+				5E78F61519C33FD4003AE978 /* Hieronymus Bosch.png in Resources */,
+				5E78F56719C1ED80003AE978 /* 30.jpg in Resources */,
+				5E78F62A19C33FD4003AE978 /* Raphael.png in Resources */,
+				5E78F62F19C33FD4003AE978 /* Vincent van Gogh.png in Resources */,
+				5E78F56319C1ED80003AE978 /* 26.jpg in Resources */,
+				5E78F5AE19C1ED80003AE978 /* 101.jpg in Resources */,
+				5E78F57919C1ED80003AE978 /* 48.jpg in Resources */,
+				5E78F55E19C1ED80003AE978 /* 21.jpg in Resources */,
+				5E78F62119C33FD4003AE978 /* Michelangelo.png in Resources */,
+				5E78F60819C33FD4003AE978 /* Diego Velazquez.png in Resources */,
+				5E78F55719C1ED80003AE978 /* 14.jpg in Resources */,
+				5E78F62B19C33FD4003AE978 /* Rembrandt.png in Resources */,
+				5E78F5B319C1ED80003AE978 /* 106.jpg in Resources */,
+				5E78F59719C1ED80003AE978 /* 78.jpg in Resources */,
+				5E78F56B19C1ED80003AE978 /* 34.jpg in Resources */,
+				5E78F55C19C1ED80003AE978 /* 19.jpg in Resources */,
+				5E78F57519C1ED80003AE978 /* 44.jpg in Resources */,
+				5E78F58D19C1ED80003AE978 /* 68.jpg in Resources */,
+				5E78F61B19C33FD4003AE978 /* James McNeill Whistler.png in Resources */,
+				5E78F59919C1ED80003AE978 /* 80.jpg in Resources */,
+				5E78F5AA19C1ED80003AE978 /* 97.jpg in Resources */,
+				5E78F5B919C1ED80003AE978 /* 112.jpg in Resources */,
+				5E78F5BA19C1ED80003AE978 /* 113.jpg in Resources */,
+				5E78F63119C33FD4003AE978 /* William Blake.png in Resources */,
+				5E78F54D19C1ED80003AE978 /* 4.jpg in Resources */,
+				5E78F56919C1ED80003AE978 /* 32.jpg in Resources */,
+				5E78F5B719C1ED80003AE978 /* 110.jpg in Resources */,
+				5E78F55919C1ED80003AE978 /* 16.jpg in Resources */,
+				5E78F55D19C1ED80003AE978 /* 20.jpg in Resources */,
+				5E78F61A19C33FD4003AE978 /* Jacques-Louis David.png in Resources */,
+				5E78F59119C1ED80003AE978 /* 72.jpg in Resources */,
+				5E78F59F19C1ED80003AE978 /* 86.jpg in Resources */,
+				5E78F58719C1ED80003AE978 /* 62.jpg in Resources */,
+				5E78F61019C33FD4003AE978 /* Gustav Klimt.png in Resources */,
+				5E78F56219C1ED80003AE978 /* 25.jpg in Resources */,
+				5E78F58019C1ED80003AE978 /* 55.jpg in Resources */,
+				5E78F57719C1ED80003AE978 /* 46.jpg in Resources */,
+				5E78F58A19C1ED80003AE978 /* 65.jpg in Resources */,
+				5E78F60519C33FD4003AE978 /* Camille Pissarro.png in Resources */,
+				5E78F55A19C1ED80003AE978 /* 17.jpg in Resources */,
+				5E78F54C19C1ED80003AE978 /* 3.jpg in Resources */,
+				5E78F62D19C33FD4003AE978 /* Salvador Dali.png in Resources */,
+				5E78F4C519BBDF7C003AE978 /* MyriadPro-BoldIt.otf in Resources */,
+				5E78F58319C1ED80003AE978 /* 58.jpg in Resources */,
+				5E78F60E19C33FD4003AE978 /* Frida Kahlo.png in Resources */,
+				5E78F60119C33FD4003AE978 /* Alfred Sisley.png in Resources */,
+				5E78F55419C1ED80003AE978 /* 11.jpg in Resources */,
+				5E78F5C419C1ED80003AE978 /* 123.jpg in Resources */,
+				5E78F55319C1ED80003AE978 /* 10.jpg in Resources */,
+				5E78F62419C33FD4003AE978 /* Paul Cezanne.png in Resources */,
+				5E78F5BB19C1ED80003AE978 /* 114.jpg in Resources */,
+				5E78F62319C33FD4003AE978 /* Pablo Picasso.png in Resources */,
+				5E78F60319C33FD4003AE978 /* Andy Warhol.png in Resources */,
+				5E78F5A919C1ED80003AE978 /* 96.jpg in Resources */,
+				5E78F61D19C33FD4003AE978 /* John Constable.png in Resources */,
+				5E78F61E19C33FD4003AE978 /* Katsushika Hokusai.png in Resources */,
+				5E78F5B019C1ED80003AE978 /* 103.jpg in Resources */,
 				5EE561BF198EE90D00D33E2B /* Images.xcassets in Resources */,
+				5E78F62219C33FD4003AE978 /* Mikhail Vrubel.png in Resources */,
+				5E78F61319C33FD4003AE978 /* Henri Matisse.png in Resources */,
+				5E78F5B119C1ED80003AE978 /* 104.jpg in Resources */,
+				5E78F5C919C1ED80003AE978 /* 128.jpg in Resources */,
+				5E78F59819C1ED80003AE978 /* 79.jpg in Resources */,
+				5E78F58119C1ED80003AE978 /* 56.jpg in Resources */,
+				5E78F55F19C1ED80003AE978 /* 22.jpg in Resources */,
+				5E78F5C719C1ED80003AE978 /* 126.jpg in Resources */,
+				5E78F59319C1ED80003AE978 /* 74.jpg in Resources */,
+				5E78F5A719C1ED80003AE978 /* 94.jpg in Resources */,
+				5E78F57F19C1ED80003AE978 /* 54.jpg in Resources */,
+				5E78F5A619C1ED80003AE978 /* 93.jpg in Resources */,
+				5E78F54B19C1ED80003AE978 /* 2.jpg in Resources */,
+				5E78F57119C1ED80003AE978 /* 40.jpg in Resources */,
+				5E6A7FC119ABA6460055CC68 /* paintings2.json in Resources */,
+				5E78F5BE19C1ED80003AE978 /* 117.jpg in Resources */,
+				5E78F5BF19C1ED80003AE978 /* 118.jpg in Resources */,
+				5E78F60619C33FD4003AE978 /* Caravaggio.png in Resources */,
+				5E78F59D19C1ED80003AE978 /* 84.jpg in Resources */,
+				5E78F60F19C33FD4003AE978 /* Georges Seurat.png in Resources */,
+				5E6A80BF19ADF3630055CC68 /* all-painters.json in Resources */,
+				5E78F54E19C1ED80003AE978 /* 5.jpg in Resources */,
+				5E78F56619C1ED80003AE978 /* 29.jpg in Resources */,
+				5E78F5B819C1ED80003AE978 /* 111.jpg in Resources */,
+				5E78F58519C1ED80003AE978 /* 60.jpg in Resources */,
+				5E78F5C619C1ED80003AE978 /* 125.jpg in Resources */,
+				5E78F62E19C33FD4003AE978 /* Sandro Botticelli.png in Resources */,
+				5E78F58919C1ED80003AE978 /* 64.jpg in Resources */,
+				5E78F58F19C1ED80003AE978 /* 70.jpg in Resources */,
+				5E78F55819C1ED80003AE978 /* 15.jpg in Resources */,
+				5E78F5BD19C1ED80003AE978 /* 116.jpg in Resources */,
+				5E78F60719C33FD4003AE978 /* Claude Monet.png in Resources */,
+				5E78F57619C1ED80003AE978 /* 45.jpg in Resources */,
+				5E78F62919C33FD4003AE978 /* Pieter Bruegel.png in Resources */,
+				5E78F5BC19C1ED80003AE978 /* 115.jpg in Resources */,
+				5E78F60B19C33FD4003AE978 /* Edvard Munch.png in Resources */,
+				5E78F5C019C1ED80003AE978 /* 119.jpg in Resources */,
+				5E78F61C19C33FD4003AE978 /* Johannes Vermeer.png in Resources */,
+				5E78F56819C1ED80003AE978 /* 31.jpg in Resources */,
+				5E78F5B519C1ED80003AE978 /* 108.jpg in Resources */,
+				5E78F58419C1ED80003AE978 /* 59.jpg in Resources */,
+				5E78F5A319C1ED80003AE978 /* 90.jpg in Resources */,
+				5E78F5A119C1ED80003AE978 /* 88.jpg in Resources */,
+				5E78F62019C33FD4003AE978 /* Mark Rothko.png in Resources */,
+				5E78F58B19C1ED80003AE978 /* 66.jpg in Resources */,
+				5E78F59E19C1ED80003AE978 /* 85.jpg in Resources */,
 				5EE561B1198EE90D00D33E2B /* InfoPlist.strings in Resources */,
+				5E78F55619C1ED80003AE978 /* 13.jpg in Resources */,
+				5E78F4C719C1ED4E003AE978 /* all-painters2.json in Resources */,
+				5E78F61619C33FD4003AE978 /* Ivan Aivazovsky.png in Resources */,
+				5E78F56A19C1ED80003AE978 /* 33.jpg in Resources */,
+				5E78F5B619C1ED80003AE978 /* 109.jpg in Resources */,
+				5E78F56519C1ED80003AE978 /* 28.jpg in Resources */,
+				5E78F61919C33FD4003AE978 /* Jackson Pollock.png in Resources */,
+				5E78F54A19C1ED80003AE978 /* 1.jpg in Resources */,
+				5E78F5A419C1ED80003AE978 /* 91.jpg in Resources */,
+				5E78F55219C1ED80003AE978 /* 9.jpg in Resources */,
+				5E78F59619C1ED80003AE978 /* 77.jpg in Resources */,
+				5E78F61819C33FD4003AE978 /* J. M. W. Turner.png in Resources */,
+				5E78F59B19C1ED80003AE978 /* 82.jpg in Resources */,
+				5E78F61419C33FD4003AE978 /* Henri-Edmond Cross.png in Resources */,
+				5E78F61F19C33FD4003AE978 /* Leonardo da Vinci.png in Resources */,
+				5E78F5A019C1ED80003AE978 /* 87.jpg in Resources */,
+				5E78F57419C1ED80003AE978 /* 43.jpg in Resources */,
+				5E78F62719C33FD4003AE978 /* Peter Paul Rubens.png in Resources */,
+				5E78F56019C1ED80003AE978 /* 23.jpg in Resources */,
+				5E78F57819C1ED80003AE978 /* 47.jpg in Resources */,
+				5E78F56D19C1ED80003AE978 /* 36.jpg in Resources */,
+				5E78F56119C1ED80003AE978 /* 24.jpg in Resources */,
+				5E78F61719C33FD4003AE978 /* J. A. Dominique Ingres.png in Resources */,
+				5E78F5AF19C1ED80003AE978 /* 102.jpg in Resources */,
+				5E78F55119C1ED80003AE978 /* 8.jpg in Resources */,
+				5E78F60C19C33FD4003AE978 /* Eugene Delacroix.png in Resources */,
+				5E78F56F19C1ED80003AE978 /* 38.jpg in Resources */,
+				5E78F62519C33FD4003AE978 /* Paul Gauguin.png in Resources */,
+				5E78F57B19C1ED80003AE978 /* 50.jpg in Resources */,
+				5E78F5CA19C1ED80003AE978 /* 129.jpg in Resources */,
+				5E78F61219C33FD4003AE978 /* Gustave Courbet.png in Resources */,
+				5E78F57319C1ED80003AE978 /* 42.jpg in Resources */,
+				5E78F62C19C33FD4003AE978 /* Rene Magritte.png in Resources */,
+				5E78F55019C1ED80003AE978 /* 7.jpg in Resources */,
 				5EE561BA198EE90D00D33E2B /* Main.storyboard in Resources */,
+				5E78F57019C1ED80003AE978 /* 39.jpg in Resources */,
+				5E78F59519C1ED80003AE978 /* 76.jpg in Resources */,
+				5E78F5AB19C1ED80003AE978 /* 98.jpg in Resources */,
+				5E78F63019C33FD4003AE978 /* Wassily Kandinsky.png in Resources */,
+				5EB906801992A0C50030FCB7 /* painters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +1084,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78F4B419B61E49003AE978 /* GTAHomeScreenViewController.m in Sources */,
 				5EE561B3198EE90D00D33E2B /* main.m in Sources */,
-				5EE561BD198EE90D00D33E2B /* GTAViewController.m in Sources */,
+				5EB9067E19929BFE0030FCB7 /* Painting+Helper.m in Sources */,
+				5E78F63819C3C031003AE978 /* Artist.m in Sources */,
+				5EE561BD198EE90D00D33E2B /* GTAGameplayViewController.m in Sources */,
+				5E78F4BA19B9EA4D003AE978 /* GTAGuessedArtistsTVC.m in Sources */,
+				5E78F4B719B80519003AE978 /* GTALoadingViewController.m in Sources */,
+				5E78F4C319BA95FF003AE978 /* GTAShowGuessedPaintingVC.m in Sources */,
 				5EE561B7198EE90D00D33E2B /* GTAAppDelegate.m in Sources */,
+				5E78F4C019BA3202003AE978 /* GTAGuessedPaintingsTVC.m in Sources */,
+				5E6A7FBF19A944B00055CC68 /* Artist+Helper.m in Sources */,
+				5EE561DD1990F67D00D33E2B /* Paintings.xcdatamodeld in Sources */,
+				5E6A81AB19AF7E860055CC68 /* Importer.m in Sources */,
+				5E78F63B19C3C031003AE978 /* Painting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +1179,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -366,7 +1211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -377,10 +1222,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessTheArtist/GuessTheArtist-Prefix.pch";
 				INFOPLIST_FILE = "GuessTheArtist/GuessTheArtist-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,10 +1240,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessTheArtist/GuessTheArtist-Prefix.pch";
 				INFOPLIST_FILE = "GuessTheArtist/GuessTheArtist-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +1312,7 @@
 				5EE561D7198EE90E00D33E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EE561D8198EE90E00D33E2B /* Build configuration list for PBXNativeTarget "GuessTheArtistTests" */ = {
 			isa = XCConfigurationList;
@@ -465,8 +1321,23 @@
 				5EE561DA198EE90E00D33E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5EE561DB1990F67D00D33E2B /* Paintings.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5EE561DC1990F67D00D33E2B /* Paintings.xcdatamodel */,
+			);
+			currentVersion = 5EE561DC1990F67D00D33E2B /* Paintings.xcdatamodel */;
+			name = Paintings.xcdatamodeld;
+			path = ../Paintings.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5EE5619B198EE90D00D33E2B /* Project object */;
 }

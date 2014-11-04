@@ -1,0 +1,225 @@
+ [
+  {
+  "title": "Haystacks, midday",
+  "year": "1890",
+  "owner": "National Gallery of Australia, Canberra",
+  "about": "This is one of eight paintings of wheat stacks that Monet\nbegan in the late summer and autumn of 1890. The artist\ncontinued to paint stacks of wheat in his neighbour's field through\nthe winter of 1890-91, producing seventeen more canvases of the\nsame subject. To this might be added further five paintings of\nstacks made in the autumn and winter of 1888-89, bringing the\ntotal number of Monet's wheat stack themed paintings to at least\nthirty.",
+  "image": "1.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism, Post-Impressionism"
+  },
+  {
+  "title": "London Parliament",
+  "year": "1903",
+  "owner": "MuMa, Le Havre",
+  "about": "Le Havre museum acquired London Parliament along with\ntwo other Monet's paintings, Cliffs at Varengeville and Waterlilies,\nin 1910. Purchased directly from the artist for the symbolic\namount of 3,000 francs, these paintings were added to the small 2\nat the time municipal collection of impressionist works that is now\nthe second of France for the number of impressionist\npaintings.",
+  "image": "2.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Houses of Parliament, Sunlight Effect",
+  "year": "1903",
+  "owner": "Brooklyn Museum, Brooklyn",
+  "about": " The painting is one of Claude Monet's Houses of\nParliament series that contains 19 canvases all exactly the same\nsize and depicting the same scene from the same vantage point,\nMonet's window at St Thomas' Hospital overlooking the Thames.\nThey are however painted at different times of the day and at\ndifferent weather circumstances.",
+  "image": "3.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Waterlilies",
+  "year": "1907",
+  "owner": "Kawamura Memorial DIC Museum of Art",
+  "about": "",
+  "image": "4.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Sunrise (Marine)",
+  "year": "1873",
+  "owner": "The J. Paul Getty Museum",
+  "about": "",
+  "image": "5.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "The Young Ladies of Giverny, Sun Effect",
+  "year": "1894",
+  "owner": "The Israel Museum, Jerusalem",
+  "about": "",
+  "image": "6.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Arrival of the Normandy Train, Gare Saint-Lazare",
+  "year": "1877",
+  "owner": "The Art Institute of Chicago",
+  "about": "",
+  "image": "7.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Poppy Field",
+  "year": "1873",
+  "owner": "Musée d’Orsay, Paris",
+  "about": "",
+  "image": "8.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Wisteria",
+  "year": "1925",
+  "owner": "Gemeentemuseum Den Haag",
+  "about": "",
+  "image": "9.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "The Magpie",
+  "year": "1869",
+  "owner": "Musée d’Orsay, Paris",
+  "about": "",
+  "image": "10.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Rue de la Bavole, Honfleur",
+  "year": "1864",
+  "owner": "Museum of Fine Arts, Boston",
+  "about": "",
+  "image": "11.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Still Life with Flowers and Fruit",
+  "year": "1869",
+  "owner": "The J. Paul Getty Museum",
+  "about": "",
+  "image": "12.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "The Windmill on the Onbekende Gracht, Amsterdam",
+  "year": "1874",
+  "owner": "The Museum of Fine Arts, Houston",
+  "about": "",
+  "image": "13.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Flowering Plum Trees",
+  "year": "1879",
+  "owner": "The Museum of Fine Arts, Budapest",
+  "about": "",
+  "image": "14.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism"
+  },
+  {
+  "title": "Waterloo Bridge in London",
+  "year": "1902",
+  "owner": "The National Museum of Western Art, Tokyo",
+  "about": "",
+  "image": "15.png",
+  "artist": "Claude Monet",
+  "style": "Impressionism "
+  },
+  {
+   "title": "A Cotton Office in New Orleans",
+   "year": "1873",
+   "owner": "Musee des Beaux-Arts, Pau",
+   "image": "91.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Gustave Caillebotte"
+   },
+   {
+   "title": "The Ballet Class",
+   "year": "1874",
+   "owner": "Musée d'Orsay, Paris",
+   "image": "92.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Georges Seurat, Edouard Manet"
+   },
+   {
+   "title": "Place de la Concorde",
+   "year": "1875",
+   "owner": "Hermitage, St. Petersburg",
+   "image": "93.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Edouard Manet"
+   },
+   {
+   "title": "The Absinthe Drinker",
+   "year": "1876",
+   "owner": "Musée d'Orsay, Paris",
+   "image": "94.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Edouard Manet"
+   },
+   {
+   "title": "Ballet Dancers in the Wings",
+   "year": "1900",
+   "owner": "St. Louis Art Museum, St. Louis",
+   "image": "95.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Camille Pissarro"
+   },
+   {
+   "title": "Dancers",
+   "year": "1899",
+   "owner": "The Toledo Museum of Art",
+   "image": "96.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Camille Pissarro"
+   },
+   {
+   "title": "At the Races in the Countryside",
+   "year": "1869",
+   "owner": "Museum of Fine Arts, Boston",
+   "image": "97.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Edouard Manet"
+   },
+   {
+   "title": "Spartan Girls Challenging Boys",
+   "year": "1860",
+   "owner": "National Gallery, London",
+   "image": "98.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism"
+   },
+   {
+   "title": "Women Combing Their Hair",
+   "year": "1876",
+   "owner": "The Phillips Collection, Washington, DC",
+   "image": "99.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Paul Gauguin"
+   },
+   {
+   "title": "Two Dancers",
+   "year": "1898",
+   "owner": "Galerie Neue Meister, Staatliche Kunstsammlungen Dresden",
+   "image": "100.png",
+   "artist": "Edgar Degas",
+   "style": "Impressionism",
+   "similarity": "Claude Monet"
+   }]
