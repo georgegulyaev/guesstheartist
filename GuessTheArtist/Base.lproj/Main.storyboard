@@ -3,6 +3,7 @@
     <dependencies>
         <deployment version="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Loading View Controller-->
@@ -417,12 +418,14 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="fxr-fY-JDw" firstAttribute="leading" secondItem="IUO-7Y-29O" secondAttribute="trailing" constant="8" id="IJq-rY-nRa"/>
+                                    <constraint firstAttribute="width" constant="152" id="eBC-qx-ME0"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nlL-Ma-aVM" secondAttribute="trailing" id="2Qt-ya-GvO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5pf-cB-PwO" secondAttribute="trailing" constant="4" id="2VS-CH-xAE"/>
                             <constraint firstAttribute="trailing" secondItem="7nz-y2-UOk" secondAttribute="trailing" id="2ue-hz-Mzg"/>
                             <constraint firstItem="END-DB-vKe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="69y-bT-Cva"/>
                             <constraint firstItem="9tm-ST-Tjx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-76" id="9XF-Tu-roj"/>
@@ -442,7 +445,6 @@
                             <constraint firstAttribute="trailing" secondItem="END-DB-vKe" secondAttribute="trailing" id="fyl-nj-B6F"/>
                             <constraint firstAttribute="trailing" secondItem="ar3-sY-y2V" secondAttribute="trailing" constant="44" id="gWV-vk-2bz"/>
                             <constraint firstItem="7nz-y2-UOk" firstAttribute="leading" secondItem="QpC-Y7-sek" secondAttribute="trailing" constant="2" id="gwU-vj-Bn6"/>
-                            <constraint firstAttribute="trailing" secondItem="5pf-cB-PwO" secondAttribute="trailing" constant="20" id="m5h-HU-eMt"/>
                             <constraint firstAttribute="centerY" secondItem="ar3-sY-y2V" secondAttribute="centerY" id="qyU-kH-4wB"/>
                             <constraint firstItem="YGO-fo-aVE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="u0L-tn-MV8"/>
                             <constraint firstAttribute="trailing" secondItem="anR-Kg-Fwv" secondAttribute="trailing" id="xeY-yo-Yg2"/>
@@ -844,9 +846,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="idU-4G-zy5"/>
         <segue reference="pbS-Ee-DNc"/>
-        <segue reference="0Np-FJ-CMa"/>
-        <segue reference="me7-8c-ZQm"/>
+        <segue reference="idU-4G-zy5"/>
+        <segue reference="X5p-th-GlS"/>
+        <segue reference="YXq-G0-F3F"/>
     </inferredMetricsTieBreakers>
 </document>
