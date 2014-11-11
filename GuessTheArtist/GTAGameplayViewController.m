@@ -8,6 +8,7 @@
 
 #import "GTAGameplayViewController.h"
 #import "GTAHomeScreenViewController.h"
+#import "CoreDataManager.h"
 //#import "QuartzCore/CALayer.h"
 
 #define iphone5 ([UIScreen mainScreen].bounds.size.height == 568)
@@ -73,6 +74,8 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:YES];
+    
     [self.paintingView removeFromSuperview];
     [self.reflection removeFromSuperview];
     [self.rootImageView removeFromSuperview];
@@ -181,13 +184,13 @@
     
     //prepare Game
     if (!self.artistsAnswers) // && step < 1
-        self.artistsAnswers = [Artist getArtistsForLevel:1 inManagedObjectContext:self.managedObjectContext];
+        self.artistsAnswers = [Artist getArtistsForLevel:1 inManagedObjectContext:[CoreDataManager singletonInstance].managedObjectContext];
     else
         self.artistsAnswers = [Artist shuffleArray:self.artistsAnswers];
     
     if (!self.paintings || step > [self.paintings count] - 1) {
         step = 0;
-        self.paintings = [Painting loadPaintings:step inManagedObjectContext:self.managedObjectContext];
+        self.paintings = [Painting loadPaintings:step inManagedObjectContext:[CoreDataManager singletonInstance].managedObjectContext];
     } else
         self.paintings = (NSArray *)[Painting shuffleArray:[[NSMutableArray alloc] initWithArray:self.paintings]];
     
@@ -290,7 +293,7 @@
                 [[self.lights objectAtIndex:0] setAlpha:0];
                 self.paintingView.alpha = self.reflection.alpha = 0;
             } completion:^(BOOL finished) {
-                [self performSegueWithIdentifier:@"MainScreen" sender:nil];
+                [self performSegueWithIdentifier:@"GameplayToHome" sender:nil];
                 //[self startGame:0];
             }];
         }];
@@ -439,14 +442,6 @@
     }];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.destinationViewController isKindOfClass:[GTAHomeScreenViewController class]]) {
-        GTAHomeScreenViewController *gtaGVC = (GTAHomeScreenViewController *)segue.destinationViewController;
-        gtaGVC.managedObjectContext = self.managedObjectContext;
-    }
-}
-
-
 #pragma mark - motion gestures
 
 - (BOOL) canBecomeFirstResponder {
@@ -458,7 +453,6 @@
         if (self.btn50_50.enabled && !self.menuIsOpened)
             [self hideTwoRandomAnswers:nil];
 }
-
 
 
 @end

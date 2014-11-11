@@ -9,6 +9,7 @@
 #import "GTAHomeScreenViewController.h"
 #import "GTAGameplayViewController.h"
 #import "GTAGuessedArtistsTVC.h"
+#import "GTAPacksViewController.h"
 
 @interface GTAHomeScreenViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *btnModeZen;
@@ -59,12 +60,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.destinationViewController isKindOfClass:[GTAGameplayViewController class]]) {
-        GTAGameplayViewController *gtaGVC = (GTAGameplayViewController *)segue.destinationViewController;
-        gtaGVC.managedObjectContext = self.managedObjectContext;
-        gtaGVC.gameMode = segue.identifier;
-    } else if ([segue.destinationViewController isKindOfClass:[GTAGuessedArtistsTVC class]]) {
-        GTAGuessedArtistsTVC *gtaGTVC = (GTAGuessedArtistsTVC *)segue.destinationViewController;
-        gtaGTVC.managedObjectContext = self.managedObjectContext;
+        GTAGameplayViewController *destanationController = (GTAGameplayViewController *)segue.destinationViewController;
+        if ([segue.identifier isEqualToString:@"HomeToGameplayZenMode"])
+            destanationController.gameMode = @"Zen";
+        else if ([segue.identifier isEqualToString:@"HomeToGameplayFeverMode"])
+            destanationController.gameMode = @"Fever";
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

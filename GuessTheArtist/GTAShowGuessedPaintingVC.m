@@ -9,6 +9,7 @@
 #import "GTAShowGuessedPaintingVC.h"
 #import "GTAGuessedPaintingsTVC.h"
 #import "Painting.h"
+#import "CoreDataManager.h"
 
 #define iphone5 ([UIScreen mainScreen].bounds.size.height == 568)
 #define iphone4 ([UIScreen mainScreen].bounds.size.height == 480)
@@ -90,21 +91,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.destinationViewController isKindOfClass:[GTAGuessedPaintingsTVC class]]) {
-        if ([segue.identifier isEqualToString:@"back"]) {
-            GTAGuessedPaintingsTVC  *gtaSGPVC = (GTAGuessedPaintingsTVC *)segue.destinationViewController;
-            gtaSGPVC.managedObjectContext = self.managedObjectContext;
-            gtaSGPVC.artist = self.painting.author;
-        }
-    }
-}
-
-
 
 - (IBAction)openInfo:(id)sender {
     NSString *fileName = [NSString stringWithFormat: @"%@/%@", [[NSBundle mainBundle] resourcePath], self.painting.image];
@@ -211,8 +197,9 @@
             self.paintingViewSmall.contentMode = UIViewContentModeBottom;
         }
     }
-    float widthRatio = itemSize.width/imageView.image.size.width;
-    float heightRatio = itemSize.height/imageView.image.size.height;
+    float widthRatio, heightRatio;
+    widthRatio = (float)itemSize.width / (float)imageView.image.size.width;
+    heightRatio = (float)itemSize.height / (float)imageView.image.size.height;
     
     if(widthRatio > heightRatio)
     {
@@ -228,6 +215,15 @@
     UIGraphicsEndImageContext();
 
     imageView.autoresizingMask = (UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth);
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SubGuessedInfoToSubGuessed"]) {
+        GTAGuessedPaintingsTVC  *destanationController = (GTAGuessedPaintingsTVC *)segue.destinationViewController;
+        destanationController.artist = self.painting.author;
+    }
 }
 
 @end

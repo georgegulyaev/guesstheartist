@@ -9,6 +9,7 @@
 #import "GTAGuessedPaintingsTVC.h"
 #import "GTAGuessedArtistsTVC.h"
 #import "GTAShowGuessedPaintingVC.h"
+#import "CoreDataManager.h"
 
 @interface GTAGuessedPaintingsTVC ()
 
@@ -155,44 +156,6 @@
     return cell;
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Table view delegate
 
@@ -205,7 +168,8 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    [self performSegueWithIdentifier:@"showPainting" sender:indexPath];
+    [self performSegueWithIdentifier:@"SubGuessedToSubGuessedInfo" sender:indexPath];
+    
 }
 
 #pragma mark - fetchedResultsController
@@ -218,7 +182,7 @@
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Painting" inManagedObjectContext:self.managedObjectContext];
+                                   entityForName:@"Painting" inManagedObjectContext:[CoreDataManager singletonInstance].managedObjectContext];
     [fetchRequest setEntity:entity];
     NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"author = %@", self.artist];
     [fetchRequest setPredicate:predicate];
@@ -230,7 +194,7 @@
     
     NSFetchedResultsController *theFetchedResultsController =
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                        managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil
+                                        managedObjectContext:[CoreDataManager singletonInstance].managedObjectContext sectionNameKeyPath:nil
                                                    cacheName:@"Root"];
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
@@ -298,17 +262,9 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.destinationViewController isKindOfClass:[GTAGuessedArtistsTVC class]]) {
-        if ([segue.identifier isEqualToString:@"back"]) {
-            GTAGuessedArtistsTVC  *gtaGAVC = (GTAGuessedArtistsTVC  *)segue.destinationViewController;
-            gtaGAVC.managedObjectContext = self.managedObjectContext;
-        }
-    } else if ([segue.destinationViewController isKindOfClass:[GTAShowGuessedPaintingVC class]]) {
-        if ([segue.identifier isEqualToString:@"showPainting"]) {
-            GTAShowGuessedPaintingVC  *gtaSGPVC = (GTAShowGuessedPaintingVC  *)segue.destinationViewController;
-            gtaSGPVC.managedObjectContext = self.managedObjectContext;
-            gtaSGPVC.painting = [self.fetchedResultsController objectAtIndexPath:sender];
-        }
+    if ([segue.identifier isEqualToString:@"SubGuessedToSubGuessedInfo"]) {
+        GTAShowGuessedPaintingVC  *destinationController = (GTAShowGuessedPaintingVC  *)segue.destinationViewController;
+        destinationController.painting = [self.fetchedResultsController objectAtIndexPath:sender];
     }
 }
 

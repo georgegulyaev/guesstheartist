@@ -1,0 +1,27 @@
+[{
+ "title": "A Cotton Office in New Orleans",
+ "year": "1873",
+ "owner": "Musee des Beaux-Arts, Pau",
+ "image": "91.png",
+ "artist": "New Artist",
+ "style": "Impressionism",
+ "similarity": "Gustave Caillebotte"
+ },
+ {
+ "title": "The Ballet Class",
+ "year": "1874",
+ "owner": "Musée d'Orsay, Paris",
+ "image": "92.png",
+ "artist": "New Artist",
+ "style": "Impressionism",
+ "similarity": "Georges Seurat, Edouard Manet"
+ },
+ {
+ "title": "Place de la Concorde",
+ "year": "1875",
+ "owner": "Hermitage, St. Petersburg",
+ "image": "93.png",
+ "artist": "New Artist",
+ "style": "Impressionism",
+ "similarity": "Edouard Manet"
+ }]

@@ -11,6 +11,5 @@
 
 @interface GTAHomeScreenViewController : UIViewController
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end

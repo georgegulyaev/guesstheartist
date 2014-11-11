@@ -8,6 +8,7 @@
 
 #import "GTALoadingViewController.h"
 #import "GTAHomeScreenViewController.h"
+#import "CoreDataManager.h"
 
 @interface GTALoadingViewController ()
 
@@ -24,12 +25,12 @@
 
 
 - (void)prepareData {
-    if (self.managedObjectContext) {
+    if ([CoreDataManager singletonInstance].managedObjectContext) {
         NSLog(@"Managed Object is ready");
         
         // self.importIsNeeded = true;
         if (self.importIsNeeded) {
-            [Importer importData:self.managedObjectContext];
+            [Importer importData:[CoreDataManager singletonInstance].managedObjectContext];
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(changeLabel)
                                                          name:@"ImportNotification"
@@ -43,7 +44,6 @@
 - (void)changeLabel {
     NSLog(@"LOADED");
     GTAHomeScreenViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MainVC"];
-    controller.managedObjectContext = self.managedObjectContext;
     [self.navigationController pushViewController:controller animated:YES];
 }
 /*

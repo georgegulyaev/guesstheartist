@@ -10,6 +10,7 @@
 #import "GTAGuessedPaintingsTVC.h"
 #import "GTAHomeScreenViewController.h"
 #import "Artist.h"
+#import "CoreDataManager.h"
 
 @interface GTAGuessedArtistsTVC ()
 
@@ -172,7 +173,8 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    [self performSegueWithIdentifier:@"showPaintings" sender:indexPath];
+    [self performSegueWithIdentifier:@"GuessedToSubGuessed" sender:indexPath];
+    
 }
 
 #pragma mark - fetchedResultsController
@@ -185,7 +187,7 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Artist" inManagedObjectContext:self.managedObjectContext];
+                                   entityForName:@"Artist" inManagedObjectContext:[CoreDataManager singletonInstance].managedObjectContext];
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sort = [[NSSortDescriptor alloc]
@@ -196,7 +198,7 @@
     
     NSFetchedResultsController *theFetchedResultsController =
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                        managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil
+                                        managedObjectContext:[CoreDataManager singletonInstance].managedObjectContext sectionNameKeyPath:nil
                                                    cacheName:@"Root"];
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
@@ -266,19 +268,9 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
-    //NSLog(@"YESSS");
-    if ([segue.destinationViewController isKindOfClass:[GTAHomeScreenViewController class]]) {
-        GTAHomeScreenViewController *gtaHVC = (GTAHomeScreenViewController *)segue.destinationViewController;
-        gtaHVC.managedObjectContext = self.managedObjectContext;
-    } else if ([segue.destinationViewController isKindOfClass:[GTAGuessedPaintingsTVC class]]) {
-        if ([segue.identifier isEqualToString:@"showPaintings"]) {
-            GTAGuessedPaintingsTVC *gtaHVC = (GTAGuessedPaintingsTVC *)segue.destinationViewController;
-            gtaHVC.managedObjectContext = self.managedObjectContext;
-            gtaHVC.artist = [self.fetchedResultsController objectAtIndexPath:sender];
-            
-            //[segue.destinationViewController performSelectorInBackground:@selector(setPainting:) withObject:self.managedObjectContext];
-        }
+    if ([segue.identifier isEqualToString:@"GuessedToSubGuessed"]) {
+        GTAGuessedPaintingsTVC *gtaHVC = (GTAGuessedPaintingsTVC *)segue.destinationViewController;
+        gtaHVC.artist = [self.fetchedResultsController objectAtIndexPath:sender];
     }
 }
 

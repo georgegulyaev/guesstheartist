@@ -207,6 +207,9 @@
 		5EB9067E19929BFE0030FCB7 /* Painting+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */; };
 		5EB906801992A0C50030FCB7 /* painters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9067F1992A0C50030FCB7 /* painters.json */; };
 		5EBC86851992DE0C00FBA34A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBC86841992DE0C00FBA34A /* CoreData.framework */; };
+		5ECB97F71A0D08A500FA5070 /* GTAPacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB97F61A0D08A500FA5070 /* GTAPacksViewController.m */; };
+		5ECB97F91A0D0E2000FA5070 /* newpack.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ECB97F81A0D0E2000FA5070 /* newpack.json */; };
+		5ECB981C1A12290B00FA5070 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB981B1A12290B00FA5070 /* CoreDataManager.m */; };
 		5EE561A7198EE90D00D33E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561A6198EE90D00D33E2B /* Foundation.framework */; };
 		5EE561AB198EE90D00D33E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561AA198EE90D00D33E2B /* UIKit.framework */; };
 		5EE561B1198EE90D00D33E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561AF198EE90D00D33E2B /* InfoPlist.strings */; };
@@ -622,6 +625,11 @@
 		5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Painting+Helper.m"; sourceTree = "<group>"; };
 		5EB9067F1992A0C50030FCB7 /* painters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = painters.json; sourceTree = "<group>"; };
 		5EBC86841992DE0C00FBA34A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5ECB97F51A0D08A500FA5070 /* GTAPacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAPacksViewController.h; sourceTree = "<group>"; };
+		5ECB97F61A0D08A500FA5070 /* GTAPacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAPacksViewController.m; sourceTree = "<group>"; };
+		5ECB97F81A0D0E2000FA5070 /* newpack.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newpack.json; sourceTree = "<group>"; };
+		5ECB981A1A12290B00FA5070 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		5ECB981B1A12290B00FA5070 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		5EE561A3198EE90D00D33E2B /* GuessTheArtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheArtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE561A6198EE90D00D33E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EE561A8198EE90D00D33E2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1101,6 +1109,8 @@
 				5EE561B8198EE90D00D33E2B /* Main.storyboard */,
 				5E6A81A919AF7E860055CC68 /* Importer.h */,
 				5E6A81AA19AF7E860055CC68 /* Importer.m */,
+				5ECB981A1A12290B00FA5070 /* CoreDataManager.h */,
+				5ECB981B1A12290B00FA5070 /* CoreDataManager.m */,
 				5E78F63619C3C031003AE978 /* Artist.h */,
 				5E78F63719C3C031003AE978 /* Artist.m */,
 				5E78F63919C3C031003AE978 /* Painting.h */,
@@ -1121,6 +1131,8 @@
 				5E78F4B919B9EA4D003AE978 /* GTAGuessedArtistsTVC.m */,
 				5E78F4BE19BA3202003AE978 /* GTAGuessedPaintingsTVC.h */,
 				5E78F4BF19BA3202003AE978 /* GTAGuessedPaintingsTVC.m */,
+				5ECB97F51A0D08A500FA5070 /* GTAPacksViewController.h */,
+				5ECB97F61A0D08A500FA5070 /* GTAPacksViewController.m */,
 				5E78F4C119BA95FF003AE978 /* GTAShowGuessedPaintingVC.h */,
 				5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */,
 				5EE561BE198EE90D00D33E2B /* Images.xcassets */,
@@ -1128,6 +1140,7 @@
 				5E78F4C619C1ED4E003AE978 /* all-painters2.json */,
 				5EB9067F1992A0C50030FCB7 /* painters.json */,
 				5E6A7FC019ABA6460055CC68 /* paintings2.json */,
+				5ECB97F81A0D0E2000FA5070 /* newpack.json */,
 				5EE561DB1990F67D00D33E2B /* Paintings.xcdatamodeld */,
 				5E45F9D11A09125A00307E7D /* painters */,
 				5E45FA041A09125A00307E7D /* paintings */,
@@ -1408,6 +1421,7 @@
 				5E45FABA1A09125B00307E7D /* 10.jpg in Resources */,
 				5E45FB091A09125B00307E7D /* 54.jpg in Resources */,
 				5E45FB381A09125B00307E7D /* 97.jpg in Resources */,
+				5ECB97F91A0D0E2000FA5070 /* newpack.json in Resources */,
 				5E45FAEE1A09125B00307E7D /* 3.jpg in Resources */,
 				5E45FB0D1A09125B00307E7D /* 58.jpg in Resources */,
 				5E78F4C719C1ED4E003AE978 /* all-painters2.json in Resources */,
@@ -1462,6 +1476,7 @@
 			files = (
 				5E78F4B419B61E49003AE978 /* GTAHomeScreenViewController.m in Sources */,
 				5EE561B3198EE90D00D33E2B /* main.m in Sources */,
+				5ECB97F71A0D08A500FA5070 /* GTAPacksViewController.m in Sources */,
 				5EB9067E19929BFE0030FCB7 /* Painting+Helper.m in Sources */,
 				5E78F63819C3C031003AE978 /* Artist.m in Sources */,
 				5EE561BD198EE90D00D33E2B /* GTAGameplayViewController.m in Sources */,
@@ -1474,6 +1489,7 @@
 				5EE561DD1990F67D00D33E2B /* Paintings.xcdatamodeld in Sources */,
 				5E6A81AB19AF7E860055CC68 /* Importer.m in Sources */,
 				5E78F63B19C3C031003AE978 /* Painting.m in Sources */,
+				5ECB981C1A12290B00FA5070 /* CoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

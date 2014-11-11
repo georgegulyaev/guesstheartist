@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwU-da-Zu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="-68"/>
+            <point key="canvasLocation" x="2237" y="-96"/>
         </scene>
         <!--Guessed ArtistsTVC-->
         <scene sceneID="K1Y-b8-IdY">
@@ -90,7 +90,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="UPE-y5-won" kind="modal" identifier="showPaintings" modalTransitionStyle="crossDissolve" id="YXq-G0-F3F"/>
+                                            <segue destination="UPE-y5-won" kind="modal" identifier="GuessedToSubGuessed" modalTransitionStyle="crossDissolve" id="YXq-G0-F3F"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -105,7 +105,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f6Y-pk-oV7" kind="modal" identifier="back" modalTransitionStyle="crossDissolve" id="qpN-mb-ccf"/>
+                                    <segue destination="f6Y-pk-oV7" kind="modal" identifier="GuessedToHome" modalTransitionStyle="crossDissolve" id="lrh-fr-xvh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,6 +123,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyp-Wx-sPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2976" y="460"/>
+        </scene>
+        <!--Packs View Controller-->
+        <scene sceneID="uyi-Nf-HUz">
+            <objects>
+                <viewController id="tw9-pv-nsx" customClass="GTAPacksViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IQr-Nu-Pzj"/>
+                        <viewControllerLayoutGuide type="bottom" id="sMS-cd-1hG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PacksVC" id="Onc-xZ-biT">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIG-1o-6RQ">
+                                <rect key="frame" x="16" y="9" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="f6Y-pk-oV7" kind="modal" identifier="PacksToHome" modalTransitionStyle="crossDissolve" id="hlT-Fz-DMp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8q-ma-Jsm">
+                                <rect key="frame" x="352" y="130" width="151" height="22"/>
+                                <state key="normal" title="Buy master pack">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcq-zh-GV1">
+                                <rect key="frame" x="66" y="130" width="181" height="22"/>
+                                <state key="normal" title="Buy apprentice pack">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$2.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjq-tE-9cn">
+                                <rect key="frame" x="129" y="168" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$2.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lz-Zd-Xm1">
+                                <rect key="frame" x="400" y="168" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pm1-Qc-ZiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2976" y="-570"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="5mt-DN-ebz">
@@ -146,11 +200,21 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hiW-HB-u4a" kind="modal" identifier="feverMode" modalTransitionStyle="crossDissolve" id="X5p-th-GlS"/>
+                                    <segue destination="hiW-HB-u4a" kind="modal" identifier="HomeToGuessed" modalTransitionStyle="crossDissolve" id="X5p-th-GlS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4y-Pl-Lya">
+                                <rect key="frame" x="197" y="253" width="174" height="53"/>
+                                <state key="normal" title="Packs">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tw9-pv-nsx" kind="modal" identifier="HomeToPacks" modalTransitionStyle="crossDissolve" id="PeM-B7-NtZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ir3-wc-gKs">
-                                <rect key="frame" x="70" y="85" width="188" height="155"/>
+                                <rect key="frame" x="71" y="85" width="188" height="155"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="X40-8i-rvn"/>
                                 </constraints>
@@ -160,11 +224,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="zenMode" modalTransitionStyle="crossDissolve" id="IrX-OE-v48"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="HomeToGameplayZenMode" modalTransitionStyle="crossDissolve" id="IrX-OE-v48"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-15-X0p">
-                                <rect key="frame" x="310" y="85" width="188" height="155"/>
+                                <rect key="frame" x="311" y="85" width="188" height="155"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="WHp-aP-reY"/>
                                 </constraints>
@@ -174,7 +238,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="feverMode" modalTransitionStyle="crossDissolve" id="idU-4G-zy5"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="HomeToGameplayFeverMode" modalTransitionStyle="crossDissolve" id="idU-4G-zy5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,8 +250,9 @@
                             <constraint firstAttribute="trailing" secondItem="1fh-K3-qIO" secondAttribute="trailing" id="mbz-13-ClW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rYk-pb-pVw"/>
+                    <navigationItem key="navigationItem" id="hCt-Ic-pOm"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnModeFever" destination="rwl-15-X0p" id="1GH-A5-PF5"/>
                         <outlet property="btnModeZen" destination="Ir3-wc-gKs" id="mwg-tt-4Ya"/>
@@ -195,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FwH-QU-ejM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2976" y="-68"/>
+            <point key="canvasLocation" x="2976" y="-96"/>
         </scene>
         <!--Gameplay View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -301,7 +366,7 @@
                                         <state key="highlighted" title="Quit game" image="btn_quit_game_normal"/>
                                         <connections>
                                             <action selector="quitGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zsc-f5-inY"/>
-                                            <segue destination="f6Y-pk-oV7" kind="modal" identifier="MainScreen" modalTransitionStyle="crossDissolve" id="pbS-Ee-DNc"/>
+                                            <segue destination="f6Y-pk-oV7" kind="modal" identifier="GameplayToHome" modalTransitionStyle="crossDissolve" id="iAg-5m-CQ8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -481,7 +546,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="xgb-Mx-t9I"/>
             </objects>
-            <point key="canvasLocation" x="3724" y="-68"/>
+            <point key="canvasLocation" x="3709" y="-96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zpg-97-Zb9">
@@ -500,7 +565,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Na-JA-WUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="-68"/>
+            <point key="canvasLocation" x="1460" y="-96"/>
         </scene>
         <!--Guessed PaintingsTVC-->
         <scene sceneID="AmJ-Za-f5a">
@@ -546,7 +611,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="aWe-4h-Sy1" kind="modal" identifier="showPainting" modalTransitionStyle="crossDissolve" id="Nqm-f4-B5R"/>
+                                            <segue destination="aWe-4h-Sy1" kind="modal" identifier="SubGuessedToSubGuessedInfo" modalTransitionStyle="crossDissolve" id="Nqm-f4-B5R"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -561,7 +626,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hiW-HB-u4a" kind="modal" identifier="back" modalTransitionStyle="crossDissolve" id="me7-8c-ZQm"/>
+                                    <segue destination="hiW-HB-u4a" kind="modal" identifier="SubGuessedToGuessed" modalTransitionStyle="crossDissolve" id="me7-8c-ZQm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQi-Ed-1Se">
@@ -649,7 +714,7 @@
                                 <state key="selected" image="btn_back_pressed"/>
                                 <state key="highlighted" image="btn_back_normal"/>
                                 <connections>
-                                    <segue destination="UPE-y5-won" kind="modal" identifier="back" modalTransitionStyle="crossDissolve" id="0Np-FJ-CMa"/>
+                                    <segue destination="UPE-y5-won" kind="modal" identifier="SubGuessedInfoToSubGuessed" modalTransitionStyle="crossDissolve" id="0Np-FJ-CMa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chl-B1-4Sa">
@@ -846,9 +911,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pbS-Ee-DNc"/>
-        <segue reference="idU-4G-zy5"/>
-        <segue reference="X5p-th-GlS"/>
-        <segue reference="YXq-G0-F3F"/>
+        <segue reference="lrh-fr-xvh"/>
+        <segue reference="me7-8c-ZQm"/>
+        <segue reference="0Np-FJ-CMa"/>
+        <segue reference="IrX-OE-v48"/>
     </inferredMetricsTieBreakers>
 </document>

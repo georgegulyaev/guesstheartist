@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Painting.h"
 
+
 @interface GTAShowGuessedPaintingVC : UIViewController
 
 @property (nonatomic,strong) Painting *painting;
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
 @end
