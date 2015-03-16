@@ -11,7 +11,7 @@
 
 @interface GTAGameplayViewController : UIViewController
 
-@property (nonatomic, strong) NSString *gameMode;
+@property (copy, nonatomic) NSString *gameMode;
 
 
 @end

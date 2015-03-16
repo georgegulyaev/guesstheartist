@@ -5,15 +5,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>Who's The Artist?</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.guesstheartist</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>Who's The Artist?</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -26,6 +26,13 @@
 	<true/>
 	<key>NSMainNibFile~ipad</key>
 	<string>Main-iPad</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MyriadPro-BoldIt.otf</string>
+		<string>MyriadPro-It.otf</string>
+		<string>MyriadPro-SemiboldIt.otf</string>
+		<string>MyriadPro-Regular.otf</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -41,12 +48,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>MyriadPro-BoldIt.otf</string>
-		<string>MyriadPro-It.otf</string>
-		<string>MyriadPro-SemiboldIt.otf</string>
-		<string>MyriadPro-Regular.otf</string>
-	</array>
 </dict>
 </plist>

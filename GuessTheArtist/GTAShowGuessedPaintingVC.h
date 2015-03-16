@@ -12,6 +12,6 @@
 
 @interface GTAShowGuessedPaintingVC : UIViewController
 
-@property (nonatomic,strong) Painting *painting;
+@property (strong, nonatomic) Painting *painting;
 
 @end

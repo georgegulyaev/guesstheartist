@@ -63,9 +63,17 @@
     UIGraphicsEndImageContext();
     self.artistPhoto.contentMode = UIViewContentModeCenter;
     self.artistPhoto.autoresizingMask = UIViewAutoresizingNone;
+}
 
+-(void)viewDidLayoutSubviews
+{
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
     
-    
+    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -129,6 +137,7 @@
     UIGraphicsEndImageContext();
     
     //customize fonts and colors
+    cell.backgroundColor = [UIColor blackColor];
     cell.contentView.backgroundColor = cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
     // set selection color
     UIView *myBackView = [[UIView alloc] initWithFrame:cell.frame];
@@ -138,7 +147,17 @@
     cell.textLabel.textColor = [UIColor colorWithWhite:222/255.0 alpha:1.0];
     //cell.detailTextLabel.textColor = [UIColor colorWithRed:62/255.0 green:103/255.0 blue:115/255.0 alpha:1.0];
     [cell.textLabel setFont:[UIFont fontWithName:@"MyriadPro-It" size:17]];
-    //[cell.detailTextLabel setFont:[UIFont fontWithName:@"MyriadPro-SemiboldIt" size:13]];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor = [UIColor blackColor];
+    
+    //table view leading space separator bug fix
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

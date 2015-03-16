@@ -106,13 +106,6 @@
     self.paintingView.alpha = 0;
     self.paintingView.contentMode = UIViewContentModeScaleAspectFit;
     self.paintingView.autoresizingMask = (UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth);
-    /*
-    self.paintingView.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.paintingView.layer.shadowOffset = CGSizeMake(-5, 5);
-    self.paintingView.layer.shadowOpacity = 0.7;
-    self.paintingView.layer.shadowRadius = 5.0;
-    self.paintingView.clipsToBounds = NO;
-    */
     //menu preparation
     self.menuIsOpened = false;
     self.menuBgView.alpha = 0;
@@ -140,7 +133,16 @@
         i ++;
     }
     //self.paintingView.image = nil;
-    NSString *fileName = [NSString stringWithFormat: @"%@/%@", [[NSBundle mainBundle] resourcePath], painting.image];
+    NSString *dir = @"";
+    if (painting.pack == [NSNumber numberWithInt: 1]) { //base pack, GuessTheArtist.app folder
+        dir = [[NSBundle mainBundle] resourcePath];
+    } else if (painting.pack == [NSNumber numberWithInt: 2]) { //in-app pack 2, downloads folder
+        dir = [[NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"Downloads"];
+    } else if (painting.pack == [NSNumber numberWithInt: 3]) { //in-app pack 3, downloads folder
+        dir = [[NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"Downloads/pack3"];
+    }
+    NSString *fileName = [NSString stringWithFormat: @"%@/%@", dir, painting.image];
+
     self.paintingView.image = [UIImage imageWithContentsOfFile:fileName];
     //NSLog(@"Frame width: %u", self.paintingView.contentScaleFactor);
 
@@ -329,14 +331,14 @@
     
     switch (self.livesLeft) {
         case 2: {
-            NSLog(@"LIves2: %d", self.livesLeft);
+            NSLog(@"Lives2: %d", self.livesLeft);
             [UIImageView animateWithDuration:0.5 animations:^{
                 [[self.livesIcons objectAtIndex:0] setAlpha:0];
             }];
             break;
         }
         case 1: {
-            NSLog(@"LIves1: %d", self.livesLeft);
+            NSLog(@"Lives1: %d", self.livesLeft);
             [UIImageView animateWithDuration:0.5 animations:^{
                 [[self.livesIcons objectAtIndex:1] setAlpha:0];
             }];

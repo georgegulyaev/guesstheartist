@@ -11,5 +11,9 @@
 
 @interface GTAHomeScreenViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btnGuessed;
+@property (weak, nonatomic) IBOutlet UIButton *btnPacks;
+@property (weak, nonatomic) IBOutlet UIButton *btnAbout;
+
 
 @end

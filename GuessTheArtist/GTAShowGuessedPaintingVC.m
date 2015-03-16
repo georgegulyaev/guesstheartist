@@ -11,29 +11,30 @@
 #import "Painting.h"
 #import "CoreDataManager.h"
 
-#define iphone5 ([UIScreen mainScreen].bounds.size.height == 568)
-#define iphone4 ([UIScreen mainScreen].bounds.size.height == 480)
+#define iphone5orHigher ([UIScreen mainScreen].bounds.size.width >= 568)
+#define iphone4 ([UIScreen mainScreen].bounds.size.width < 568)
 #define isAtLeast61 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.1);
 
 @interface GTAShowGuessedPaintingVC ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *rootImageView;
-@property (strong, nonatomic) IBOutlet UIImageView *reflection;
-@property (strong, nonatomic) IBOutlet UIImageView *paintingView;
-@property (strong, nonatomic) IBOutlet UIImageView *paintingViewSmall;
-@property (strong, nonatomic) IBOutlet UIView *infoView;
-@property (strong, nonatomic) IBOutlet UILabel *infoTitle;
-@property (strong, nonatomic) IBOutlet UILabel *infoYear;
-@property (strong, nonatomic) IBOutlet UILabel *infoStyle;
-@property (strong, nonatomic) IBOutlet UILabel *infoLocation;
-@property (strong, nonatomic) IBOutlet UITextView *infoAbout;
-@property (strong, nonatomic) IBOutlet UIButton *close;
-@property (strong, nonatomic) IBOutlet UIButton *open;
+@property (weak, nonatomic) IBOutlet UIImageView *reflection;
+@property (weak, nonatomic) IBOutlet UIImageView *paintingView;
+@property (weak, nonatomic) IBOutlet UIView *infoView;
+
+@property (weak, nonatomic) IBOutlet UILabel *captionTitle;
+@property (weak, nonatomic) IBOutlet UILabel *infoTitle;
+@property (weak, nonatomic) IBOutlet UILabel *infoYear;
+@property (weak, nonatomic) IBOutlet UILabel *infoStyle;
+@property (weak, nonatomic) IBOutlet UILabel *infoLocation;
+@property (weak, nonatomic) IBOutlet UITextView *infoAbout;
+@property (weak, nonatomic) IBOutlet UIButton *close;
+@property (weak, nonatomic) IBOutlet UIButton *open;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *lights;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *captions;
+@property (weak, nonatomic) IBOutletCollection(UILabel) NSMutableArray *captions;
 @property (weak, nonatomic) IBOutlet UIView *view;
-@property (strong, nonatomic) IBOutlet UIButton *back;
-@property (strong, nonatomic) IBOutlet UILabel *paintingTitle;
+@property (weak, nonatomic) IBOutlet UIButton *back;
+@property (weak, nonatomic) IBOutlet UILabel *paintingTitle;
 
 
 @end
@@ -44,36 +45,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"%f", [UIScreen mainScreen].bounds.size.height);
+    [self.rootImageView setContentMode:UIViewContentModeScaleAspectFill];
     if (iphone4) {
+        NSLog(@"iphone 4");
         self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone4"];
-    } else if (iphone5) {
+    } else if (iphone5orHigher) {
+         NSLog(@"iphone 5");
         self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
     }
     
-    self.infoTitle.font = self.infoYear.font = self.infoStyle.font = self.infoLocation.font = self.infoAbout.font =[UIFont fontWithName:@"MyriadPro-Regular" size:14];
-    self.paintingTitle.font = [UIFont fontWithName:@"MyriadPro-Regular" size:12];
     
-    self.infoView.hidden = YES;
-    self.paintingTitle.text = self.painting.title;
-    self.infoTitle.text = [NSString stringWithFormat:@"%@\n\n", self.painting.title];
+    
+    self.infoView.hidden = YES; //•
+    self.paintingTitle.text = self.infoTitle.text = [NSString stringWithFormat:@" 🚬🐴 %@ ", self.painting.title];
+    [self.paintingTitle sizeToFit];
     self.infoYear.text = self.painting.year;
-    self.infoStyle.text = [NSString stringWithFormat:@"%@\n\n", self.painting.style];
-    self.infoLocation.text = (self.painting.location) ? [NSString stringWithFormat:@"%@\n\n", self.painting.location] : @"No information.\n\n";
+    self.infoStyle.text = self.painting.style;
+    self.infoLocation.text = (self.painting.location) ? self.painting.location : @"No information.";
     
     self.paintingView.contentMode = UIViewContentModeScaleAspectFit;
     self.paintingView.autoresizingMask =(UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth);
     NSString *fileName = [NSString stringWithFormat: @"%@/%@", [[NSBundle mainBundle] resourcePath], self.painting.image];
     self.paintingView.image = [UIImage imageWithContentsOfFile:fileName];
-    
-    for (UILabel *label in self.captions) {
-        [label setFont:[UIFont fontWithName:@"MyriadPro-Regular" size:12]];
-    }
-    
-    CGRect currentFrame = self.infoTitle.frame;
-    CGSize max = CGSizeMake(self.infoTitle.frame.size.width, 28);
-    CGSize expected = [self.infoTitle.text sizeWithFont:self.infoTitle.font constrainedToSize:max lineBreakMode:self.infoTitle.lineBreakMode];
-    currentFrame.size.height = expected.height;
-    self.infoTitle.frame = currentFrame;
+
     
 
 
@@ -93,50 +88,55 @@
 }
 
 - (IBAction)openInfo:(id)sender {
-    NSString *fileName = [NSString stringWithFormat: @"%@/%@", [[NSBundle mainBundle] resourcePath], self.painting.image];
-    //small image resizing
-    self.paintingViewSmall.image = [UIImage imageWithContentsOfFile:fileName];
-    [self resizeImage:self.paintingViewSmall];
-    self.paintingViewSmall.alpha = 0;
-    
-    //animation
-    [UIImageView animateWithDuration:0.2 animations:^{
-        self.back.alpha = 0;
-        self.paintingTitle.alpha = 0;
-        [[self.lights objectAtIndex:2] setAlpha:0];
-        //self.rootImageView.alpha = 0.7;
-        self.reflection.alpha = 0.7;
-        self.paintingView.alpha = 0.7;
-    } completion:^(BOOL finished) {
+    [UIImageView animateWithDuration:0.6 animations:^{
         [UIImageView animateWithDuration:0.2 animations:^{
-            [[self.lights objectAtIndex:1] setAlpha:0];
-            //self.rootImageView.alpha = 0.5;
-            self.reflection.alpha = 0.5;
-            self.paintingView.alpha = 0.5;
+            [[self.lights objectAtIndex:0] setAlpha:0.0];
         } completion:^(BOOL finished) {
             [UIImageView animateWithDuration:0.2 animations:^{
-                [[self.lights objectAtIndex:0] setAlpha:0];
-                //self.rootImageView.alpha = 0;
-                self.reflection.alpha = 0;
-                self.paintingView.alpha = 0.3;
+                [[self.lights objectAtIndex:1] setAlpha:0.0];
             } completion:^(BOOL finished) {
-                [UIImageView animateWithDuration:0.6 animations:^{
-                    self.paintingView.alpha = 0;
-                } completion:^(BOOL finished) {
-                    self.infoView.hidden = NO;
-                    self.infoView.alpha = 0;
-                    self.paintingViewSmall.alpha = 0;
-                    //[[self.lights objectAtIndex:1] setAlpha:0.5];
-                    [UIImageView animateWithDuration:1.0 animations:^{
-                        self.infoView.alpha = 1.0;
-                        self.paintingViewSmall.alpha = 1.0;
-                        //[[self.lights objectAtIndex:1] setAlpha:1.0];
-                    }];
-                    
+                [UIImageView animateWithDuration:0.2 animations:^{
+                    [[self.lights objectAtIndex:2] setAlpha:0.0];
                 }];
             }];
         }];
+        self.paintingView.alpha = 0.3;
+        self.reflection.alpha = 0;
+        self.paintingTitle.alpha = 0;
+        
+    } completion:^(BOOL finished) {
+        self.infoView.hidden = NO;
+        self.infoView.alpha = 0;
+        //[[self.lights objectAtIndex:1] setAlpha:0.5];
+        [UIImageView animateWithDuration:1.0 animations:^{
+            self.infoView.alpha = 1.0;
+            //self.paintingViewSmall.alpha = 1.0;
+            //[[self.lights objectAtIndex:1] setAlpha:1.0];
+        }];
+        
     }];
+    /*
+    
+    //animation
+    [UIImageView animateWithDuration:0.2 animations:^{ //turning 3rd light off, fading out reflection and the artwork to 70%
+        self.back.alpha = 0;
+        self.paintingTitle.alpha = 0;
+        
+        self.reflection.alpha = 0.7;
+        self.paintingView.alpha = 0.7;
+    } completion:^(BOOL finished) {
+        [UIImageView animateWithDuration:0.2 animations:^{ //turning 2st light off, fading out reflection and the artwork to 50%
+            [[self.lights objectAtIndex:1] setAlpha:0.0];
+            self.reflection.alpha = 0.5;
+            self.paintingView.alpha = 0.5;
+        } completion:^(BOOL finished) {
+            [UIImageView animateWithDuration:0.2 animations:^{ //turning 1st light off, fading out reflection to 0 and the artwork to 30%
+                [[self.lights objectAtIndex:0] setAlpha:0.0];
+            } completion:^(BOOL finished) {
+               
+            }];
+        }];
+    }];*/
     
     
     
@@ -150,7 +150,6 @@
         [UIImageView animateWithDuration:1.0 animations:^{
             self.infoView.hidden = YES;
         } completion:^(BOOL finished) {
-            self.paintingViewSmall.image = nil;
             [UIImageView animateWithDuration:0.2 animations:^{
                 self.back.alpha = 1.0;
                 self.paintingTitle.alpha = 1.0;
@@ -176,46 +175,6 @@
     }];
 }
 
-#pragma mark helper functions
-
--(void)resizeImage: (UIImageView *)imageView {
-    CGSize itemSize;
-    if (iphone5) {
-        if (self.painting.about) {
-            itemSize = CGSizeMake(232, 115);
-            self.paintingViewSmall.contentMode = UIViewContentModeTop;
-        } else {
-            itemSize = CGSizeMake(232, 254);
-            self.paintingViewSmall.contentMode = UIViewContentModeBottom;
-        }
-    } else if (iphone4) {
-        if (self.painting.about) {
-            itemSize = CGSizeMake(126, 115);
-            self.paintingViewSmall.contentMode = UIViewContentModeTop;
-        } else {
-            itemSize = CGSizeMake(126, 254);
-            self.paintingViewSmall.contentMode = UIViewContentModeBottom;
-        }
-    }
-    float widthRatio, heightRatio;
-    widthRatio = (float)itemSize.width / (float)imageView.image.size.width;
-    heightRatio = (float)itemSize.height / (float)imageView.image.size.height;
-    
-    if(widthRatio > heightRatio)
-    {
-        itemSize=CGSizeMake(imageView.image.size.width*heightRatio,imageView.image.size.height*heightRatio);
-    } else {
-        itemSize=CGSizeMake(imageView.image.size.width*widthRatio,imageView.image.size.height*widthRatio);
-    }
-    
-    UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0);
-    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-    [imageView.image drawInRect:imageRect];
-    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    imageView.autoresizingMask = (UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth);
-}
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -23,7 +23,6 @@
     [self prepareData];
 }
 
-
 - (void)prepareData {
     if ([CoreDataManager singletonInstance].managedObjectContext) {
         NSLog(@"Managed Object is ready");
@@ -45,6 +44,7 @@
     NSLog(@"LOADED");
     GTAHomeScreenViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MainVC"];
     [self.navigationController pushViewController:controller animated:YES];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"ImportNotofication" object:nil];
 }
 /*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

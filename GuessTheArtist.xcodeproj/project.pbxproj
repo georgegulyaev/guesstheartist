@@ -204,12 +204,15 @@
 		5E78F63819C3C031003AE978 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F63719C3C031003AE978 /* Artist.m */; };
 		5E78F63B19C3C031003AE978 /* Painting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F63A19C3C031003AE978 /* Painting.m */; };
 		5E78F63D19C7B874003AE978 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F63C19C7B85A003AE978 /* MyriadPro-Regular.otf */; };
+		5EA79B6E1AB3B9C00057D772 /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA79B6D1AB3B9C00057D772 /* CustomLabel.m */; };
 		5EB9067E19929BFE0030FCB7 /* Painting+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */; };
 		5EB906801992A0C50030FCB7 /* painters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9067F1992A0C50030FCB7 /* painters.json */; };
 		5EBC86851992DE0C00FBA34A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBC86841992DE0C00FBA34A /* CoreData.framework */; };
-		5ECB97F71A0D08A500FA5070 /* GTAPacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB97F61A0D08A500FA5070 /* GTAPacksViewController.m */; };
 		5ECB97F91A0D0E2000FA5070 /* newpack.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ECB97F81A0D0E2000FA5070 /* newpack.json */; };
 		5ECB981C1A12290B00FA5070 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB981B1A12290B00FA5070 /* CoreDataManager.m */; };
+		5ECB981F1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB981E1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m */; };
+		5ECB98211A1668CF00FA5070 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECB98201A1668CF00FA5070 /* StoreKit.framework */; };
+		5ECB98241A1E002E00FA5070 /* GTAChooseGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB98231A1E002E00FA5070 /* GTAChooseGameViewController.m */; };
 		5EE561A7198EE90D00D33E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561A6198EE90D00D33E2B /* Foundation.framework */; };
 		5EE561AB198EE90D00D33E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561AA198EE90D00D33E2B /* UIKit.framework */; };
 		5EE561B1198EE90D00D33E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561AF198EE90D00D33E2B /* InfoPlist.strings */; };
@@ -621,15 +624,20 @@
 		5E78F63919C3C031003AE978 /* Painting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Painting.h; sourceTree = "<group>"; };
 		5E78F63A19C3C031003AE978 /* Painting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Painting.m; sourceTree = "<group>"; };
 		5E78F63C19C7B85A003AE978 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
+		5EA79B6C1AB3B9C00057D772 /* CustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLabel.h; sourceTree = "<group>"; };
+		5EA79B6D1AB3B9C00057D772 /* CustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLabel.m; sourceTree = "<group>"; };
 		5EB9067C19929BFE0030FCB7 /* Painting+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Painting+Helper.h"; sourceTree = "<group>"; };
 		5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Painting+Helper.m"; sourceTree = "<group>"; };
 		5EB9067F1992A0C50030FCB7 /* painters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = painters.json; sourceTree = "<group>"; };
 		5EBC86841992DE0C00FBA34A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		5ECB97F51A0D08A500FA5070 /* GTAPacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAPacksViewController.h; sourceTree = "<group>"; };
-		5ECB97F61A0D08A500FA5070 /* GTAPacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAPacksViewController.m; sourceTree = "<group>"; };
 		5ECB97F81A0D0E2000FA5070 /* newpack.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newpack.json; sourceTree = "<group>"; };
 		5ECB981A1A12290B00FA5070 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		5ECB981B1A12290B00FA5070 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		5ECB981D1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAPacksPurchaseViewController.h; sourceTree = "<group>"; };
+		5ECB981E1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAPacksPurchaseViewController.m; sourceTree = "<group>"; };
+		5ECB98201A1668CF00FA5070 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5ECB98221A1E002E00FA5070 /* GTAChooseGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAChooseGameViewController.h; sourceTree = "<group>"; };
+		5ECB98231A1E002E00FA5070 /* GTAChooseGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAChooseGameViewController.m; sourceTree = "<group>"; };
 		5EE561A3198EE90D00D33E2B /* GuessTheArtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheArtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE561A6198EE90D00D33E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EE561A8198EE90D00D33E2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -657,6 +665,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECB98211A1668CF00FA5070 /* StoreKit.framework in Frameworks */,
 				5EBC86851992DE0C00FBA34A /* CoreData.framework in Frameworks */,
 				5EE561AB198EE90D00D33E2B /* UIKit.framework in Frameworks */,
 				5EE561A7198EE90D00D33E2B /* Foundation.framework in Frameworks */,
@@ -1080,6 +1089,7 @@
 				5EE561A4198EE90D00D33E2B /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		5EE561A4198EE90D00D33E2B /* Products */ = {
 			isa = PBXGroup;
@@ -1093,6 +1103,7 @@
 		5EE561A5198EE90D00D33E2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5ECB98201A1668CF00FA5070 /* StoreKit.framework */,
 				5EBC86841992DE0C00FBA34A /* CoreData.framework */,
 				5EE561A6198EE90D00D33E2B /* Foundation.framework */,
 				5EE561A8198EE90D00D33E2B /* CoreGraphics.framework */,
@@ -1119,20 +1130,24 @@
 				5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */,
 				5EB9067C19929BFE0030FCB7 /* Painting+Helper.h */,
 				5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */,
+				5EA79B6C1AB3B9C00057D772 /* CustomLabel.h */,
+				5EA79B6D1AB3B9C00057D772 /* CustomLabel.m */,
 				5EE561B5198EE90D00D33E2B /* GTAAppDelegate.h */,
 				5EE561B6198EE90D00D33E2B /* GTAAppDelegate.m */,
 				5E78F4B519B80519003AE978 /* GTALoadingViewController.h */,
 				5E78F4B619B80519003AE978 /* GTALoadingViewController.m */,
 				5E78F4B219B61E49003AE978 /* GTAHomeScreenViewController.h */,
 				5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */,
+				5ECB98221A1E002E00FA5070 /* GTAChooseGameViewController.h */,
+				5ECB98231A1E002E00FA5070 /* GTAChooseGameViewController.m */,
+				5ECB981D1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.h */,
+				5ECB981E1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m */,
 				5EE561BB198EE90D00D33E2B /* GTAGameplayViewController.h */,
 				5EE561BC198EE90D00D33E2B /* GTAGameplayViewController.m */,
 				5E78F4B819B9EA4D003AE978 /* GTAGuessedArtistsTVC.h */,
 				5E78F4B919B9EA4D003AE978 /* GTAGuessedArtistsTVC.m */,
 				5E78F4BE19BA3202003AE978 /* GTAGuessedPaintingsTVC.h */,
 				5E78F4BF19BA3202003AE978 /* GTAGuessedPaintingsTVC.m */,
-				5ECB97F51A0D08A500FA5070 /* GTAPacksViewController.h */,
-				5ECB97F61A0D08A500FA5070 /* GTAPacksViewController.m */,
 				5E78F4C119BA95FF003AE978 /* GTAShowGuessedPaintingVC.h */,
 				5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */,
 				5EE561BE198EE90D00D33E2B /* Images.xcassets */,
@@ -1476,7 +1491,6 @@
 			files = (
 				5E78F4B419B61E49003AE978 /* GTAHomeScreenViewController.m in Sources */,
 				5EE561B3198EE90D00D33E2B /* main.m in Sources */,
-				5ECB97F71A0D08A500FA5070 /* GTAPacksViewController.m in Sources */,
 				5EB9067E19929BFE0030FCB7 /* Painting+Helper.m in Sources */,
 				5E78F63819C3C031003AE978 /* Artist.m in Sources */,
 				5EE561BD198EE90D00D33E2B /* GTAGameplayViewController.m in Sources */,
@@ -1484,12 +1498,15 @@
 				5E78F4B719B80519003AE978 /* GTALoadingViewController.m in Sources */,
 				5E78F4C319BA95FF003AE978 /* GTAShowGuessedPaintingVC.m in Sources */,
 				5EE561B7198EE90D00D33E2B /* GTAAppDelegate.m in Sources */,
+				5ECB981F1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m in Sources */,
 				5E78F4C019BA3202003AE978 /* GTAGuessedPaintingsTVC.m in Sources */,
 				5E6A7FBF19A944B00055CC68 /* Artist+Helper.m in Sources */,
 				5EE561DD1990F67D00D33E2B /* Paintings.xcdatamodeld in Sources */,
+				5ECB98241A1E002E00FA5070 /* GTAChooseGameViewController.m in Sources */,
 				5E6A81AB19AF7E860055CC68 /* Importer.m in Sources */,
 				5E78F63B19C3C031003AE978 /* Painting.m in Sources */,
 				5ECB981C1A12290B00FA5070 /* CoreDataManager.m in Sources */,
+				5EA79B6E1AB3B9C00057D772 /* CustomLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1555,7 +1572,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1571,8 +1589,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "049ebbee-9708-41ce-a1c3-e538c027b8f7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1593,7 +1612,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1603,7 +1623,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "049ebbee-9708-41ce-a1c3-e538c027b8f7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1619,9 +1640,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessTheArtist/GuessTheArtist-Prefix.pch";
 				INFOPLIST_FILE = "GuessTheArtist/GuessTheArtist-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "049ebbee-9708-41ce-a1c3-e538c027b8f7";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1637,9 +1658,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessTheArtist/GuessTheArtist-Prefix.pch";
 				INFOPLIST_FILE = "GuessTheArtist/GuessTheArtist-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "049ebbee-9708-41ce-a1c3-e538c027b8f7";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
