@@ -10,9 +10,12 @@
 #import "GTAGuessedArtistsTVC.h"
 #import "GTAShowGuessedPaintingVC.h"
 #import "CoreDataManager.h"
+#import "ImageFinder.h"
+#import "CustomTableViewCell.h"
 
 @interface GTAGuessedPaintingsTVC ()
 
+@property (retain, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIButton *btnBack;
 @property (strong, nonatomic) IBOutlet UIImageView *artistPhoto;
@@ -23,21 +26,38 @@
 
 @implementation GTAGuessedPaintingsTVC
 
-@synthesize fetchedResultsController = _fetchedResultsController;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Painting" inManagedObjectContext:[CoreDataManager sharedInstance].managedObjectContext];
+    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"author = %@", self.artist];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
+                              initWithKey:@"title" ascending:NO];
+    
+    fetchRequest.entity = entity;
+    fetchRequest.sortDescriptors = @[ sort ];
+    fetchRequest.predicate = predicate;
+    fetchRequest.fetchBatchSize = 15;
+    
+    NSFetchedResultsController *gtaFetchResultsController =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                        managedObjectContext:[CoreDataManager sharedInstance].managedObjectContext sectionNameKeyPath:nil
+                                                   cacheName:nil];
+    gtaFetchResultsController.delegate = self;
+    self.fetchedResultsController = gtaFetchResultsController;
+    
+    //[NSFetchedResultsController deleteCacheWithName:@"Artists"];
     NSError *error;
-    if (![[self fetchedResultsController] performFetch:&error]) {
-		// Update to handle the error appropriately.
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);  // Fail
-	}
-
-    self.tableView.delegate = self;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        // Update to handle the error appropriately.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    }
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     self.tableView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
     self.tableView.opaque = NO;
@@ -81,14 +101,13 @@
     [self.tableView removeFromSuperview];
 }
 
-/*
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     self.fetchedResultsController = nil;
     self.tableView.delegate = nil;
     self.tableView.dataSource = nil;
-}*/
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -107,46 +126,49 @@
 {
     // Return the number of rows in the section.
     id  sectionInfo =
-    [[_fetchedResultsController sections] objectAtIndex:section];
+    [[self.fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    Painting *painting = [_fetchedResultsController objectAtIndexPath:indexPath];
+- (void)configureCell:(CustomTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    Painting *painting = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", painting.title];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ year", painting.year];
+    cell.labelTitle.text = [NSString stringWithFormat:@"%@", painting.title];
+    cell.labelDetail.text = [NSString stringWithFormat:@"%@", painting.year];
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ year", painting.year];
+    
+    
     
     //set image
-    NSString *fileName = [NSString stringWithFormat: @"%@/%@", [[NSBundle mainBundle] resourcePath], painting.image];
-    cell.imageView.image = [UIImage imageWithContentsOfFile:fileName];
+
+    cell.image.image = [ImageFinder getImage:painting.image];
+    
     
     //setting image frame and scaling image with appropriate ratio
-    CGSize itemSize = CGSizeMake(70, 40);
-    double scaleFactor = fmax(fmax(cell.imageView.image.size.width / 70, cell.imageView.image.size.height / 40), 1);
-    double newWidth = cell.imageView.image.size.width / scaleFactor;
-    double newHeight = cell.imageView.image.size.height / scaleFactor;
+    CGSize itemSize = CGSizeMake(80, 80);
+    double scaleFactor = fmax(fmax(cell.image.image.size.width / 80, cell.image.image.size.height / 80), 1);
+    double newWidth = cell.image.image.size.width / scaleFactor;
+    double newHeight = cell.image.image.size.height / scaleFactor;
     
     UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
     float leftOffset = (itemSize.width - newWidth) / 2;
     float topOffset = (itemSize.height - newHeight) / 2;
     CGRect newRect = CGRectMake(leftOffset, topOffset, newWidth, newHeight);
     
-    [cell.imageView.image drawInRect:newRect];
-    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    [cell.image.image drawInRect:newRect];
+    cell.image.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    //customize fonts and colors
+
+    cell.backgroundView = nil;
     cell.backgroundColor = [UIColor blackColor];
     cell.contentView.backgroundColor = cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
+    
     // set selection color
     UIView *myBackView = [[UIView alloc] initWithFrame:cell.frame];
     myBackView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:0.8];
     cell.selectedBackgroundView = myBackView;
-    //set fonts
-    cell.textLabel.textColor = [UIColor colorWithWhite:222/255.0 alpha:1.0];
-    //cell.detailTextLabel.textColor = [UIColor colorWithRed:62/255.0 green:103/255.0 blue:115/255.0 alpha:1.0];
-    [cell.textLabel setFont:[UIFont fontWithName:@"MyriadPro-It" size:17]];
+
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor blackColor];
     
@@ -162,14 +184,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *customCellIdentifier = @"CustomTableViewCell";
+    
+    
+    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:customCellIdentifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"CustomTableViewCell" owner:self options:nil] objectAtIndex:0];
     }
     
-    // Configure the cell...
+    // Configure the cell
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
@@ -180,47 +204,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
     [self performSegueWithIdentifier:@"SubGuessedToSubGuessedInfo" sender:indexPath];
     
 }
 
 #pragma mark - fetchedResultsController
-
-- (NSFetchedResultsController *)fetchedResultsController {
-    
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Painting" inManagedObjectContext:[CoreDataManager singletonInstance].managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"author = %@", self.artist];
-    [fetchRequest setPredicate:predicate];
-    
-    
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                              initWithKey:@"title" ascending:NO];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    NSFetchedResultsController *theFetchedResultsController =
-    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                        managedObjectContext:[CoreDataManager singletonInstance].managedObjectContext sectionNameKeyPath:nil
-                                                   cacheName:@"Root"];
-    self.fetchedResultsController = theFetchedResultsController;
-    _fetchedResultsController.delegate = self;
-    
-    return _fetchedResultsController;
-    
-}
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
@@ -235,22 +223,14 @@
     switch(type) {
             
         case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeUpdate:
             [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
-        case NSFetchedResultsChangeMove:
-            [tableView deleteRowsAtIndexPaths:[NSArray
-                                               arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:[NSArray
-                                               arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        default:
             break;
     }
 }
@@ -264,8 +244,11 @@
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+        case NSFetchedResultsChangeUpdate:
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        default:
             break;
     }
 }

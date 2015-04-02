@@ -20,17 +20,21 @@
     painting.style = [[paintingArray valueForKey:@"style"] description];
     painting.image = [[paintingArray valueForKey:@"image"] description];
     painting.location = [[paintingArray valueForKey:@"owner"] description];
+    if ([NSNumber numberWithInteger:[[paintingArray valueForKey:@"andlevel"] integerValue]])
+        painting.andlevel = [NSNumber numberWithInteger:[[paintingArray valueForKey:@"andlevel"] integerValue]];
+    painting.guessed = [NSNumber numberWithInteger:0];
     painting.pack = [NSNumber numberWithInteger:[[paintingArray valueForKey:@"pack"] integerValue]];
-    //replace with the real value
-    painting.level = [NSNumber numberWithInteger:[[paintingArray valueForKey:@"level"] integerValue]];
-    //replace with the real value
+    if (painting.pack == [NSNumber numberWithInt:1]) {
+        painting.level = [NSNumber numberWithInt:1];
+    } else
+        painting.level = [NSNumber numberWithInteger:[[paintingArray valueForKey:@"level"] integerValue]];
     
     return painting;
 }
 
-+(NSArray *)loadPaintings:(int)step inManagedObjectContext: (NSManagedObjectContext *)context {
++(NSArray *)loadPaintingsForPacks:(NSMutableArray *)packs andLevel:(NSInteger)level inManagedObjectContext: (NSManagedObjectContext *)context {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Painting"];
-    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"ANY pack == %d", step + 1];
+    NSPredicate *predicate  = (level) ? [NSPredicate predicateWithFormat:@"ANY pack in %@ and ANY level = %d", packs, level] : [NSPredicate predicateWithFormat:@"ANY pack in %@", packs];
     [request setPredicate:predicate];
     NSError *error = nil;
     NSArray *array;

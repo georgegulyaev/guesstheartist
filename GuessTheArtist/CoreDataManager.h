@@ -10,12 +10,9 @@
 
 @interface CoreDataManager : NSObject
 
-@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property BOOL importIsNeeded;
+@property (nonatomic, strong, readwrite) NSManagedObjectContext *managedObjectContext;
 
-+ (CoreDataManager *)singletonInstance;
++ (CoreDataManager *)sharedInstance;
 + (void)save: (NSManagedObjectContext *)managedObjectContext;
 
 @end

@@ -13,6 +13,6 @@
 #import "Artist+Helper.h"
 
 @interface Importer : NSObject
-+(void)importData: (NSManagedObjectContext *)context;
-+(void)importNewPack: (NSManagedObjectContext *)context;
++(void)importNativeData:(NSManagedObjectContext *)context;
++(void)importNewPack:(NSString *)packName withContext:(NSManagedObjectContext *)context;
 @end

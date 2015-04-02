@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GTAGuessedArtistsTVC : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
+@interface GTAGuessedArtistsTVC : UIViewController
 
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @end

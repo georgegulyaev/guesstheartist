@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnContinueWithBasePack;
 @property (weak, nonatomic) IBOutlet UIButton *btnApprentice;
 @property (weak, nonatomic) IBOutlet UIButton *btnMaster;
+
 @property (copy, nonatomic) NSString *gameMode;
 - (IBAction)play:(id)sender;
 - (IBAction)continueWithBasePack:(id)sender;

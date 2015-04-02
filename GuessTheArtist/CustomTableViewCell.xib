@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MyriadPro-SemiboldIt.otf">
+            <string>MyriadPro-SemiboldIt</string>
+            <string>MyriadPro-SemiboldIt</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="55" id="aJx-1G-uPx" customClass="CustomTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJx-1G-uPx" id="QnJ-2u-eIN">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-Gq-diL" userLabel="ArtworkImage">
+                        <rect key="frame" x="13" y="5" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="V4K-ad-P8G"/>
+                            <constraint firstAttribute="height" constant="45" id="dLv-6P-bzC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U50-GY-JRJ" userLabel="Label name">
+                        <rect key="frame" x="68" y="11" width="242" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="BuS-Wp-bma"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MyriadPro-SemiboldIt" family="Myriad Pro" pointSize="17"/>
+                        <color key="textColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzK-tb-AUf" userLabel="Label subtitle">
+                        <rect key="frame" x="68" y="31" width="242" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="TUP-gZ-fA0"/>
+                            <constraint firstAttribute="width" constant="130" id="kIM-Eg-kry"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MyriadPro-SemiboldIt" family="Myriad Pro" pointSize="13"/>
+                        <color key="textColor" red="0.24313725489999999" green="0.4039215686" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kIM-Eg-kry"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.043137254899999998" green="0.015686274510000001" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="U50-GY-JRJ" firstAttribute="leading" secondItem="R3A-Gq-diL" secondAttribute="trailing" constant="10" id="0X4-fw-yxI"/>
+                    <constraint firstAttribute="trailing" secondItem="U50-GY-JRJ" secondAttribute="trailing" constant="10" id="5mM-wb-cO7"/>
+                    <constraint firstItem="U50-GY-JRJ" firstAttribute="top" secondItem="QnJ-2u-eIN" secondAttribute="top" constant="11" id="C8j-sa-mWu"/>
+                    <constraint firstItem="vzK-tb-AUf" firstAttribute="top" secondItem="U50-GY-JRJ" secondAttribute="bottom" constant="2" id="G3s-Qz-DEL"/>
+                    <constraint firstAttribute="centerY" secondItem="R3A-Gq-diL" secondAttribute="centerY" id="On9-w8-NcW"/>
+                    <constraint firstAttribute="trailing" secondItem="vzK-tb-AUf" secondAttribute="trailing" constant="10" id="RpR-lK-y7B"/>
+                    <constraint firstItem="vzK-tb-AUf" firstAttribute="leading" secondItem="R3A-Gq-diL" secondAttribute="trailing" constant="10" id="WqY-p3-Ncb"/>
+                    <constraint firstItem="R3A-Gq-diL" firstAttribute="leading" secondItem="QnJ-2u-eIN" secondAttribute="leadingMargin" constant="5" id="p4y-hA-Avy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="image" destination="R3A-Gq-diL" id="qR7-d6-wgr"/>
+                <outlet property="labelDetail" destination="vzK-tb-AUf" id="Fip-xu-8iB"/>
+                <outlet property="labelTitle" destination="U50-GY-JRJ" id="ewp-Au-JQQ"/>
+            </connections>
+            <point key="canvasLocation" x="240" y="208"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -11,6 +11,6 @@
 @interface Painting (Helper)
 
 + (Painting *)addPainting:(NSDictionary *)paintingArray inManagedObjectContext: (NSManagedObjectContext *)context;
-+(NSArray *)loadPaintings:(int)step inManagedObjectContext: (NSManagedObjectContext *)context;
++(NSArray *)loadPaintingsForPacks:(NSMutableArray *)packs andLevel:(NSInteger)level inManagedObjectContext: (NSManagedObjectContext *)context;
 + (NSMutableArray *)shuffleArray:(NSMutableArray *)array;
 @end

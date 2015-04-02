@@ -13,6 +13,5 @@
 @interface GTAGuessedPaintingsTVC : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) Artist *artist;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @end

@@ -53,11 +53,12 @@
     }
 }
 
-//get artists list for current level
-+ (NSMutableArray *)getArtistsForLevel:(int)level inManagedObjectContext:(NSManagedObjectContext *)context {
+//get artists list for packs: 0 - base pack, 1 - apprentice pack, 2 - master pack
++ (NSMutableArray *)getArtistsForPacks:(NSMutableArray *)pack andLevel:(NSInteger)level inManagedObjectContext:(NSManagedObjectContext *)context {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Artist"];
+    NSLog(@"Level: %d",level);
     //request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
-    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"ANY paintings.pack == %d", level];
+    NSPredicate *predicate  = (level) ? [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@ and ANY paintings.level = %d", pack, level] : [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@", pack];
     [request setPredicate:predicate];
     
     NSError *error = nil;

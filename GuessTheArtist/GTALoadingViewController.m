@@ -20,16 +20,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self prepareData];
+    [self loadData];
 }
 
-- (void)prepareData {
-    if ([CoreDataManager singletonInstance].managedObjectContext) {
+- (void)loadData {
+    if ([CoreDataManager sharedInstance].managedObjectContext) {
         NSLog(@"Managed Object is ready");
         
-        // self.importIsNeeded = true;
         if (self.importIsNeeded) {
-            [Importer importData:[CoreDataManager singletonInstance].managedObjectContext];
+            [Importer importNativeData:[CoreDataManager sharedInstance].managedObjectContext];
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(changeLabel)
                                                          name:@"ImportNotification"

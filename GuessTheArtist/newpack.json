@@ -1,27 +1,420 @@
 [{
- "title": "A Cotton Office in New Orleans",
- "year": "1873",
- "owner": "Musee des Beaux-Arts, Pau",
- "image": "91.png",
- "artist": "New Artist",
- "style": "Impressionism",
- "similarity": "Gustave Caillebotte"
+ "fact": "The Storm on the Sea of Galilee, also know as Christ in the Storm, is the only seascape ever painted by Rembrandt. It depicts Jesus calming the waves of the sea, saving the lives of the fourteen men aboard the vessel. Of these fourteen men, it is said Rembrandt included a self-portrait of himself in the boat, next to Jesus and his twelve disciples.\n On March 18, 1990, the painting was stolen by thieves disguised as police officers from Gardener Museum in Boston. The paintings have never been recovered, and it is considered the biggest art theft in history.",
+ "image": "10.jpg",
+ "artist": "Rembrandt",
+ "pack": "2",
+ "level": "1",
+ "unlocked": "",
+ "seen": ""
  },
  {
- "title": "The Ballet Class",
- "year": "1874",
- "owner": "Musée d'Orsay, Paris",
- "image": "92.png",
- "artist": "New Artist",
- "style": "Impressionism",
- "similarity": "Georges Seurat, Edouard Manet"
+ "fact": "View of Toledo is one of only two surviving landscapes by El Greco. It is among the best known depictions of the sky in western art. At the time it was painted, it was rare to portray an isolated landscape scene, making El Greco the first landscape artist in the history of Spanish art.",
+ "image": "1044.jpg",
+ "artist": "El Greco",
+ "pack": "2",
+ "level": "1",
+ "unlocked": "",
+ "seen": ""
  },
  {
- "title": "Place de la Concorde",
- "year": "1875",
- "owner": "Hermitage, St. Petersburg",
- "image": "93.png",
- "artist": "New Artist",
- "style": "Impressionism",
- "similarity": "Edouard Manet"
+ "fact": "Most artists create at least one self-portrait of themselves. Many create multiple pieces of art. For Michelangelo, this Renaissance painter might just one the award for the most creative self-portrait that’s been considered a famous work of art. In his painting of the Last Judgment, which he spent 5 years creating in 1536, Bartholomew is shown to be holding the knife that caused him to be a martyr in one hand and a chunk of his skin in the other hand.\n Taking a close look at the flayed skin, there is the shape of a face present. That face is very clearly a self-portrait of Michelangelo.",
+ "image": "30-1.jpg",
+ "artist": "Michelangelo",
+ "pack": "2",
+ "level": "1",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "Did you know that the real name of El Greco was Doménikos Theotokópoulos. And \"El Greco\" (\"The Greek\") is just a nickname referencing to the artist's Greek origin.",
+ "image": "1045.jpg",
+ "artist": "El Greco",
+ "pack": "2",
+ "level": "1",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "\"The Rokeby Venus\", also known as \"The Toilet of Venus\" is the only one nude by Velázquez which still exists today.",
+ "image": "853.jpg",
+ "artist": "Diego Velázquez",
+ "pack": "2",
+ "level": "1",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "The \"urban legend\" says: \"Many years ago, when Leonardo da Vinci was painting The Last Supper, he looked for someone to be a model for Jesus. Eventually he found local choirboy in a church in Rome named Pietro Bandinelli, who not only had lovely features, but also lived a good life. Years passed, but the painting was still not finished because he needed someone to use as a model for Judas Iscariot and he wanted someone whose face was hard and sinful. At last he saw a beggar on the streets of Rome with a such an evil face he thought twice about asking him; but he did so, and painted his face on his canvas. As he finished, he asked the man his name and he replied, 'I am Pietro Bandinelli, I also sat for you as your model for Christ.? The sinful life he had lived had so disfigured the face that had first attracted da Vinci, he now thought it to be the most villainous in the whole of Rome!",
+ "image": "5.jpg",
+ "artist": "Leonadro da Vinci",
+ "pack": "2",
+ "level": "2",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "\"Narcissus\" is one of only two known Caravaggio's paintings on a theme from Classical mythology. The story of Narcissus, told by the poet Ovid in his Metamorphoses, is of a handsome youth who falls in love with his own reflection. Unable to tear himself away, he dies of his passion, and even when crossing the Styx (a river in Greek mythology that formed the boundary between Earth and the Underworld), keeps looking at his own reflection.",
+ "image": "227.jpg",
+ "artist": "Caravaggio",
+ "pack": "2",
+ "level": "2",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "At the time of Michelangelo's rising to fame, the greatest artist of the era was actually considered to be Raphael. This young upstart, however, was starting to eat into the business that Raphael was able to get. To prove that he was the better artist, Raphael convinced the Pope to hire Michelangelo to paint the Sistine Chapel. As the story goes, Raphael would often go into the Sistine Chapel to check on the progress that was being made. One look at the work speaks for itself, so Raphael couldn’t have been very pleased by what he was seeing.",
+ "image": "30.jpg",
+ "artist": "Michelangelo",
+ "pack": "2",
+ "level": "2",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "Pieter Bruegel was often nicknamed Peasant Bruegel. He sometimes went to weddings and meals dressed like a poor peasant to get ideas for his paintings, and to better mingle with people.",
+ "image": "94.jpg",
+ "artist": "Pieter Bruegel",
+ "pack": "2",
+ "level": "2",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "It is a life-sized depiction of the character Danae from Greek mythology, the mother of Perseus. She is presumably depicted as welcoming Zeus, who impregnated her in the form of a shower of gold.",
+ "image": "182.jpg",
+ "artist": "Rembrandt",
+ "pack": "2",
+ "level": "2",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "3",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "Witches' Sabbath shows the devil in the form of a garlanded goat, surrounded by a coven of disfigured, young and aging witches in a moonlit barren landscape. The goat possesses large horns and is crowned by a wreath of oak leaves. An old witch holds an infant in her hands. The devil seems to be acting as priest at an initiation ceremony for the child, though popular superstition at the time believed the devil often fed on children and human fetuses (unborn child).",
+ "image": "267.jpg",
+ "artist": "Francisco Goya",
+ "pack": "2",
+ "level": "3",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "To make ends meet, Constable took up portraiture, which he found dull. He quietly rebelled against the artistic culture that taught artists to use their imagination to compose their pictures rather than nature itself. Eventhough he executed many fine portraits.",
+ "image": "",
+ "artist": "John Constable",
+ "pack": "2",
+ "level": "3",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "Gustav Klimt never painted a self-portrait.",
+ "image": "69.jpg",
+ "artist": "Gustav Klimt",
+ "pack": "2",
+ "level": "3",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "In Jim Jarmusch's 1995 western Dead Man, the central character, played by Johnny Depp, is named William Blake and allusions to Blake's poetry appear thematically as well as explicitly. A native American, called \"Nobody\", saves William Blake's life, and actually thinks that the person whose life he has saved is, in fact, William Blake the poet.",
+ "image": "William Blake",
+ "artist": "Gustav Klimt",
+ "pack": "2",
+ "level": "3",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "In June 2008 the Museo del Prado issued a press release in which Manuela Mena, Chief Curator of 18th-Century Painting and Goya, stated that the painting (\"The Colossus\") was \"with almost complete certainty\" the work of the painter Asensio Juliá who was a friend and collaborator of Goya.",
+ "image": "268.jpg",
+ "artist": "Francisco Goya",
+ "pack": "2",
+ "level": "4",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "In 1894, Klimt was commissioned to paint the ceilings in the University of Vienna's great hall. The commission included three paintings, Philosophy, Medicine, and Jurisprudence. When Klimt presented them to the university upon completion, they were determined to be pornographic.  The university would not display them. Medicine was the second painting in the series, and depicted the river of life, and the continuity of life and death, and had no allusions to medicine or the science of healing.",
+ "image": "334.jpg",
+ "artist": "Gustav Klimt",
+ "pack": "2",
+ "level": "4",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "4",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "4",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "4",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "Due to cataract surgery in 1923, Monet’s color palette changed significantly. After the operation he painted water lilies with more blue than before. There’s an opinion, that this could happen because after lens removal he could see ultraviolet light, which would have given a blue cast to the world.",
+ "image": "211.jpg",
+   "artist": "Claude Monet",
+ "pack": "2",
+ "level": "5",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "5",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "In 1893 Monet purchased land with a pond near his property in Giverny, willing to build something \"for the pleasure of the eye and also for motifs to paint.\" The result was his water-lily garden, where he started a series of 18 views of japanese style wooden footbridge over the pond. In 1980, thanks to the foundation of Claude Monet, the house and gardens of Giverny were opened for visitors from all over the world.",
+ "image": "203.jpg",
+  "artist": "Claude Monet",
+ "pack": "2",
+ "level": "5",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "Haystacks was Monet’s first series exhibited.",
+ "image": "201.jpg",
+   "artist": "Claude Monet",
+ "pack": "2",
+ "level": "5",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "5",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "Claude Monet painted a series (more than 10) of paintings of the Palace of Westminster, home of the British Parliament, during his stays in London between the years 1900-1905. The paintings have all the same size and viewpoint, Monet's window at St Thomas' Hospital overlooking the Thames. They are however painted at different times of the day and at different weather circumstances.",
+ "image": "202.jpg",
+  "artist": "Claude Monet",
+ "pack": "2",
+ "level": "6",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "6",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "6",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "6",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "2",
+ "level": "6",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
+ },
+ {
+ "fact": "",
+ "image": "",
+ "pack": "",
+ "level": "",
+ "unlocked": "",
+ "seen": ""
  }]

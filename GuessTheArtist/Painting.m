@@ -21,5 +21,7 @@
 @dynamic year;
 @dynamic style;
 @dynamic author;
+@dynamic guessed;
+@dynamic andlevel;
 
 @end

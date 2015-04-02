@@ -10,22 +10,22 @@
 
 @implementation Importer
 
-+(void)importData: (NSManagedObjectContext *)context {
++(void)importNativeData: (NSManagedObjectContext *)context {
     NSError* err = nil;
-    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"all-painters2" ofType:@"json"];
+    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"packAPisInstalled"];
+    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"document" ofType:@"json"];
     //parse JSON-file with paintings
     NSArray* paintings = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
                                                          options:kNilOptions
                                                            error:&err];
-    //import painters and artists in separate queue
-    dispatch_queue_t importQueue = dispatch_queue_create("data import", NULL);
-    dispatch_async(importQueue, ^{
-        
-        // do our long running process here
+    NSLog(@"Error: %@", err);
+
+    if (!err && paintings != nil) {
+
         NSMutableDictionary *artistsDictionary = [[NSMutableDictionary alloc] init];
         
         [paintings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) { //going through an array made from JSON-file
-            
+            //NSLog(@"Artist: %@", obj);
             Painting *painting = [Painting addPainting:obj inManagedObjectContext:context]; //adding Painting object
             
             NSString *artistSetName = [obj valueForKey:@"artist"]; //getting arist name for current object
@@ -44,36 +44,34 @@
         
         NSError *err = nil;
         [context save:&err]; //save ManagedObjectContext
-        
-        // do any UI stuff on the main UI thread
-        dispatch_async(dispatch_get_main_queue(), ^{
+    
+        if (!err)
             NSLog(@"Data imported");
-            [[NSNotificationCenter defaultCenter]
-             postNotificationName:@"ImportNotification"
-             object:self];
-        });
         
-    });
-    
-    
+    } else
+        NSLog(@"Error: %@", err.localizedDescription);
 }
 
-+(void)importNewPack: (NSManagedObjectContext *)context {
++(void)importNewPack:(NSString *)packName withContext:(NSManagedObjectContext *)context {
     NSError* err = nil;
-    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"paintings2" ofType:@"json"];
+    
+    NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *dataPath = [[[paths objectAtIndex:0] stringByAppendingPathComponent:bundleID]  stringByAppendingPathComponent:[NSString stringWithFormat:@"import%@.json", packName]];
+
     NSArray* paintings = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
                                                          options:kNilOptions
                                                            error:&err];
     
-    dispatch_queue_t importQueue = dispatch_queue_create("data import", NULL);
-    dispatch_async(importQueue, ^{
-        
-        // do our long running process here
+    if (!err && paintings != nil) {
+
         NSMutableDictionary *artistsDictionary = [[NSMutableDictionary alloc] init];
         
         [paintings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Painting *painting = [Painting addPainting:obj inManagedObjectContext:context];
             NSString *artistSetName = [obj valueForKey:@"artist"];
+            NSLog(@"%@", artistSetName);
             if (![artistsDictionary valueForKey:artistSetName]) { //Set doesn't exist
                 [artistsDictionary setValue:[NSSet setWithObject:painting] forKey:artistSetName];
             } else {
@@ -89,16 +87,12 @@
         
         NSError *err = nil;
         [context save:&err];
-        
-        // do any UI stuff on the main UI thread
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"Data imported");
-            [[NSNotificationCenter defaultCenter]
-             postNotificationName:@"ImportNewPackNotification"
-             object:self];
-        });
-        
-    });
+        if (!err) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ImportNewPackNotification" object:packName];
+            NSLog(@"no error");
+        }
+    } else
+        NSLog(@"Error: %@", err.localizedDescription);
     
 }
 

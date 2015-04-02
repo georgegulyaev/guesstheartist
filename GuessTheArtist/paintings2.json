@@ -1,89 +1,3344 @@
- [{
-        "title": "A Cotton Office in New Orleans",
-        "year": "1873",
-        "owner": "Musee des Beaux-Arts, Pau",
-        "image": "91.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Gustave Caillebotte"
-      },
-      {
-        "title": "The Ballet Class",
-        "year": "1874",
-        "owner": "Musée d'Orsay, Paris",
-        "image": "92.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Georges Seurat, Edouard Manet"
-      },
-      {
-        "title": "Place de la Concorde",
-        "year": "1875",
-        "owner": "Hermitage, St. Petersburg",
-        "image": "93.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Edouard Manet"
-      },
-      {
-        "title": "The Absinthe Drinker",
-        "year": "1876",
-        "owner": "Musée d'Orsay, Paris",
-        "image": "94.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Edouard Manet"
-      },
-      {
-        "title": "Ballet Dancers in the Wings",
-        "year": "1900",
-        "owner": "St. Louis Art Museum, St. Louis",
-        "image": "95.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Camille Pissarro"
-      },
-      {
-        "title": "Dancers",
-        "year": "1899",
-        "owner": "The Toledo Museum of Art",
-        "image": "96.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Camille Pissarro"
-      },
-      {
-        "title": "At the Races in the Countryside",
-        "year": "1869",
-        "owner": "Museum of Fine Arts, Boston",
-        "image": "97.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Edouard Manet"
-      },
-      {
-        "title": "Spartan Girls Challenging Boys",
-        "year": "1860",
-        "owner": "National Gallery, London",
-        "image": "98.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism"
-      },
-      {
-        "title": "Women Combing Their Hair",
-        "year": "1876",
-        "owner": "The Phillips Collection, Washington, DC",
-        "image": "99.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Paul Gauguin"
-      },
-      {
-        "title": "Two Dancers",
-        "year": "1898",
-        "owner": "Galerie Neue Meister, Staatliche Kunstsammlungen Dresden",
-        "image": "100.png",
-        "artist": "Edgar Degas",
-        "style": "Impressionism",
-        "similarity": "Claude Monet"
-      }]
+ [
+  {
+  "title": "A dream",
+  "year": "1932",
+  "owner": "Private Collection",
+  "image": "2.jpg",
+  "artist": "Pablo Picasso",
+  "style": "Cubism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Girl on the ball",
+  "year": "1905",
+  "owner": "Pushkin Museum of Fine Art, Moscow, Russia",
+  "image": "1.jpg",
+  "artist": "Pablo Picasso",
+  "style": "Expressionism, Symbolism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Nude, Green Leaves and Bust",
+  "year": "1932",
+  "owner": "Pushkin Museum of Fine Art, Moscow, Russia",
+  "image": "3.jpg",
+  "artist": "Pablo Picasso",
+  "style": "Expressionism, Symbolism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Mona Lisa",
+  "year": "c.1504",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "4.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Last Supper",
+  "year": "1495",
+  "owner": "Church Santa Maria delle Grazie, Milan, Italy",
+  "image": "5.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Lady with the Ermine",
+  "year": "1496",
+  "owner": "Czartoryski Museum, Cracow, Poland",
+  "image": "6.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Card Players",
+  "year": "1892",
+  "owner": "The Barnes Foundation, USA",
+  "image": "7.jpg",
+  "artist": "Paul Cézanne",
+  "style": "Post-Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Large Bathers",
+  "year": "1900",
+  "owner": "National Gallery, London, U.K.",
+  "image": "8.jpg",
+  "artist": "Paul Cézanne",
+  "style": "Post-Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Stoneware Pitcher",
+  "year": "1894",
+  "owner": "Fondation Beyeler, Switzerland",
+  "image": "9.jpg",
+  "artist": "Paul Cézanne",
+  "style": "Post-Impressionism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Christ in the Storm",
+  "year": "1633",
+  "owner": "Stewart Gardner Museum, Boston, U.S.",
+  "image": "10.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Nightwatch",
+  "year": "1642",
+  "owner": "Amsterdam State Museum, Netherlands",
+  "image": "11.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+  "year": "1632",
+  "owner": "Mauritshuis Royal Picture Gallery, Hague, Netherlands",
+  "image": "12.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Impression, sunrise",
+  "year": "1873",
+  "image": "16.jpg",
+  "artist": "Claude Monet",
+  "style": "Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Poppy Field",
+  "year": "1873",
+  "owner": "Musée d’Orsay, Paris",
+  "image": "17.jpg",
+  "artist": "Claude Monet",
+  "style": "Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Water Lilies",
+  "year": "1919",
+  "owner": "Honolulu Museum of Art, Hawaii, U.S.",
+  "image": "18.jpg",
+  "artist": "Claude Monet",
+  "style": "Impressionism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Lute Player",
+  "year": "1596",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "19.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Calling of Saint Matthew",
+  "year": "1600",
+  "owner": "The Contarelli Chapel, Rome",
+  "image": "20.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Cardsharps",
+  "year": "1594",
+  "owner": "The Kimbell Art Museum, Fort Worth, Texas, USA",
+  "image": "21.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Ulysses Deriding Polyphemus",
+  "year": "1848",
+  "owner": "National Gallery, London, UK",
+  "image": "22.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Fighting Temeraire",
+  "year": "1839",
+  "owner": "National Gallery, London, UK",
+  "image": "23.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Dutch Boats in a Gale",
+  "year": "1801",
+  "owner": "National Gallery, London, UK",
+  "image": "24.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Sistine Chapel Ceiling: Creation of Adam",
+  "year": "1510",
+  "owner": "Sistine Chapel, Vatican City, Italy",
+  "image": "28.jpg",
+  "artist": "Michelangelo",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Conversion of Saul",
+  "year": "1545",
+  "owner": "Capella Paolina, Palazzi Pontifici, Vatican",
+  "image": "29.jpg",
+  "artist": "Michelangelo",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Last Judgement",
+  "year": "1541",
+  "owner": "Sistine Chapel, Vatican City, Italy",
+  "image": "30.jpg",
+  "artist": "Michelangelo",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Nude Maja",
+  "year": "1800",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "34.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Saturn Devouring His Son",
+  "year": "1823",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "36.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Charles IV of Spain and his family",
+  "year": "1800",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "35.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Starry Night",
+  "year": "1889",
+  "owner": "MoMA, The Museum of Modern Art, N.Y., U.S.",
+  "image": "37.jpg",
+  "artist": "Vincent van Gogh",
+  "style": "Post-Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Sunflowers",
+  "year": "1889",
+  "owner": "Van Gogh Museum, Amsterdam, Netherlands",
+  "image": "38.jpg",
+  "artist": "Vincent van Gogh",
+  "style": "Post-Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Church in Auvers-sur-Oise, View from the Chevet",
+  "year": "1890",
+  "owner": "Musée d’Orsay, Paris, France",
+  "image": "39.jpg",
+  "artist": "Vincent van Gogh",
+  "style": "Post-Impressionism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Woman with a Hat",
+  "year": "1905",
+  "owner": "San Francisco Museum of Modern Art, San Francisco, CA, USA",
+  "image": "46.jpg",
+  "artist": "Henri Matisse",
+  "style": "Fauvism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Dance (II)",
+  "year": "1910",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "47.jpg",
+  "artist": "Henri Matisse",
+  "style": "Expressionism, Fauvism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Blue Nude (Souvenir of Biskra)",
+  "year": "1907",
+  "owner": "Baltimore Museum of Art, Baltimore, MD, USA",
+  "image": "48.jpg",
+  "artist": "Henri Matisse",
+  "style": "Fauvism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The School of Athens",
+  "year": "1510",
+  "owner": "Vatican Museums and Galleries, Vatican City, Italy",
+  "image": "49.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Madonna Conestabile",
+  "year": "1502",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "50.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Self Portrait",
+  "year": "1506",
+  "owner": "Galleria degli Uffizi, Florence, Italy",
+  "image": "51.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Scream",
+  "year": "1910",
+  "owner": " The Munch Museum, Oslo, Norway",
+  "image": "52.jpg",
+  "artist": "Edvard Munch",
+  "style": "Expressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Sick Child",
+  "year": "1886",
+  "owner": "National Gallery, Oslo, Norway",
+  "image": "53.jpg",
+  "artist": "Edvard Munch",
+  "style": "Expressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Madonna",
+  "year": "1894",
+  "owner": "The Munch Museum, Oslo, Norway",
+  "image": "54.jpg",
+  "artist": "Edvard Munch",
+  "style": "Expressionism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Massacre of the Innocents",
+  "year": "1637",
+  "owner": "Alte Pinakothek, Munich, Germany",
+  "image": "55.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Fall of Phaeton",
+  "year": "1604",
+  "owner": "National Gallery of Art, Washington, DC, USA",
+  "image": "56.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "Anna of Austria, queen of France, mother of king Louis XIV",
+  "year": "1622",
+  "owner": "The Norton Simon Foundation",
+  "image": "57.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Girl with a Pearl Earring",
+  "year": "1665",
+  "owner": "Royal Picture Gallery Mauritshuis",
+  "image": "73.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The astronomer",
+  "year": "1668",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "74.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Milkmaid",
+  "year": "1660",
+  "owner": "Rijksmuseum, Amsterdam, Netherlands",
+  "image": "75.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "Spartan Girls Challenging Boys",
+  "year": "1860",
+  "owner": "National Gallery, London",
+  "image": "76.jpg",
+  "artist": "Edgar Degas",
+  "style": "Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Absinthe Drinker",
+  "year": "1876",
+  "owner": "Musée d'Orsay, Paris",
+  "image": "77.jpg",
+  "artist": "Edgar Degas",
+  "style": "Impressionism",
+  "pack": "1",
+  "level": "1"
+  },
+  {
+  "title": "The Ballet Class",
+  "year": "1874",
+  "owner": "Musée d'Orsay, Paris",
+  "image": "78.jpg",
+  "artist": "Edgar Degas",
+  "style": "Impressionism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Persistence of Memory",
+  "year": "1931",
+  "owner": "Museum of Modern Art, New York, USA",
+  "image": "82.jpg",
+  "artist": "Salvador Dali",
+  "style": "Surrealism",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "Dream Caused by the Flight of a Bee around a Pomegranate. One Second before Awakening",
+  "year": "1944",
+  "owner": "Thyssen-Bornemisza Collection, Madrid, Spain",
+  "image": "83.jpg",
+  "artist": "Salvador Dali",
+  "style": "Surrealism",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "Young Virgin Auto-Sodomized by the Horns of Her Own Chastity",
+  "year": "1954",
+  "owner": "Private Collection",
+  "image": "84.jpg",
+  "artist": "Salvador Dali",
+  "style": "Surrealism",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Birth of Venus",
+  "year": "1485",
+  "owner": "Galleria degli Uffizi, Florence, Italy",
+  "image": "85.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "Primavera",
+  "year": "1478",
+  "owner": "Galleria degli Uffizi, Florence, Italy",
+  "image": "86.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "Venus and Mars",
+  "year": "1483",
+  "owner": "National Gallery, London, UK",
+  "image": "87.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "1",
+  "level": "3"
+  },
+  {
+  "title": "The Son of Man",
+  "year": "1964",
+  "owner": "Private Collection",
+  "image": "99.jpg",
+  "artist": "René Magritte",
+  "style": "Surrealism",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "The Human Condition",
+  "year": "1933",
+  "owner": "National Gallery of Art, Washington DC",
+  "image": "100.jpg",
+  "artist": "René Magritte",
+  "style": "Surrealism",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "The Great Wave off Kanagawa",
+  "year": "1831",
+  "owner": "Private Collection",
+  "image": "109.jpg",
+  "artist": "Katsushika Hokusai",
+  "style": "Ukiyo-e",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "Fuji, Mountains in clear Weather (Red Fuji)",
+  "year": "1831",
+  "owner": "Private Collection",
+  "image": "110.jpg",
+  "artist": "Katsushika Hokusai",
+  "style": "Ukiyo-e",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "Self-Portrait with Thorn Necklace and Hummingbird",
+  "year": "1940",
+  "image": "123.jpg",
+  "artist": "Frida Kahlo",
+  "style": "Naïve Art (Primitivism)",
+  "pack": "1",
+  "level": "2"
+  },
+  {
+  "title": "The Wounded Deer",
+  "year": "1946",
+  "owner": "Collection of Carolyn Farb Houston, Texas, U.S.A.",
+  "image": "124.jpg",
+  "artist": "Frida Kahlo",
+  "style": "Naïve Art (Primitivism)",
+  "pack": "1",
+  "level": "2"
+  },
+  
+  {
+  "title": "Mona Lisa",
+  "year": "c.1504",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "4.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Last Supper",
+  "year": "1495",
+  "owner": "Church Santa Maria delle Grazie, Milan, Italy",
+  "image": "5.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Lady with the Ermine",
+  "year": "1496",
+  "owner": "Czartoryski Museum, Cracow, Poland",
+  "image": "6.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Bird's Eye View of a Landscape",
+  "year": "c.1502",
+  "owner": "Royal Collection, Windsor Castle, London, UK",
+  "image": "151.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Annunciation",
+  "year": "c.1480",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "154.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Virgin of the Rocks",
+  "year": "c.1485",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "155.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Leda",
+  "year": "c.1510",
+  "owner": "Galleria Borghese, Rome, Italy",
+  "image": "156.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "St. John the Baptist",
+  "year": "c.1515",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "157.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Flying machine",
+  "year": "c.1487",
+  "owner": "Institut de France, Paris, France",
+  "image": "158.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Head of a Woman",
+  "year": "c.1508",
+  "owner": "Galleria Nazionale, Parma, Italy",
+  "image": "160.jpg",
+  "artist": "Leonardo da Vinci",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Sistine Chapel Ceiling: Creation of Adam",
+  "year": "1510",
+  "owner": "Sistine Chapel, Vatican City, Italy",
+  "image": "28.jpg",
+  "artist": "Michelangelo",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Conversion of Saul",
+  "year": "1545",
+  "owner": "Capella Paolina, Palazzi Pontifici, Vatican",
+  "image": "29.jpg",
+  "artist": "Michelangelo",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Last Judgement",
+  "year": "1541",
+  "owner": "Sistine Chapel, Vatican City, Italy",
+  "image": "30.jpg",
+  "artist": "Michelangelo",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Last Judgement (St. Bartholomew displaying his flayed skin.)",
+  "year": "1541",
+  "owner": "Sistine Chapel, Vatican City, Italy",
+  "image": "30-1.jpg",
+  "artist": "Michelangelo",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The School of Athens",
+  "year": "1510",
+  "owner": "Vatican Museums and Galleries, Vatican City, Italy",
+  "image": "49.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Madonna Conestabile",
+  "year": "1502",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "50.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Self Portrait",
+  "year": "1506",
+  "owner": "Galleria degli Uffizi, Florence, Italy",
+  "image": "51.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Holy Family with a Lamb",
+  "year": "1507",
+  "owner": " Museo del Prado, Madrid, Spain",
+  "image": "281.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Portrait of Bindo Altoviti",
+  "year": "1512",
+  "owner": "National Gallery of Art, Washingon, DC, USA",
+  "image": "282.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Presentation in the Temple",
+  "year": "1502",
+  "owner": "Pinacoteca Vaticana, Rome, Italy",
+  "image": "283.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Madonna and Child",
+  "year": "1505",
+  "owner": "National Gallery of Art, Washingon, DC, USA",
+  "image": "284.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "St. Michael",
+  "year": "1505",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "285.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Portrait of Agnolo Doni",
+  "year": "1506",
+  "owner": "Galleria Palatina (Palazzo Pitti), Florence, Italy",
+  "image": "286.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Vision of a Knight",
+  "year": "1504",
+  "owner": "National Gallery, London, UK",
+  "image": "287.jpg",
+  "artist": "Raphael",
+  "style": "High Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Birth of Venus",
+  "year": "1485",
+  "owner": "Galleria degli Uffizi, Florence, Italy",
+  "image": "85.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Primavera",
+  "year": "1478",
+  "owner": "Galleria degli Uffizi, Florence, Italy",
+  "image": "86.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Venus and Mars",
+  "year": "1483",
+  "owner": "National Gallery, London, UK",
+  "image": "87.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Adoration of the Magi",
+  "year": "1476",
+  "owner": "Santa Maria Novella church (destroyed)",
+  "image": "401.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Portrait of Dante",
+  "year": "1478",
+  "owner": "Private Collection",
+  "image": "402.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Portrait of Simonetta Vespucci",
+  "year": "1476",
+  "owner": "Staatliche Museen zu Berlin, Gemäldegalerie, Berlin, Germany",
+  "image": "403.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Giuliano de Medici",
+  "year": "1478",
+  "owner": "Staatliche Museen zu Berlin, Gemäldegalerie, Berlin, Germany",
+  "image": "404.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Story of Lucretia",
+  "year": "1504",
+  "owner": "Isabella Stewart Gardner Museum, Boston, Massachusetts, USA",
+  "image": "405.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Pallas and Centaur",
+  "year": "1482",
+  "owner": "Galleria degli Uffizi, Florence, Italy",
+  "image": "407.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Story of Nastagio Degli Onesti - The Banquet in the Pine Forest",
+  "year": "1483",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "408.jpg",
+  "artist": "Sandro Botticelli",
+  "style": "Early Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Garden of Earthly Delights",
+  "year": "1515",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "105.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Triptych: The Temptation of St. Anthony",
+  "year": "1516",
+  "owner": "Museu Nacional de Arte Antigua",
+  "image": "106.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Christ Carrying the Cross",
+  "year": "1490",
+  "owner": "Kunsthistorisches Museum, Vienna, Austria",
+  "image": "512.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Crucifixion with a Donor",
+  "year": "1485",
+  "owner": "Musée Royaux des Beaux-Arts, Brussels, Belgium",
+  "image": "513.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Concert in the Egg",
+  "year": "1516",
+  "owner": "Palais des Beaux-Arts de Lille, France",
+  "image": "514.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Ship of Fools",
+  "year": "1500",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "515.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Conjurer",
+  "year": "1505",
+  "owner": "Saint-Germain-en-Laye, Paris, France",
+  "image": "516.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "St. John the Baptist in Meditation",
+  "year": "1499",
+  "owner": "Museo Lazaro Galdiano, Madrid, Spain",
+  "image": "517.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Allegory of Gluttony and Lust",
+  "year": "1500",
+  "owner": "Yale University Art Gallery in New Haven, Connecticut, USA",
+  "image": "520.jpg",
+  "artist": "Hieronymus Bosch",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Netherlandish Proverbs",
+  "year": "1559",
+  "owner": "Gemäldegalerie, Berlin, Germany",
+  "image": "93.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Blind Leading the Blind",
+  "year": "1568",
+  "owner": "Museo di Capodimonte, Naples, Italy",
+  "image": "94.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Hunters in the Snow",
+  "year": "1565",
+  "owner": "Kunsthistorisches Museum, Vienna, Austria",
+  "image": "431.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Gloomy Day",
+  "year": "1559",
+  "owner": "Kunsthistorisches Museum, Vienna, Austria",
+  "image": "433.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Triumph of Death",
+  "year": "1562",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "434.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The \"Little\" Tower of Babel",
+  "year": "1563",
+  "owner": "Museum Boijmans van Beuningen, Rotterdam, Netherlands",
+  "image": "435.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Christ and the Woman taken in Adultery",
+  "year": "1565",
+  "owner": "Samuel Courtauld Trust, The Courtauld Gallery, London, UK",
+  "image": "436.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Adoration of the Kings",
+  "year": "1564",
+  "owner": "National Gallery, London, UK",
+  "image": "437.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Land of Cockaigne",
+  "year": "1567",
+  "owner": "Alte Pinakothek, Munich, Germany",
+  "image": "438.jpg",
+  "artist": "Pieter Bruegel",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Rolin Madonna",
+  "year": "1435",
+  "image": "721.jpg",
+  "owner": "Musée du Louvre, Paris, France",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Arnolfini Wedding",
+  "year": "1434",
+  "owner": "National Gallery, London, UK",
+  "image": "722.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Virgin of the Chancellor Rolin (detail)",
+  "year": "1436",
+  "owner": "The Louvre, Paris, France",
+  "image": "723.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "A Man in a Turban",
+  "year": "1433",
+  "owner": "National Gallery, London, UK",
+  "image": "724.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Portrait of Giovanni Arnolfini",
+  "year": "1435",
+  "owner": "Staatliche Museen zu Berlin, Gemäldegalerie, Berlin, Germany",
+  "image": "725.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Madonna of Canon van der Paele (detail)",
+  "year": "1436",
+  "owner": "Musee Communal des Beaux-Arts, Bruges, Belgium",
+  "image": "726.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "St. Francis Receiving the Stigmata",
+  "year": "1427",
+  "owner": "Galleria Sabauda, Turin, Italy",
+  "image": "727.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Adoration of the Lamb",
+  "year": "1429",
+  "owner": "Royal Museum of Fine Arts, Antwerp, Belgium",
+  "image": "728.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Madonna in the Church",
+  "year": "1439",
+  "owner": "Staatliche Museen zu Berlin, Gemäldegalerie, Berlin, Germany",
+  "image": "729.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Madonna and Child with Canon Joris van der Paele",
+  "year": "1436",
+  "owner": "Groeningemuseum, Bruges, Belgium",
+  "image": "730.jpg",
+  "artist": "Jan van Eyck",
+  "style": "Northern Renaissance",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Dormition of the Virgin",
+  "year": "1566",
+  "owner": "Holy Cathedral of the, Dormition of the Virgin, Hermoupolis, Greece",
+  "image": "1041.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Burial of the Count of Orgaz",
+  "year": "1587",
+  "owner": "Toledo Cathedral, Toledo, Spain",
+  "image": "1042.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Coronation of the Virgin",
+  "year": "1591",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "1043.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "View of Toledo",
+  "year": "1599",
+  "owner": "Metropolitan Museum of Art, New York City",
+  "image": "1044.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Portrait of an old man",
+  "year": "1600",
+  "owner": "Metropolitan Museum of Art, New York City",
+  "image": "1045.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Last Supper",
+  "year": "1568",
+  "owner": "Pinacoteca Nazionale, Bologna, Italy",
+  "image": "1046.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Christ carrying the cross",
+  "year": "1578",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "1047.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Portrait of a man",
+  "year": "1580",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "1048.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Julian Romero de las Azanas and his patron St. Julian",
+  "year": "1590",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "1049.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Painting (Man with a Pipe)",
+  "year": "1925",
+  "owner": "Museo Reina Sofia, Madrid, Spain",
+  "image": "1050.jpg",
+  "artist": "El Greco",
+  "style": "Mannerism (Late Renaissance)",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Storm on the Sea of Galilee",
+  "year": "1633",
+  "owner": "Stewart Gardner Museum, Boston, U.S.",
+  "image": "10.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Nightwatch",
+  "year": "1642",
+  "owner": "Amsterdam State Museum, Netherlands",
+  "image": "11.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+  "year": "1632",
+  "owner": "Mauritshuis Royal Picture Gallery, Hague, Netherlands",
+  "image": "12.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Return of the Prodigal Son",
+  "year": "1669",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "181.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Danae",
+  "year": "1643",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "182.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Belshazzar's Feast",
+  "year": "1635",
+  "owner": "National Gallery, London, UK",
+  "image": "183.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Self-portrait with Saskia",
+  "year": "c. 1635",
+  "owner": "National Gallery, London, UK",
+  "image": "184.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Two Studies Of A Bird Of Paradise",
+  "year": "1630",
+  "owner": "Private Collection",
+  "image": "185.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Self-Portrait with Beret and Turned-Up Collar",
+  "year": "1659",
+  "owner": "National Gallery of Art, London, UK",
+  "image": "187.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Rich Fool",
+  "year": "1627",
+  "owner": "Gemäldegalerie, Berlin, Germany",
+  "image": "189.jpg",
+  "artist": "Rembrandt",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Lute Player",
+  "year": "1596",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "19.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Calling of Saint Matthew",
+  "year": "1600",
+  "owner": "The Contarelli Chapel, Rome",
+  "image": "20.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Cardsharps",
+  "year": "1594",
+  "owner": "The Kimbell Art Museum, Fort Worth, Texas, USA",
+  "image": "21.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Boy with a Basket of Fruit",
+  "year": "1593",
+  "owner": "The Borghese Gallery, Rome",
+  "image": "221.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Basket of Fruit",
+  "year": "1596",
+  "owner": "The Biblioteca Ambrosiana, Milan, Italy",
+  "image": "223.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Jupiter, Neptune and Pluto",
+  "year": "1597",
+  "owner": "Cathedral Museum, Toledo, Spain",
+  "image": "224.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "David and Goliath",
+  "year": "1599",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "225.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Narcissus",
+  "year": "1599",
+  "owner": "National Gallery of Ancient Art, Rome, Italy",
+  "image": "227.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Saint Jerome Writing",
+  "year": "1605",
+  "owner": "The Borghese Gallery, Rome",
+  "image": "228.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Young Sick Bacchus",
+  "year": "1593",
+  "owner": "The Borghese Gallery, Rome",
+  "image": "229.jpg",
+  "artist": "Caravaggio",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Massacre of the Innocents",
+  "year": "1637",
+  "owner": "Alte Pinakothek, Munich, Germany",
+  "image": "55.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Fall of Phaeton",
+  "year": "1604",
+  "owner": "National Gallery of Art, Washington, DC, USA",
+  "image": "56.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Anna of Austria, queen of France, mother of king Louis XIV",
+  "year": "1622",
+  "owner": "The Norton Simon Foundation",
+  "image": "57.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Marchesa Brigida Spinola Doria",
+  "year": "1606",
+  "owner": "National Gallery of Art, Washington, DC, USA",
+  "image": "301.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Self-Portrait",
+  "year": "1639",
+  "owner": "Kunsthistorisches Museum, Vienna, Austria",
+  "image": "302.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Charles V in Armour",
+  "year": "1603",
+  "owner": "Private Collection",
+  "image": "303.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Rape of the Daughters of Leucippus",
+  "year": "1618",
+  "owner": "Alte Pinakothek, Munich, Germany",
+  "image": "304.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Samson and Delilah",
+  "year": "1610",
+  "owner": "Cincinnati Art Museum, Cincinnati, OH, USA",
+  "image": "305.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Portrait of Lady Arundel with her Train",
+  "year": "1620",
+  "owner": "Alte Pinakothek, Munich, Germany",
+  "image": "308.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Marie de Medicis as Bellona",
+  "year": "1625",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "309.jpg",
+  "artist": "Peter Paul Rubens",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Girl with a Pearl Earring",
+  "year": "1665",
+  "owner": "Royal Picture Gallery Mauritshuis",
+  "image": "73.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The astronomer",
+  "year": "1668",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "74.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Milkmaid",
+  "year": "1660",
+  "owner": "Rijksmuseum, Amsterdam, Netherlands",
+  "image": "75.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Girl interrupted at her music",
+  "year": "1661",
+  "owner": "Frick Collection, New York, USA",
+  "image": "352.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The music lesson",
+  "year": "1665",
+  "image": "353.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "View on Delft",
+  "year": "1661",
+  "owner": "Royal Picture Gallery Mauritshuis",
+  "image": "354.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Lady Writing a Letter with Her Maid",
+  "year": "1670",
+  "owner": "National Gallery of Ireland, Dublin, Ireland",
+  "image": "355.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Procuress",
+  "year": "1656",
+  "owner": "Gemäldegalerie Alte Meister, Dresden, Germany",
+  "image": "357.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Little Street",
+  "year": "1660",
+  "owner": "Rijksmuseum, Amsterdam, Netherlands",
+  "image": "358.jpg",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "The Geographer",
+  "year": "1669",
+  "image": "359.jpg",
+  "owner": "Städel Museum, Frankfurt am Main, Germany",
+  "artist": "Johannes Vermeer",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Las Meninas",
+  "year": "1656",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "107.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Surrender of Breda",
+  "year": "1635",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "108.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Rokeby Venus",
+  "year": "1648",
+  "image": "853.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Forge of Vulcan",
+  "year": "1630",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "854.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Lunch",
+  "year": "1620",
+  "image": "855.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "A White Horse",
+  "year": "1635",
+  "owner": "Palacio Real, Madrid, Spain",
+  "image": "856.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "St. Anthony the Abbot and St. Paul the First Hermit",
+  "year": "1635",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "857.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Self-Portrait",
+  "year": "1640",
+  "owner": "Museo de Bellas Artes, Valencia, Spain",
+  "image": "858.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Don Sebastian de Morra",
+  "year": "1645",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "859.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Portrait of the Infanta Margarita Aged Five",
+  "year": "1656",
+  "owner": "Kunsthistorisches Museum, Vienna, Austria",
+  "image": "860.jpg",
+  "artist": "Diego Velázquez",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Officers And Sergeants Of The St. Hadrian Civic Guard",
+  "year": "1639",
+  "image": "821.jpg",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Regents of the St. Elisabeth's Hospital, Haarlem",
+  "year": "1641",
+  "image": "822.jpg",
+  "owner": "Frans Hals Museum, Haarlem, Netherlands",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Boy Playing A Violin",
+  "image": "823.jpg",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Marriage Portrait of Isaac Massa and Beatrix van der Laen",
+  "image": "824.jpg",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Family portrait",
+  "year": "1635",
+  "image": "825.jpg",
+  "owner": "Cincinnati Art Museum, Cincinnati, OH, USA",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Paulus van Beresteyn",
+  "year": "1620",
+  "image": "826.jpg",
+  "owner": "Musée du Louvre, Paris, France",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Portrait of a Jester with a Lute",
+  "year": "1624",
+  "image": "827.jpg",
+  "owner": "Musée du Louvre, Paris, France",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Portrait of a Young Man with a Glove",
+  "year": "1640",
+  "image": "828.jpg",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "Family Group in a Landscape",
+  "year": "1649",
+  "image": "829.jpg",
+  "owner": "The Thyssen-Bornemisza Museum, Madrid, Spain",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  {
+  "title": "A Banquet of the Officers of the St. George Militia Company",
+  "year": "1616",
+  "image": "830.jpg",
+  "owner": "Frans Hals Museum, Haarlem, Netherlands",
+  "artist": "Frans Hals",
+  "style": "Baroque",
+  "pack": "2",
+  "level": "2"
+  },
+  
+  {
+  "title": "Nude Maja",
+  "year": "1800",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "34.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Saturn Devouring His Son",
+  "year": "1823",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "36.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Charles IV of Spain and his family",
+  "year": "1800",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "35.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Self-portrait in the Studio",
+  "year": "1790",
+  "owner": "Real Academia de Bellas Artes de San Fernando, Madrid, Spain",
+  "image": "261.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Straw Manikin",
+  "year": "1792",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "264.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Picador Caught by the Bull",
+  "year": "1793",
+  "owner": "Private Collection",
+  "image": "265.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Summer, or The Harvest",
+  "year": "1786",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "266.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Witches' Sabbath",
+  "year": "1798",
+  "owner": "Museo Lázaro Galdiano, Madrid, Spain",
+  "image": "267.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Colossus",
+  "year": "1812",
+  "owner": "Museo del Prado, Madrid, Spain",
+  "image": "268.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Don Manuel Osorio Manrique de Zuniga",
+  "year": "1787",
+  "owner": "Metropolitan Museum of Art, New York City",
+  "image": "269.jpg",
+  "artist": "Francisco Goya",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Self-Portrait",
+  "year": "1799",
+  "owner": "Tate Gallery, London, UK",
+  "image": "231.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Stamford",
+  "year": "1828",
+  "owner": "Lincolnshire County Council, Usher Gallery, Lincoln, UK",
+  "image": "234.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Lake of Thun, Switzerland",
+  "year": "1806",
+  "owner": "Private Collection",
+  "image": "235.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Venice with the Salute",
+  "year": "1840",
+  "owner": "Tate Britain, London, England, UK",
+  "image": "237.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Rain Steam and Speed, The Great Western Railway",
+  "year": "1844",
+  "owner": "National Gallery, London, UK",
+  "image": "238.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Burning of the Houses of Parliament",
+  "year": "1834",
+  "owner": "Philadelphia Museum of Art, Philadelphia, PA, USA",
+  "image": "239.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Storm Seam Boat off a Harbour's Mouth Making Signals in Shallow Water, and Going by the Lead",
+  "year": "182",
+  "owner": " Tate Gallery, London, UK",
+  "image": "240.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Ulysses Deriding Polyphemus",
+  "year": "1848",
+  "owner": "National Gallery, London, UK",
+  "image": "22.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Fighting Temeraire",
+  "year": "1839",
+  "owner": "National Gallery, London, UK",
+  "image": "23.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Dutch Boats in a Gale",
+  "year": "1801",
+  "owner": "National Gallery, London, UK",
+  "image": "24.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Grand Canal, Venice",
+  "year": "1834",
+  "owner": "Yale Center for British Art, Paul Mellon Collection, Connecticut, USA",
+  "image": "240.jpg",
+  "artist": "J. M. W. Turner",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Salisbury Cathedral from the Bishop's Garden",
+  "year": "1823",
+  "owner": " Victoria and Albert Museum, London, UK",
+  "image": "88.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Seascape Study with Rain Cloud",
+  "year": "1827",
+  "owner": "Royal Academy of Arts, London, UK",
+  "image": "89.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Wivenhoe Park",
+  "year": "1816",
+  "owner": "National Gallery of Art, Washington, DC, USA",
+  "image": "90.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  
+  {
+  "title": "Stonehenge",
+  "year": "1835",
+  "owner": " Victoria and Albert Museum, London, UK",
+  "image": "411.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "A Cottage in a Cornfield",
+  "year": "1817",
+  "owner": "National Museum of Wales (Amgueddfa Cymru), Wales, UK",
+  "image": "412.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Yarmouth Pier",
+  "year": "1822",
+  "owner": "The Berger Collection at the Denver Art Museum, USA",
+  "image": "413.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Old Sarum",
+  "year": "1834",
+  "owner": "Victoria and Albert Museum, London, UK",
+  "image": "414.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Brighton Beach",
+  "year": "No information",
+  "owner": "Royal Academy of Arts, London, UK",
+  "image": "415.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Hadleigh Castle",
+  "year": "1829",
+  "owner": "Yale Center for British Art, Connecticut, USA",
+  "image": "416.jpg",
+  "artist": "John Constable",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Ancient of Days",
+  "year": "1794",
+  "owner": "Private Collection",
+  "image": "70.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Oberon, Titania and Puck with Fairies Dancing",
+  "year": "1786",
+  "owner": "Private Collection",
+  "image": "71.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Red Dragon and the Woman Clothed with the Sun",
+  "year": "1805",
+  "owner": "Brooklyn Museum, Brooklyn, New York, USA",
+  "image": "72.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Isaac Newton",
+  "year": "1795",
+  "owner": "Tate Gallery, London, UK",
+  "image": "341.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Jacob's Ladder",
+  "year": "1806",
+  "owner": "Private Collection",
+  "image": "342.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Naomi entreating Ruth and Orpah to return to the land of Moab",
+  "year": "1795",
+  "owner": "Victoria and Albert Museum, London, UK",
+  "image": "343.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Hecate The Night of Enitharmon`s Joy",
+  "year": "1795",
+  "owner": "Tate Gallery, London, UK",
+  "image": "344.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Los Entering the Grave",
+  "year": "1820",
+  "owner": "Yale Center for British Art",
+  "image": "345.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Satan Smiting Job with Sore Boils",
+  "year": "1826",
+  "owner": "Tate Gallery, London, UK",
+  "image": "349.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Lovers Whirlwind",
+  "year": "1827",
+  "owner": "City Museum and Art Gallery",
+  "image": "350.jpg",
+  "artist": "William Blake",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Seated Demon",
+  "year": "1890",
+  "owner": "Tretyakov Gallery, Moscow, Russia",
+  "image": "58.jpg",
+  "artist": "Mikhail Vrubel",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Swan Princess",
+  "year": "1900",
+  "owner": "Tretyakov Gallery, Moscow, Russia",
+  "image": "59.jpg",
+  "artist": "Mikhail Vrubel",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Demon Downcast",
+  "year": "1902",
+  "owner": "Tretyakov Gallery, Moscow, Russia",
+  "image": "60.jpg",
+  "artist": "Mikhail Vrubel",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Boreas",
+  "year": "1903",
+  "owner": "Private Collection",
+  "image": "1021.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "A Mermaid",
+  "year": "1900",
+  "owner": "Royal Academy of Arts, England",
+  "image": "1022.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Its sweet doing nothing",
+  "year": "1879",
+  "owner": "Private Collection",
+  "image": "1023.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Saint Eulalia",
+  "year": "1885",
+  "owner": "Tate Britain, London, England, UK",
+  "image": "1024.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Magic Circle",
+  "year": "1886",
+  "owner": "Private Collection",
+  "image": "1025.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Lady of Shalott",
+  "year": "1888",
+  "owner": "Tate Britain, London, England, UK",
+  "image": "1026.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Ophelia",
+  "year": "1889",
+  "owner": "Private Collection",
+  "image": "1027.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Pandora",
+  "year": "1898",
+  "owner": "Private Collection",
+  "image": "1028.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Awakening of Adonis",
+  "year": "1899",
+  "owner": "Private Collection",
+  "image": "1029.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Ulysses and the Sirens",
+  "year": "1891",
+  "owner": "National Gallery of Victoria, Melbourne, Australia",
+  "image": "1030.jpg",
+  "artist": "J. W. Waterhouse",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "White Stone",
+  "year": "1933",
+  "owner": "Nicholas Roerich Museum, New York, USA",
+  "image": "921.jpg",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Waves of fog",
+  "year": "1924",
+  "owner": "Nicholas Roerich Museum, New York, USA",
+  "image": "922.jpg",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Book of Wisdom",
+  "year": "1924",
+  "image": "923.jpg",
+  "owner": "Private Collection",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Krishna (Spring in Kulu)",
+  "year": "1930",
+  "image": "924.jpg",
+  "owner": "Nicholas Roerich Museum, New York, USA",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Mount of five treasures",
+  "year": "1933",
+  "image": "925.jpg",
+  "owner": "Nicholas Roerich Museum, New York, USA",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Star of the Hero",
+  "year": "1936",
+  "owner": "Nicholas Roerich Museum, New York, USA",
+  "image": "926.jpg",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Saint Sophia the Almighty Wisdom",
+  "year": "1932",
+  "owner": "Nicholas Roerich Museum, New York, USA",
+  "image": "927.jpg",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Mstislav's duel with Rededia",
+  "year": "1943",
+  "owner": "Russian Museum, St. Petersburg, Russia",
+  "image": "928.jpg",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Visitors from over the sea",
+  "year": "1901",
+  "owner": "Tretyakov Gallery, Moscow, Russia",
+  "image": "929.jpg",
+  "artist": "Nicholas Roerich",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Kiss",
+  "year": "1908",
+  "owner": "The Österreichische Galerie Belvedere, Vienna, Austria",
+  "image": "67.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Art Nouveau (Modern)",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Portrait of Adele Bloch-Bauer I",
+  "year": "1907",
+  "owner": "Private Collection",
+  "image": "68.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Art Nouveau (Modern)",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Tree of life",
+  "year": "1909",
+  "owner": "Austrian Museum of Applied Arts, Vienna, Austria",
+  "image": "69.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Art Nouveau (Modern)",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Farmhouse with Birch Trees",
+  "year": "1903",
+  "owner": "The Österreichische Galerie Belvedere, Vienna, Austria",
+  "image": "331.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Art Nouveau (Modern)",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "University of Vienna Ceiling Paintings (Medicine), detail showing Hygieia",
+  "year": "1907",
+  "owner": "Destroyed in 1945",
+  "image": "334.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Art Nouveau (Modern)",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Portrait of Helene Klimt",
+  "year": "1898",
+  "owner": "Private Collection",
+  "image": "335.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Portrait of Rose von Rosthorn-Friedmann",
+  "year": "1901",
+  "owner": "The Österreichische Galerie Belvedere, Vienna, Austria",
+  "image": "336.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Houses at Unterach on the Attersee",
+  "year": "c.1916",
+  "owner": "Private Collection",
+  "image": "337.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Art Nouveau (Modern)",
+  "pack": "2",
+  "level": "4"
+  },
+  
+  {
+  "title": "Portrait of Adele Bloch-Bauer II",
+  "year": "1912",
+  "owner": "Private Collection",
+  "image": "339.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Art Nouveau (Modern)",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Schubert at the Piano II",
+  "year": "1899",
+  "owner": "The painting was destroyed",
+  "image": "340.jpg",
+  "artist": "Gustav Klimt",
+  "style": "Symbolism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Dante and Virgil in Hell",
+  "year": "1850",
+  "owner": "Private Collection",
+  "image": "113.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Birth Of Venus",
+  "year": "1879",
+  "owner": "Musée d'Orsay, Paris, France",
+  "image": "114.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Portrait of the Artist",
+  "year": "1879",
+  "owner": "Montreal Museum of Arts, Quebec, Canada",
+  "image": "541.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Little Knitter",
+  "year": "1882",
+  "owner": "Appleton Museum of Art, Florida, USA",
+  "image": "542.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Rest in Harvest",
+  "year": "1865",
+  "owner": "Philbrook Museum of Art, Oklahoma, USA",
+  "image": "543.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Shepherdess",
+  "year": "1889",
+  "owner": "Philadelphia Museum of Art, Philadelphia, PA, USA",
+  "image": "544.jpg",
+  "artist": "Bouguereau",
+  "style": "Realism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Shell",
+  "year": "1871",
+  "owner": "Private Collection",
+  "image": "545.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Nymphs and Satyr",
+  "year": "1873",
+  "owner": "Sterling and Francine Clark Art Institute at Williamstown, MA, USA",
+  "image": "546.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Homer and his Guide",
+  "year": "1874",
+  "owner": "Milwaukee Art Museum, Milwaukee, Wisconsin, USA",
+  "image": "547.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Marguerite",
+  "year": "1903",
+  "owner": "Private Collection",
+  "image": "548.jpg",
+  "artist": "Bouguereau",
+  "style": "Realism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Madame la Comtesse de Cambaceres",
+  "year": "1895",
+  "owner": "The Seattle Art Museum, Washington, USA",
+  "image": "549.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Cupidon",
+  "year": "1891",
+  "owner": "Private Collection",
+  "image": "550.jpg",
+  "artist": "Bouguereau",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Death of Marat",
+  "year": "1793",
+  "owner": "Musée Royaux des Beaux-Arts, Brussels, Belgium",
+  "image": "91.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Consecration of the Emperor Napoleon",
+  "year": "1807",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "92.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Oath of Horatii",
+  "year": "1784",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "421.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Lictors Bearing to Brutus the Bodies of his Sons",
+  "year": "1789",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "422.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Patrocles",
+  "owner": "Musee d'Art Thomas Henry, Cherbourg, France",
+  "image": "423.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "Napoleon Bonaparte in his Study at the Tuileries",
+  "year": "1812",
+  "owner": "Private Collection",
+  "image": "424.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "1"
+  },{
+  "title": "Self Portrait",
+  "year": "1794",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "425.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "1"
+  },
+  {
+  "title": "The Combat of Mars and Minerva",
+  "year": "1771",
+  "owner": "Musée du Petit Palais, Paris, France",
+  "image": "426.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },{
+  "title": "Portrait of Marie Francoise Buron",
+  "year": "1769",
+  "owner": "Musee National des Beaux Arts, Algiers",
+  "image": "427.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Portrait of Alphonse Leroy",
+  "year": "1783",
+  "owner": "Musée Fabre, Montpellier, France",
+  "image": "428.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },{
+  "title": "Sappho and Phaon",
+  "year": "1809",
+  "owner": "Hermitage, St. Petersburg, Russia",
+  "image": "429.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Death of Socrates",
+  "year": "1787",
+  "owner": "Metropolitan Museum of Art, New York City, USA",
+  "image": "430.jpg",
+  "artist": "Jacques-Louis David",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Napoleon I on his Imperial Throne",
+  "year": "1806",
+  "owner": "Musée de l'Armée, Hôtel des Invalides,Paris",
+  "image": "101.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Turkish Bath",
+  "year": "1863",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "102.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Jupiter and Thetis",
+  "year": "1811",
+  "owner": "Musée Granet, Aix-en-Provence, France",
+  "image": "491.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Portrait of Napoléon Bonaparte, The First Council",
+  "year": "1804",
+  "owner": "Musée des Beaux-Arts, Liège, France",
+  "image": "492.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Apotheosis of Homer",
+  "year": "1827",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "493.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Self-Portrait",
+  "year": "1804",
+  "owner": "Metropolitan Museum of Art, New York City",
+  "image": "494.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Portrait of Mademoiselle Rivière",
+  "year": "1805",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "495.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Caroline Murat, Queen of Naples",
+  "year": "1814",
+  "owner": "Private Collection",
+  "image": "496.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "The Sistine Chapel",
+  "year": "1814",
+  "owner": "National Gallery of Art, Washington, DC, USA",
+  "image": "497.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Portrait of Monsieur Bertin",
+  "year": "1832",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "498.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Grande Odalisque",
+  "year": "1814",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "499.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Bather of Valpinçon",
+  "year": "1808",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "500.jpg",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "style": "Neoclassicism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Liberty Leading the People",
+  "year": "1830",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "115.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Orphan Girl at the Cemetery",
+  "year": "1824",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "116.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Scenes from the Massacre of Chios",
+  "year": "1822",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "871.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "The Women of Algiers in their Apartment",
+  "year": "1834",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "872.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Self-Portrait",
+  "year": "1837",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "873.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Michelangelo in his Studio",
+  "year": "1850",
+  "owner": "Musée Fabre, Montpellier, France",
+  "image": "874.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Jewish wedding in Morocco",
+  "year": "1839",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "875.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Hamlet and Horatio in the graveyard",
+  "year": "1839",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "876.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "Greece on the Ruins of Missolonghi",
+  "year": "1826",
+  "owner": "Musée des Beaux-Arts de Bordeaux, Bordeaux, France",
+  "image": "877.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "A Young Tiger Playing with Its Mother",
+  "year": "1831",
+  "owner": "Musée du Louvre, Paris, France",
+  "image": "878.jpg",
+  "artist": "Eugene Delacroix",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "View of the Kremlin from the Krimsky Bridge in Inclement Weather",
+  "year": "1851",
+  "owner": "Tretyakov Gallery, Moscow, Russia",
+  "image": "863.jpg",
+  "artist": "Alexei Savrasov",
+  "style": "Realism",
+  "pack": "2",
+  "level": "4"
+  },
+  {
+  "title": "View in the Neighbourhood of Oranienbaum",
+  "year": "1854",
+  "owner": " Russian Museum, St. Petersburg, Russia",
+  "image": "864.jpg",
+  "artist": "Alexei Savrasov",
+  "style": "Realism",
+  "pack": "2",
+  "level": "3"
+  },
+  {
+  "title": "Monastery Gates",
+  "year": "1875",
+  "owner": " Russian Museum, St. Petersburg, Russia",
+  "image": "867.jpg",
+  "artist": "Alexei Savrasov",
+  "style": "Realism",
+  "pack": "2",
+  "level": "3"
+  },
+  
+  {
+  "title": "Les Demoiselles du bord de la Seine",
+  "year": "1856",
+  "owner": "Petit Palais, City of Paris Fine Art Museum, Paris, France",
+  "image": "64.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "The Artist’s Studio",
+  "year": "1855",
+  "owner": "Musée d'Orsay, Paris, France",
+  "image": "65.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "The Stone Breakers",
+  "year": "1850",
+  "owner": "Destroyed during World War II",
+  "image": "66-1.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "The Desperate Man",
+  "year": "1845",
+  "owner": "Private Collection",
+  "image": "66.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Romanticism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "The Meeting (Bonjour Monsieur Courbet)",
+  "year": "1854",
+  "owner": "Musée Fabre, Montpellier, France",
+  "image": "321.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "The Wheat Sifters",
+  "year": "1855",
+  "owner": "Musée des Beaux Arts, Nantes, France",
+  "image": "322.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "The Wave",
+  "year": "1870",
+  "owner": "Private Collection",
+  "image": "323.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "A Burial at Ornans",
+  "year": "1850",
+  "owner": "Musée d'Orsay, Paris, France",
+  "image": "324.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "The Village Maidens",
+  "year": "1852",
+  "owner": "Leeds Museums and Galleries, Leeds, UK",
+  "image": "325.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "6"
+  },
+  
+  {
+  "title": "The Beach, Sunset",
+  "year": "1867",
+  "owner": "Private Collection",
+  "image": "327.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "Bay with Cliffs",
+  "year": "1869",
+  "owner": "Wadsworth Atheneum, Hartford, CT, USA",
+  "image": "328.jpg",
+  "artist": "Gustave Courbet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "The Vision after the Sermon (Jacob wrestling with the Angel)",
+  "year": "1888",
+  "owner": "National Galleries of Scotland, U.K.",
+  "image": "33.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Synthetism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "Two Tahitian Women",
+  "year": "1899",
+  "owner": "Metropolitan Museum of Art, New York City, U.S.",
+  "image": "32.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Cloisonnism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "Where Do We Come From? What Are We? Where Are We Going?",
+  "year": "1897",
+  "owner": "Museum of Fine Arts, Boston, MA, USA",
+  "image": "31.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Post-Impressionism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "Working the land",
+  "year": "1873",
+  "owner": "Fitzwilliam Museum, Cambridge, UK",
+  "image": "251.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Impressionism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "Still Life with Profile of Laval",
+  "year": "1886",
+  "owner": "Indianapolis Museum of Art, Indianapolis, Indiana, USA",
+  "image": "252.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Post-Impressionism",
+  "pack": "2",
+  "level": "5"
+  },
+  {
+  "title": "Still Life with Three Puppies",
+  "year": "1888",
+  "owner": "Museum of Modern Art, New York, USA",
+  "image": "253.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Post-Impressionism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "The first flowers",
+  "year": "1888",
+  "owner": "Post-Impressionism",
+  "image": "254.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Private Collection",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "Self Portrait with Halo",
+  "year": "1889",
+  "owner": "Bibliotheque des Arts Decoratifs, Paris, France",
+  "image": "256.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Cloisonnism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "The Seed of the Areoi",
+  "year": "1892",
+  "owner": "Museum of Modern Art, New York, USA",
+  "image": "259.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Post-Impressionism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "Self Portrait in a Hat",
+  "year": "1893",
+  "owner": "Musée d'Orsay, Paris, France",
+  "image": "260.jpg",
+  "artist": "Paul Gauguin",
+  "style": "Post-Impressionism",
+  "pack": "2",
+  "level": "6"
+  },
+  {
+  "title": "The Luncheon on the Grass",
+  "year": "1863",
+  "owner": "Musée d'Orsay, Paris, France",
+  "image": "585.jpg",
+  "artist": "Édouard Manet",
+  "style": "Realism",
+  "pack": "2",
+  "level": "5"
+  },
+

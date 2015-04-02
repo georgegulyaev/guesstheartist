@@ -21,6 +21,8 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * year;
 @property (nonatomic, retain) NSString * style;
+@property (nonatomic, retain) NSNumber * guessed;
+@property (nonatomic, retain) NSNumber * andlevel;
 @property (nonatomic, retain) Artist *author;
 
 @end

@@ -12,7 +12,7 @@
 
 + (void)addArtists:(NSDictionary *)artistsDictionary inManagedObjectContext: (NSManagedObjectContext *)context;
 + (void)addArtistsPack:(NSDictionary *)artistsDictionary inManagedObjectContext:(NSManagedObjectContext *)context;
-+ (NSMutableArray *)getArtistsForLevel:(int)level inManagedObjectContext:(NSManagedObjectContext *)context;
++ (NSMutableArray *)getArtistsForPacks:(NSMutableArray *)packs andLevel:(NSInteger)level inManagedObjectContext:(NSManagedObjectContext *)context;
 + (NSMutableArray *)getShuffledArtists:(NSMutableArray *)artistsArray excludingName:(NSString *)excludingName;
 + (NSMutableArray *)shuffleArray:(NSMutableArray *)array;
 

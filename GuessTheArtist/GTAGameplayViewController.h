@@ -12,6 +12,8 @@
 @interface GTAGameplayViewController : UIViewController
 
 @property (copy, nonatomic) NSString *gameMode;
+@property NSInteger pack;
+@property NSInteger level;
 
 
 @end

@@ -10,6 +10,7 @@
 #import "GTAGuessedPaintingsTVC.h"
 #import "Painting.h"
 #import "CoreDataManager.h"
+#import "ImageFinder.h"
 
 #define iphone5orHigher ([UIScreen mainScreen].bounds.size.width >= 568)
 #define iphone4 ([UIScreen mainScreen].bounds.size.width < 568)
@@ -17,7 +18,7 @@
 
 @interface GTAShowGuessedPaintingVC ()
 
-@property (strong, nonatomic) IBOutlet UIImageView *rootImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *rootImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *reflection;
 @property (weak, nonatomic) IBOutlet UIImageView *paintingView;
 @property (weak, nonatomic) IBOutlet UIView *infoView;
@@ -36,6 +37,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *back;
 @property (weak, nonatomic) IBOutlet UILabel *paintingTitle;
 
+@property (strong, nonatomic) UIImage *image;
+
 
 @end
 
@@ -45,8 +48,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%f", [UIScreen mainScreen].bounds.size.height);
-    [self.rootImageView setContentMode:UIViewContentModeScaleAspectFill];
+    NSLog(@"%f", [UIScreen mainScreen].bounds.size.width);
+    //[self.rootImageView setContentMode:UIViewContentModeScaleAspectFill];
     if (iphone4) {
         NSLog(@"iphone 4");
         self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone4"];
@@ -54,20 +57,20 @@
          NSLog(@"iphone 5");
         self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
     }
-    
-    
-    
+
     self.infoView.hidden = YES; //•
-    self.paintingTitle.text = self.infoTitle.text = [NSString stringWithFormat:@" 🚬🐴 %@ ", self.painting.title];
-    [self.paintingTitle sizeToFit];
-    self.infoYear.text = self.painting.year;
+    self.infoTitle.text = self.painting.title;
+    
+    self.paintingTitle.text =  [NSString stringWithFormat:@"%C• %@ • %C%C%C", 0x00A0, self.infoTitle.text, 0x00A0, 0x00A0, 0x00A0];
+
+    self.infoYear.text = (self.painting.year) ? self.painting.year : @"No information.";
     self.infoStyle.text = self.painting.style;
     self.infoLocation.text = (self.painting.location) ? self.painting.location : @"No information.";
     
     self.paintingView.contentMode = UIViewContentModeScaleAspectFit;
     self.paintingView.autoresizingMask =(UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth);
-    NSString *fileName = [NSString stringWithFormat: @"%@/%@", [[NSBundle mainBundle] resourcePath], self.painting.image];
-    self.paintingView.image = [UIImage imageWithContentsOfFile:fileName];
+    self.image = [ImageFinder getImage:self.painting.image];
+    self.paintingView.image = self.image;
 
     
 
@@ -100,6 +103,7 @@
                 }];
             }];
         }];
+        self.back.alpha = 0;
         self.paintingView.alpha = 0.3;
         self.reflection.alpha = 0;
         self.paintingTitle.alpha = 0;
@@ -113,33 +117,7 @@
             //self.paintingViewSmall.alpha = 1.0;
             //[[self.lights objectAtIndex:1] setAlpha:1.0];
         }];
-        
     }];
-    /*
-    
-    //animation
-    [UIImageView animateWithDuration:0.2 animations:^{ //turning 3rd light off, fading out reflection and the artwork to 70%
-        self.back.alpha = 0;
-        self.paintingTitle.alpha = 0;
-        
-        self.reflection.alpha = 0.7;
-        self.paintingView.alpha = 0.7;
-    } completion:^(BOOL finished) {
-        [UIImageView animateWithDuration:0.2 animations:^{ //turning 2st light off, fading out reflection and the artwork to 50%
-            [[self.lights objectAtIndex:1] setAlpha:0.0];
-            self.reflection.alpha = 0.5;
-            self.paintingView.alpha = 0.5;
-        } completion:^(BOOL finished) {
-            [UIImageView animateWithDuration:0.2 animations:^{ //turning 1st light off, fading out reflection to 0 and the artwork to 30%
-                [[self.lights objectAtIndex:0] setAlpha:0.0];
-            } completion:^(BOOL finished) {
-               
-            }];
-        }];
-    }];*/
-    
-    
-    
 }
 - (IBAction)closeInfo:(id)sender {
     
@@ -183,6 +161,18 @@
         GTAGuessedPaintingsTVC  *destanationController = (GTAGuessedPaintingsTVC *)segue.destinationViewController;
         destanationController.artist = self.painting.author;
     }
+}
+- (IBAction)saveArtwork:(id)sender {
+    UIImageWriteToSavedPhotosAlbum(self.image,
+                                   self, // send the message to 'self' when calling the callback
+                                   @selector(image:didFinishSavingWithError:contextInfo:), // the selector to tell the method to call on completion
+                                   NULL); // you generally won't need a contextInfo here
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo: (void *) contextInfo {
+    if (!error)
+        NSLog(@"Image saved");
+    
 }
 
 @end
