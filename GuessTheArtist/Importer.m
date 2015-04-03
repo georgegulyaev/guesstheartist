@@ -12,8 +12,8 @@
 
 +(void)importNativeData: (NSManagedObjectContext *)context {
     NSError* err = nil;
-    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"packAPisInstalled"];
-    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"document" ofType:@"json"];
+    //[[NSUserDefaults standardUserDefaults] setBool:true forKey:@"packAPisInstalled"];
+    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"base" ofType:@"json"];
     //parse JSON-file with paintings
     NSArray* paintings = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
                                                          options:kNilOptions

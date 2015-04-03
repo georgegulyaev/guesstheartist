@@ -30,7 +30,7 @@
     
     [super viewDidLoad];
     
-    self.headersTitles = @[ @"Base pack", @"Apprentice pack", @"Master pack" ];
+    self.headersTitles = @[ @"BASE PACK", @"APPRENTICE PACK", @"Master pack" ];
     
     self.numberOfSections = 1;
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packAPisInstalled"])
@@ -125,7 +125,25 @@
     float totalPaintingsInLevel = [[[[self.statsDict objectForKey:[NSNumber numberWithInteger:indexPath.section + 1]] objectAtIndex:indexPath.row] objectForKey:@"count"] floatValue];
     
     cell.labelLevelName.text = [NSString stringWithFormat:@"Level %@", level];
-    cell.imageFrame.image = [UIImage imageNamed:@"frame2"];
+    
+    //re-do
+    NSError *error = nil;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
+    NSURL *libraryURL = [fileManager URLForDirectory:NSLibraryDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:&error];
+    NSURL *folderURL = [[libraryURL URLByAppendingPathComponent:bundleID] URLByAppendingPathComponent:@"ap_icons.bundle"]
+    ;
+    NSLog(@"folder: %@", folderURL.path);
+    //NSBundle *bundle = [NSBundle bundleWithURL:folderURL];
+    //NSString *imageName = [bundle pathForResource:@"icon2-1" ofType:@"png"];
+    //NSString *imageName2 = [bundle pathForResource:[NSString stringWithFormat:@"icon%d-%@", (indexPath.section + 1), level] ofType:@"png"];
+    
+    
+    if ((indexPath.section + 1) < 3)
+        cell.imageFrame.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon%d-%@", (indexPath.section + 1), level]];
+    else
+        cell.imageFrame.image = [UIImage imageNamed:@"frame2"];
     cell.labelGuessed.text = [NSString stringWithFormat:@"Guessed: %d / %d", (int)guessedPaintings, (int)totalPaintingsInLevel];
     
     cell.imageStarsBg.image = [self setStarsForGuessed:(int)guessedPaintings total:(int)totalPaintingsInLevel];
@@ -141,7 +159,7 @@
 #pragma mark UICollectionViewDelegateLayoutFlow
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(5, 15, 5, 15);
+    return UIEdgeInsetsMake(0, 15, 0, 15);
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -152,6 +170,15 @@
         CustomReusableHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
 
         headerView.labelHeader.text = [self.headersTitles objectAtIndex:indexPath.section];
+
+        UIView *topBorder = [UIView new];
+        topBorder.backgroundColor = [UIColor blackColor];
+        topBorder.frame = CGRectMake(0, 0, headerView.frame.size.width, 1);
+        [headerView addSubview:topBorder];
+        UIView *bottomBorder = [UIView new];
+        bottomBorder.backgroundColor = [UIColor blackColor];
+        bottomBorder.frame = CGRectMake(0, headerView.frame.size.height - 1, headerView.frame.size.width, 1);
+        [headerView addSubview:bottomBorder];
 
         reusableView = headerView;
     }

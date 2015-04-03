@@ -779,6 +779,14 @@ NSString *const packMP = @"MP";
                               self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alertView show];
     NSLog(@"RestoredTransactionFailedWithError");
+    //update UI
+    for (SKPaymentTransaction *transaction in queue.transactions) {
+        if ([transaction.payment.productIdentifier isEqualToString:PACK_APPRENTICE]) {
+            self.btnBuy_AP.enabled = self.btnRestore_AP.enabled = YES;
+        } else if ([transaction.payment.productIdentifier isEqualToString:PACK_MASTER]) {
+            self.btnBuy_MP.enabled = self.btnRestore_MP.enabled = YES;
+        }
+    }
 }
 
 -(void)request:(SKRequest *)request didFailWithError:(NSError *)error {

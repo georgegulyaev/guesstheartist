@@ -709,8 +709,9 @@
 		5E45FAB71A09125B00307E7D /* Wassily Kandinsky.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45FA021A09125A00307E7D /* Wassily Kandinsky.png */; };
 		5E45FAB81A09125B00307E7D /* William Blake.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45FA031A09125A00307E7D /* William Blake.png */; };
 		5E45FB3B1A09166A00307E7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561B8198EE90D00D33E2B /* Main.storyboard */; };
+		5E64546F1ACE76F7002538C3 /* importAP.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E64546E1ACE76F7002538C3 /* importAP.json */; };
+		5E6454741ACEA45A002538C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6454731ACEA45A002538C3 /* Default@2x.png */; };
 		5E6A7FBF19A944B00055CC68 /* Artist+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */; };
-		5E6A7FC119ABA6460055CC68 /* paintings2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E6A7FC019ABA6460055CC68 /* paintings2.json */; };
 		5E6A80BF19ADF3630055CC68 /* prepopulated-painters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E6A80BE19ADF3630055CC68 /* prepopulated-painters.json */; };
 		5E6A81AB19AF7E860055CC68 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A81AA19AF7E860055CC68 /* Importer.m */; };
 		5E78F4B419B61E49003AE978 /* GTAHomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */; };
@@ -719,7 +720,7 @@
 		5E78F4C019BA3202003AE978 /* GTAGuessedPaintingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4BF19BA3202003AE978 /* GTAGuessedPaintingsTVC.m */; };
 		5E78F4C319BA95FF003AE978 /* GTAShowGuessedPaintingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */; };
 		5E78F4C519BBDF7C003AE978 /* MyriadPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4C419BBDEF2003AE978 /* MyriadPro-BoldIt.otf */; };
-		5E78F4C719C1ED4E003AE978 /* all-painters2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4C619C1ED4E003AE978 /* all-painters2.json */; };
+		5E78F4C719C1ED4E003AE978 /* base.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F4C619C1ED4E003AE978 /* base.json */; };
 		5E78F63319C3594F003AE978 /* MyriadPro-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F63219C3592D003AE978 /* MyriadPro-SemiboldIt.otf */; };
 		5E78F63519C3B489003AE978 /* MyriadPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E78F63419C3B3C0003AE978 /* MyriadPro-It.otf */; };
 		5E78F63819C3C031003AE978 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F63719C3C031003AE978 /* Artist.m */; };
@@ -742,7 +743,6 @@
 		5EB9067E19929BFE0030FCB7 /* Painting+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */; };
 		5EB906801992A0C50030FCB7 /* painters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9067F1992A0C50030FCB7 /* painters.json */; };
 		5EBC86851992DE0C00FBA34A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBC86841992DE0C00FBA34A /* CoreData.framework */; };
-		5ECB97F91A0D0E2000FA5070 /* newpack.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ECB97F81A0D0E2000FA5070 /* newpack.json */; };
 		5ECB981C1A12290B00FA5070 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB981B1A12290B00FA5070 /* CoreDataManager.m */; };
 		5ECB981F1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB981E1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m */; };
 		5ECB98211A1668CF00FA5070 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECB98201A1668CF00FA5070 /* StoreKit.framework */; };
@@ -1488,9 +1488,10 @@
 		5E45FA011A09125A00307E7D /* Vincent van Gogh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vincent van Gogh.png"; sourceTree = "<group>"; };
 		5E45FA021A09125A00307E7D /* Wassily Kandinsky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wassily Kandinsky.png"; sourceTree = "<group>"; };
 		5E45FA031A09125A00307E7D /* William Blake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "William Blake.png"; sourceTree = "<group>"; };
+		5E64546E1ACE76F7002538C3 /* importAP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = importAP.json; sourceTree = "<group>"; };
+		5E6454731ACEA45A002538C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5E6A7FBD19A944B00055CC68 /* Artist+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Artist+Helper.h"; sourceTree = "<group>"; };
 		5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Artist+Helper.m"; sourceTree = "<group>"; };
-		5E6A7FC019ABA6460055CC68 /* paintings2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paintings2.json; sourceTree = "<group>"; };
 		5E6A80BE19ADF3630055CC68 /* prepopulated-painters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "prepopulated-painters.json"; sourceTree = "<group>"; };
 		5E6A81A919AF7E860055CC68 /* Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Importer.h; sourceTree = "<group>"; };
 		5E6A81AA19AF7E860055CC68 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Importer.m; sourceTree = "<group>"; };
@@ -1505,7 +1506,7 @@
 		5E78F4C119BA95FF003AE978 /* GTAShowGuessedPaintingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAShowGuessedPaintingVC.h; sourceTree = "<group>"; };
 		5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAShowGuessedPaintingVC.m; sourceTree = "<group>"; };
 		5E78F4C419BBDEF2003AE978 /* MyriadPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-BoldIt.otf"; sourceTree = "<group>"; };
-		5E78F4C619C1ED4E003AE978 /* all-painters2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "all-painters2.json"; sourceTree = "<group>"; };
+		5E78F4C619C1ED4E003AE978 /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		5E78F5CE19C33FD4003AE978 /* Alexei Savrasov.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alexei Savrasov.png"; sourceTree = "<group>"; };
 		5E78F5CF19C33FD4003AE978 /* Alfred Sisley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alfred Sisley.png"; sourceTree = "<group>"; };
 		5E78F5D019C33FD4003AE978 /* Amedeo Modigliani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Amedeo Modigliani.png"; sourceTree = "<group>"; };
@@ -1595,7 +1596,6 @@
 		5EB9067D19929BFE0030FCB7 /* Painting+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Painting+Helper.m"; sourceTree = "<group>"; };
 		5EB9067F1992A0C50030FCB7 /* painters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = painters.json; sourceTree = "<group>"; };
 		5EBC86841992DE0C00FBA34A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		5ECB97F81A0D0E2000FA5070 /* newpack.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newpack.json; sourceTree = "<group>"; };
 		5ECB981A1A12290B00FA5070 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		5ECB981B1A12290B00FA5070 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		5ECB981D1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAPacksPurchaseViewController.h; sourceTree = "<group>"; };
@@ -2552,6 +2552,7 @@
 		5EE5619A198EE90D00D33E2B = {
 			isa = PBXGroup;
 			children = (
+				5E6454731ACEA45A002538C3 /* Default@2x.png */,
 				5EB0E4D81ABC5A700048E346 /* GTADownloadQueue.h */,
 				5EB0E4D91ABC5A710048E346 /* GTADownloadQueue.m */,
 				5EB0E5111ABCEC7A0048E346 /* SSZipArchive */,
@@ -2603,12 +2604,11 @@
 				5EE561BE198EE90D00D33E2B /* Images.xcassets */,
 				5E6A80BE19ADF3630055CC68 /* prepopulated-painters.json */,
 				5EB0E5B31AC23A920048E346 /* Empty.sqlite */,
-				5E78F4C619C1ED4E003AE978 /* all-painters2.json */,
+				5E78F4C619C1ED4E003AE978 /* base.json */,
 				5EB0E5B41AC23BCB0048E346 /* Paintings.sqlite */,
 				5E22968C1AC8C725003EAD01 /* document.json */,
+				5E64546E1ACE76F7002538C3 /* importAP.json */,
 				5EB9067F1992A0C50030FCB7 /* painters.json */,
-				5E6A7FC019ABA6460055CC68 /* paintings2.json */,
-				5ECB97F81A0D0E2000FA5070 /* newpack.json */,
 				5EE561DB1990F67D00D33E2B /* Paintings.xcdatamodeld */,
 				5E2292051AC8C160003EAD01 /* Apprentice Pack paintings temp */,
 				5E45F9D11A09125A00307E7D /* painters */,
@@ -3100,6 +3100,7 @@
 				5E229A7F1ACA1962003EAD01 /* 795.jpg in Resources */,
 				5E229C591ACA1986003EAD01 /* 805.jpg in Resources */,
 				5E229B2E1ACA1973003EAD01 /* 161.jpg in Resources */,
+				5E6454741ACEA45A002538C3 /* Default@2x.png in Resources */,
 				5E45FAAC1A09125B00307E7D /* Paul Gauguin.png in Resources */,
 				5E2299481ACA1954003EAD01 /* 88.jpg in Resources */,
 				5E45FA9B1A09125B00307E7D /* Henri-Edmond Cross.png in Resources */,
@@ -3143,7 +3144,6 @@
 				5E229CE21ACA1A3B003EAD01 /* 77.jpg in Resources */,
 				5E2298B31ACA1940003EAD01 /* 824.jpg in Resources */,
 				5E229B491ACA1973003EAD01 /* 362.jpg in Resources */,
-				5E6A7FC119ABA6460055CC68 /* paintings2.json in Resources */,
 				5E229A751ACA1962003EAD01 /* 678.jpg in Resources */,
 				5E45FAA51A09125B00307E7D /* Katsushika Hokusai.png in Resources */,
 				5E229A891ACA1962003EAD01 /* 820.jpg in Resources */,
@@ -3232,6 +3232,7 @@
 				5E2299801ACA1954003EAD01 /* 491.jpg in Resources */,
 				5E229B961ACA1973003EAD01 /* 1108.jpg in Resources */,
 				5E229A851ACA1962003EAD01 /* 816.jpg in Resources */,
+				5E64546F1ACE76F7002538C3 /* importAP.json in Resources */,
 				5E229C331ACA1986003EAD01 /* 477.jpg in Resources */,
 				5E229A671ACA1962003EAD01 /* 585.jpg in Resources */,
 				5E2298A81ACA1940003EAD01 /* 723.jpg in Resources */,
@@ -3276,10 +3277,9 @@
 				5E45FA891A09125B00307E7D /* Amedeo Modigliani.png in Resources */,
 				5E229A9A1ACA1962003EAD01 /* 890.jpg in Resources */,
 				5E2298AA1ACA1940003EAD01 /* 725.jpg in Resources */,
-				5ECB97F91A0D0E2000FA5070 /* newpack.json in Resources */,
 				5E229C681ACA1987003EAD01 /* 1083.jpg in Resources */,
 				5E2299B01ACA1954003EAD01 /* 1029.jpg in Resources */,
-				5E78F4C719C1ED4E003AE978 /* all-painters2.json in Resources */,
+				5E78F4C719C1ED4E003AE978 /* base.json in Resources */,
 				5E229A961ACA1962003EAD01 /* 884.jpg in Resources */,
 				5E229C3E1ACA1986003EAD01 /* 687.jpg in Resources */,
 				5E229C1D1ACA1986003EAD01 /* 195.jpg in Resources */,
@@ -3620,7 +3620,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3638,7 +3638,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

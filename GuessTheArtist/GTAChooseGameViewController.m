@@ -20,23 +20,21 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    
+    [[UILabel appearanceWhenContainedIn:[GTAChooseGameViewController class], nil]
+     setFont:[UIFont fontWithName:@"MyriadPro-BoldIt" size:17]];
+    self.labelGameMode.text = [NSString stringWithFormat:@"Game Mode: %@", self.gameMode];
+    self.btnPlay.hidden = YES;
+    self.btnContinueWithBasePack.hidden = NO;
+    
     [self updateChoosePackButtons];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[UILabel appearanceWhenContainedIn:[GTAChooseGameViewController class], nil]
-     setFont:[UIFont fontWithName:@"MyriadPro-BoldIt" size:17]];
-    self.labelGameMode.text = [NSString stringWithFormat:@"Game Mode: %@", self.gameMode];
-    self.btnPlay.hidden = YES;
-    self.btnContinueWithBasePack.hidden = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 #pragma mark - Navigation

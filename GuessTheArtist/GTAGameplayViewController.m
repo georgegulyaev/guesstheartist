@@ -63,26 +63,14 @@ float const secondsLeft = 12;
     NSString *scoreChanged;
     NSTimer *timer;
     BOOL feverMode;
+    BOOL viewDidDisappear;
     float secondsCounter;
-}
-
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:YES];
-    if (timer)
-        [timer invalidate];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%ld", (long)self.pack
-          );
+    
     self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
     if (iphone4) {
         self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone4"];
@@ -115,9 +103,15 @@ float const secondsLeft = 12;
     [self.view addGestureRecognizer:swipe];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:YES];
+    [self destroyTimerIfNeeded];
+}
+
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:YES];
     
+    viewDidDisappear = true;
     [self.paintingView removeFromSuperview];
     [self.reflection removeFromSuperview];
     [self.rootImageView removeFromSuperview];
@@ -130,8 +124,8 @@ float const secondsLeft = 12;
 
 
 - (void)prepareGameUI {
-    if (timer)
-        timer = nil;
+    [self destroyTimerIfNeeded];
+    [self replaceLeftConstraintOnView:self.menuView withConstant:-76.0];
     /* setting buttons default color */
     for (UIButton *btn in self.buttons) {
         btn.hidden = NO;
@@ -202,7 +196,7 @@ float const secondsLeft = 12;
             } completion:^(BOOL finished) {
                 /* start countdown if needed */
                 if (feverMode) {
-                    timer = nil;
+                    [self destroyTimerIfNeeded];
                     if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive) //if FeverMode and App is not in the background mode
                         [self countDownStart];
                 }
@@ -264,7 +258,7 @@ float const secondsLeft = 12;
 /* start 15 seconds countdown updating Progress view */
 - (void)countDownStart {
     NSLog(@"start");
-    if (!timer) {
+    if (!timer && !viewDidDisappear) {
         self.progressBar.progress = 1;
         //float time = 1.0f;
         secondsCounter = secondsLeft;
@@ -292,9 +286,20 @@ float const secondsLeft = 12;
     self.labelSecondsLeft.text = (secondsCounter < 10) ? [NSString stringWithFormat:@"0:0%d", (int)secondsCounter] : [NSString stringWithFormat:@"0:%d", (int)secondsCounter];
 }
 
-- (void)checkSolution: (UIButton *)sender {
-    if (timer)
+- (void)destroyTimerIfNeeded {
+    if (timer) {
         [timer invalidate];
+        timer = nil;
+    }
+}
+
+/* Check selected answer */
+- (void)checkSolution: (UIButton *)sender {
+    
+    [self destroyTimerIfNeeded];
+    
+    if (self.menuIsOpened)
+        [self menuOpenClose:nil];
     /*show right answer button in green */
     for (UIButton *button in self.buttons) {
         button.userInteractionEnabled = NO;
@@ -398,7 +403,9 @@ float const secondsLeft = 12;
 
 /* Animation of lights and Artwork image before showing GameOver screen */
 - (void)animateBeforeFinishingTheGame {
-    if (timer) timer = nil;
+    
+    [self destroyTimerIfNeeded];
+    
     if ([self.paintings count] < self.currentArtworkNumber + 1) {
         self.currentArtworkNumber= -1;
     }
@@ -424,7 +431,9 @@ float const secondsLeft = 12;
 
 /* Animation of lights and Artwork image view before the game start */
 - (void)animateBeforeNewGame {
-    if (timer) timer = nil;
+    
+    [self destroyTimerIfNeeded];
+    
     if ([self.paintings count] < self.currentArtworkNumber + 1) {
         self.currentArtworkNumber = -1;
     }
@@ -493,6 +502,9 @@ float const secondsLeft = 12;
 
 /* Restart button pressed */
 - (IBAction)restartGame:(id)sender {
+    
+    [self destroyTimerIfNeeded];
+    
     [self menuOpenClose:sender];
     [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(animateBeforeNewGame) userInfo:nil repeats:NO];
     
@@ -520,7 +532,9 @@ float const secondsLeft = 12;
 
 /* Skip the artwork hint button pressed */
 - (IBAction)skipTheStill:(id)sender {
-    if (timer) [timer invalidate];
+    
+    [self destroyTimerIfNeeded];
+    
     //add if skipIsAvailable marker
     self.btnSkip.enabled = NO;
     self.btnSkip.alpha = 0.5;
@@ -531,8 +545,9 @@ float const secondsLeft = 12;
 
 /* Quit game action */
 - (IBAction)quitGame:(id)sender {
-    if (timer) [timer invalidate];
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    [self destroyTimerIfNeeded];
+    
 }
 
 #pragma mark - Sliding view helpers
