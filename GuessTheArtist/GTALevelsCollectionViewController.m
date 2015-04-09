@@ -22,21 +22,45 @@
 @property int numberOfSections;
 @property NSArray *headersTitles;
 
+
 @end
 
-@implementation GTALevelsCollectionViewController 
+@implementation GTALevelsCollectionViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     
     [super viewDidLoad];
     
-    self.headersTitles = @[ @"BASE PACK", @"APPRENTICE PACK", @"Master pack" ];
-    
-    self.numberOfSections = 1;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_black2"]];
+    //[[NSUserDefaults standardUserDefaults] setBool:true forKey:@"packAPisInstalled"];
+    self.headersTitles = @[ @"BASE PACK", @"APPRENTICE PACK", @"MASTER PACK" ];
+
+    //unlock 1st level of all installed packs
+    self.numberOfSections = 3;
+    //unlock base pack
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"pack1level1cleared"] == false)
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"pack1level1cleared"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    //unlock ApprenticePack if Installed
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packAPisInstalled"])
-        self.numberOfSections += 1;
+    {
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"pack2level1cleared"] == false)
+        {
+            [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"pack2level1cleared"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+    }
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packMPisInstalled"])
-        self.numberOfSections += 1;
+    {
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"pack3level1cleared"] == false)
+        {
+            [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"pack3level1cleared"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+    }
     
     NSLog(@"%d", self.numberOfSections);
     
@@ -78,10 +102,11 @@
     fetchRequest.propertiesToGroupBy = @[ @"level" ];
     fetchRequest.sortDescriptors = @[ sort ];
     
-    for (int i = 1; i <= self.numberOfSections; i ++) {
+    for (int i = 1; i <= self.numberOfSections; i ++)
+    {
         NSPredicate *predicate;
         if (i == 2) //add to Apprentice pack images from 1st pack
-           predicate = [NSPredicate predicateWithFormat:@"pack = %d or (pack = 1 and andlevel = 1)", i];
+           predicate = [NSPredicate predicateWithFormat:@"pack = %d", i]; //to-do
         else
             predicate = [NSPredicate predicateWithFormat:@"pack = %d", i];
         fetchRequest.predicate = predicate;
@@ -100,77 +125,123 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    self.collectionView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
+    //self.collectionView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    //to-do
-    //NSLog(@"count: %lu", (unsigned long)[[self.statsDict allKeys] count]);
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self.collectionView reloadData];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
     return [[self.statsDict allKeys] count];
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
     //to-do
-    //NSLog(@"count: %@", 1);
+    if ((section + 1) == 3)
+        return 10;
     return [[self.statsDict objectForKey:[NSNumber numberWithInt:(int)section+1]] count];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
     static NSString *CellIdentifier = @"CellId";
     CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    //cell.userInteractionEnabled = NO;
-
-    id level = [[[self.statsDict objectForKey:[NSNumber numberWithInteger:indexPath.section + 1]] objectAtIndex:indexPath.row] objectForKey:@"level"];
-    float guessedPaintings = [[[[self.statsDict objectForKey:[NSNumber numberWithInteger:indexPath.section + 1]] objectAtIndex:indexPath.row] objectForKey:@"guessed"] floatValue];
-    float totalPaintingsInLevel = [[[[self.statsDict objectForKey:[NSNumber numberWithInteger:indexPath.section + 1]] objectAtIndex:indexPath.row] objectForKey:@"count"] floatValue];
     
-    cell.labelLevelName.text = [NSString stringWithFormat:@"Level %@", level];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    int pack = (int)indexPath.section + 1;
     
     //re-do
-    NSError *error = nil;
+
+    if (pack < 3) { //if pack < 3
+        NSUInteger level = [[[[self.statsDict objectForKey:[NSNumber numberWithInt:pack]] objectAtIndex:indexPath.row] objectForKey:@"level"] integerValue];
+        
+        cell.labelLevelName.text = [NSString stringWithFormat:@"Level %d", (int)level];
+        
+        cell.imageFrame.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon%d-%d", pack, (int)level]];
     
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
-    NSURL *libraryURL = [fileManager URLForDirectory:NSLibraryDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:&error];
-    NSURL *folderURL = [[libraryURL URLByAppendingPathComponent:bundleID] URLByAppendingPathComponent:@"ap_icons.bundle"]
-    ;
-    NSLog(@"folder: %@", folderURL.path);
-    //NSBundle *bundle = [NSBundle bundleWithURL:folderURL];
-    //NSString *imageName = [bundle pathForResource:@"icon2-1" ofType:@"png"];
-    //NSString *imageName2 = [bundle pathForResource:[NSString stringWithFormat:@"icon%d-%@", (indexPath.section + 1), level] ofType:@"png"];
-    
-    
-    if ((indexPath.section + 1) < 3)
-        cell.imageFrame.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon%d-%@", (indexPath.section + 1), level]];
-    else
-        cell.imageFrame.image = [UIImage imageNamed:@"frame2"];
-    cell.labelGuessed.text = [NSString stringWithFormat:@"Guessed: %d / %d", (int)guessedPaintings, (int)totalPaintingsInLevel];
-    
-    cell.imageStarsBg.image = [self setStarsForGuessed:(int)guessedPaintings total:(int)totalPaintingsInLevel];
-    
+        /* configure cell look depending on user progress */
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:[NSString stringWithFormat:@"pack%dlevel%dcleared", pack, (int)level]] == true)
+        { //level cleared
+            cell.imageLock.hidden = cell.userInteractionEnabled = YES;
+            cell.imageStarsBg.hidden = cell.imageLight.hidden = NO;
+            
+            NSUInteger bestScore = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"pack%dlevel%dBestScore", pack, (int)level]];
+            NSUInteger totalPaintingsNumber = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"pack%dlevel%DPaintingsTotal", pack, (int)level]];
+            
+            cell.labelGuessed.hidden = YES;
+            if (bestScore > 0 && totalPaintingsNumber > 0)
+            {
+                cell.labelGuessed.hidden = NO;
+                cell.labelGuessed.text = [NSString stringWithFormat:@"GUESSED: %d/%d", (int)bestScore, (int)totalPaintingsNumber];
+                
+            }
+            cell.imageStarsBg.image = [self setStarsForGuessed:bestScore total:totalPaintingsNumber];
+        } else
+        { //level not cleared yet
+            cell.userInteractionEnabled = cell.imageLock.hidden = NO;
+            cell.imageStarsBg.hidden = cell.labelGuessed.hidden = cell.imageLight.hidden = YES;
+        }
+    }
+    else if (pack == 3)
+    { //Master Pack Coming Soon
+        cell.imageFrame.image = [UIImage imageNamed:@"icon_coming_soon"];
+        cell.labelLevelName.text = [NSString stringWithFormat:@"Level %d", (int)(indexPath.row + 1)];
+        cell.userInteractionEnabled = NO;
+        cell.imageLight.hidden = cell.labelGuessed.hidden = cell.imageLock.hidden = cell.imageStarsBg.hidden = YES;
+    }
+    cell.layer.shouldRasterize = YES;
+    cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
     //[self performSegueWithIdentifier:@"ZenGameLevelsToGamePlay" sender:indexPath];
 
 }
 
-#pragma mark UICollectionViewDelegateLayoutFlow
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, 15, 0, 15);
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    //if ((section + 1) == 3) //Master pack coming soon
+      //  return -20;
+    if ((section + 1) == 1 || ((section + 1) == 2 && [[NSUserDefaults standardUserDefaults] boolForKey:@"packAPisInstalled"])) //Apprentice pack
+        return 10;
+    return -20;
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+#pragma mark UICollectionViewDelegateLayoutFlow
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(15, 15, 10, 15);
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
     
     UICollectionReusableView *reusableView = nil;
-    NSLog(@"%@ ,%ld, %ld", indexPath, (long)indexPath.row, (long)indexPath.section);
-    if (kind == UICollectionElementKindSectionHeader) {
+    //NSLog(@"%@ ,%ld, %ld", indexPath, (long)indexPath.row, (long)indexPath.section);
+    if (kind == UICollectionElementKindSectionHeader)
+    {
         CustomReusableHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
 
         headerView.labelHeader.text = [self.headersTitles objectAtIndex:indexPath.section];
-
+        
+        headerView.btnPacks.hidden = YES;
+        //re-do for future packs
+        if ((indexPath.section + 1) == 2) //Apprentice Pack
+        {
+            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packAPisInstalled"] == false)
+                headerView.btnPacks.hidden = NO;
+        }
+        
+        
         UIView *topBorder = [UIView new];
         topBorder.backgroundColor = [UIColor blackColor];
         topBorder.frame = CGRectMake(0, 0, headerView.frame.size.width, 1);
@@ -188,11 +259,28 @@
  /*
  / Takes total number of paintings and number of guessed paintings, return UIImageView with stars from 0 to 5;
  */
-- (UIImage *)setStarsForGuessed:(float)guessed total:(float)total {
+- (UIImage *)setStarsForGuessed:(float)guessed total:(float)total
+{
+    int starsToGive
+    ;
+    float guessedPercantage = (guessed * 100 / total); //because 5 stars total
     
-    float guessedPercantage = (guessed / total * 5); //because 5 stars total
+    if (guessedPercantage == 100) //100% artworks guessed
+        starsToGive = 6;
+    else if (guessedPercantage >= 92 && guessedPercantage < 100)
+        starsToGive = 5;
+    else if (guessedPercantage >= 71 && guessedPercantage < 92)
+        starsToGive = 4;
+    else if (guessedPercantage >= 51 && guessedPercantage < 71)
+        starsToGive = 3;
+    else if (guessedPercantage >= 26 && guessedPercantage < 51)
+        starsToGive = 2;
+    else if (guessedPercantage >= 1 && guessedPercantage < 26)
+        starsToGive = 1;
+    else
+        starsToGive = 0;
 
-    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"icon_stars%d", (int)guessedPercantage]];
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"icon_stars%d", starsToGive]];
     return image;
 }
 
@@ -201,15 +289,23 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //NSIndexPath *indexPath = sender;
-    //NSLog(@"section: %d", indexPath.section);
-    if ([segue.identifier isEqualToString:@"ZenGameLevelsToGamePlay"]) {
+    if ([segue.identifier isEqualToString:@"ZenGameLevelsToGamePlay"])
+    {
             NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
         GTAGameplayViewController *gtaGamePlayVC = (GTAGameplayViewController *)segue.destinationViewController;
         gtaGamePlayVC.level = [[[[self.statsDict objectForKey:[NSNumber numberWithInteger:indexPath.section + 1]] objectAtIndex:indexPath.row] objectForKey:@"level"] integerValue];
         gtaGamePlayVC.pack = indexPath.section + 1;
         gtaGamePlayVC.gameMode = @"ZEN";
     }
+}
+
+- (IBAction)unwindToZen:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
+- (IBAction)back:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

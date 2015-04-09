@@ -26,6 +26,8 @@
     self.labelGameMode.text = [NSString stringWithFormat:@"Game Mode: %@", self.gameMode];
     self.btnPlay.hidden = YES;
     self.btnContinueWithBasePack.hidden = NO;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_black2"]];
+
     
     [self updateChoosePackButtons];
 }
@@ -34,8 +36,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-
 
 #pragma mark - Navigation
 
@@ -51,10 +51,6 @@
     // Pass the selected object to the new view controller.
 }
 
-
-- (IBAction)back:(id)sender {
-    //[self performSegueWithIdentifier:@"ChooseGameToHome" sender:nil];
-}
 
 - (IBAction)play:(id)sender {
     //[self performSegueWithIdentifier:@"ChooseGameToGameplay" sender:nil];
@@ -122,15 +118,21 @@
     }
     //buttons play/continue update
     if (packMPisSelected == true || packAPisSelected == true) {
-        NSLog(@"YES");
         self.btnContinueWithBasePack.hidden = YES;
         self.btnPlay.hidden = NO;
     }
     if (packMPisSelected == false && packAPisSelected == false)  {
-        NSLog(@"YES2");
         self.btnContinueWithBasePack.hidden = NO;
         self.btnPlay.hidden = YES;
     }
     
+}
+
+- (IBAction)unwindToChoose:(UIStoryboardSegue *)unwindSegue
+{
+}
+
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

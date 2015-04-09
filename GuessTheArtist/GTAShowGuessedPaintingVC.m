@@ -71,10 +71,6 @@
     self.paintingView.autoresizingMask =(UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth);
     self.image = [ImageFinder getImage:self.painting.image];
     self.paintingView.image = self.image;
-
-    
-
-
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -119,6 +115,7 @@
         }];
     }];
 }
+
 - (IBAction)closeInfo:(id)sender {
     
     [UIImageView animateWithDuration:1.0 animations:^{
@@ -157,7 +154,7 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"SubGuessedInfoToSubGuessed"]) {
+    if ([segue.identifier isEqualToString:@"GuessedPaintingInfoToGuessedPaintings"]) {
         GTAGuessedPaintingsTVC  *destanationController = (GTAGuessedPaintingsTVC *)segue.destinationViewController;
         destanationController.artist = self.painting.author;
     }
@@ -173,6 +170,9 @@
     if (!error)
         NSLog(@"Image saved");
     
+}
+- (IBAction)back:(id)sender {
+    [self performSegueWithIdentifier:@"GuessedPaintingInfoToGuessedPaintings" sender:nil];
 }
 
 @end

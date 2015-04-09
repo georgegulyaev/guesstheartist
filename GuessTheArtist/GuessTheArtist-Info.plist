@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Who's The Artist?</string>
+	<string>Who&apos;s The Artist?</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -30,6 +30,7 @@
 		<string>MyriadPro-It.otf</string>
 		<string>MyriadPro-SemiboldIt.otf</string>
 		<string>MyriadPro-Regular.otf</string>
+		<string>MyriadPro-Bold.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>

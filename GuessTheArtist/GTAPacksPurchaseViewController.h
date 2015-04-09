@@ -16,9 +16,4 @@
     IBOutlet UIScrollView *scroller;
 }
 
-+ (GTAPacksPurchaseViewController *)sharedInstance;
-
-
-
-
 @end

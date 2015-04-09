@@ -10,9 +10,10 @@
 
 @interface CustomCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageLock;
 @property (weak, nonatomic) IBOutlet UILabel *labelLevelName;
 @property (weak, nonatomic) IBOutlet UIImageView *imageStarsBg;
 @property (weak, nonatomic) IBOutlet UIImageView *imageFrame;
 @property (weak, nonatomic) IBOutlet UILabel *labelGuessed;
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageLight;
 @end

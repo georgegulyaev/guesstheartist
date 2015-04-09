@@ -59,16 +59,12 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    self.tableView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
+    //self.tableView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
     self.tableView.opaque = NO;
     self.tableView.backgroundView = nil;
-    //buttons
-    [self.btnBack setTitleColor:[UIColor colorWithRed:140/255.0 green:171/255.0 blue:181/255.0 alpha:1.0] forState:UIControlStateNormal];
-    [self.btnBack.titleLabel setFont:[UIFont fontWithName:@"MyriadPro-BoldIt" size:16]];
+
     //label
-    [self.artistName setTextColor:[UIColor colorWithRed:255/255.0 green:245/255.0 blue:229/255.0 alpha:1.0]];
-    [self.artistName setFont:[UIFont fontWithName:@"MyriadPro-BoldIt" size:16]];
-    self.artistName.text = [self.artist.name uppercaseString];
+    self.artistName.text = self.artist.name;
     
     //set image
     NSString *fileName = [NSString stringWithFormat: @"%@/%@.png", [[NSBundle mainBundle] resourcePath], self.artist.name];
@@ -85,6 +81,14 @@
     self.artistPhoto.autoresizingMask = UIViewAutoresizingNone;
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_black2"]];
+    [self.tableView reloadData];
+}
+
+
 -(void)viewDidLayoutSubviews
 {
     if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
@@ -98,15 +102,15 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:YES];
-    [self.tableView removeFromSuperview];
+    //[self.tableView removeFromSuperview];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.fetchedResultsController = nil;
-    self.tableView.delegate = nil;
-    self.tableView.dataSource = nil;
+    //self.fetchedResultsController = nil;
+    //self.tableView.delegate = nil;
+    //self.tableView.dataSource = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -161,8 +165,8 @@
     UIGraphicsEndImageContext();
 
     cell.backgroundView = nil;
-    cell.backgroundColor = [UIColor blackColor];
-    cell.contentView.backgroundColor = cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
     
     // set selection color
     UIView *myBackView = [[UIView alloc] initWithFrame:cell.frame];
@@ -223,11 +227,11 @@
     switch(type) {
             
         case NSFetchedResultsChangeInsert:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(CustomTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(CustomTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         default:
@@ -268,6 +272,13 @@
         GTAShowGuessedPaintingVC  *destinationController = (GTAShowGuessedPaintingVC  *)segue.destinationViewController;
         destinationController.painting = [self.fetchedResultsController objectAtIndexPath:sender];
     }
+}
+
+- (IBAction)unwindToPaintingsGuessed:(UIStoryboardSegue *)unwindSegue
+{
+}
+- (IBAction)back:(id)sender {
+    [self performSegueWithIdentifier:@"GuessedPaintingsToArtists" sender:nil];
 }
 
 @end

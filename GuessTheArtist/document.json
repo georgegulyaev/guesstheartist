@@ -1204,16 +1204,6 @@
  "level": "1"
  },
  {
- "title": "The Last Supper",
- "year": "1568",
- "owner": "Pinacoteca Nazionale, Bologna, Italy",
- "image": "1046.jpg",
- "artist": "El Greco",
- "style": "Mannerism (Late Renaissance)",
- "pack": "2",
- "level": "2"
- },
- {
  "title": "Christ carrying the cross",
  "year": "1578",
  "owner": "Museo del Prado, Madrid, Spain",
@@ -1250,36 +1240,6 @@
  "image": "1050.jpg",
  "artist": "El Greco",
  "style": "Mannerism (Late Renaissance)",
- "pack": "2",
- "level": "2"
- },
- {
- "title": "The Storm on the Sea of Galilee",
- "year": "1633",
- "owner": "Stewart Gardner Museum, Boston, U.S.",
- "image": "10.jpg",
- "artist": "Rembrandt",
- "style": "Baroque",
- "pack": "2",
- "level": "1"
- },
- {
- "title": "The Nightwatch",
- "year": "1642",
- "owner": "Amsterdam State Museum, Netherlands",
- "image": "11.jpg",
- "artist": "Rembrandt",
- "style": "Baroque",
- "pack": "2",
- "level": "1"
- },
- {
- "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
- "year": "1632",
- "owner": "Mauritshuis Royal Picture Gallery, Hague, Netherlands",
- "image": "12.jpg",
- "artist": "Rembrandt",
- "style": "Baroque",
  "pack": "2",
  "level": "2"
  },
@@ -4183,16 +4143,6 @@
   "year": "1874",
   "owner": "National Gallery of Art, Washington, DC, USA",
   "image": "442.jpg",
-  "artist": "Pierre-Auguste Renoir",
-  "style": "Impressionism",
-  "pack": "2",
-  "level": "7"
-  },
-  {
-  "title": "The Large Bathers",
-  "year": "1887",
-  "owner": "Philadelphia Museum of Art, Philadelphia, PA, USA",
-  "image": "444.jpg",
   "artist": "Pierre-Auguste Renoir",
   "style": "Impressionism",
   "pack": "2",

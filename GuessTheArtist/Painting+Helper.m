@@ -22,6 +22,8 @@
     painting.location = [[paintingArray valueForKey:@"owner"] description];
     if ([NSNumber numberWithInteger:[[paintingArray valueForKey:@"andlevel"] integerValue]])
         painting.andlevel = [NSNumber numberWithInteger:[[paintingArray valueForKey:@"andlevel"] integerValue]];
+    else
+        painting.andlevel = [NSNumber numberWithInteger:0];
     painting.guessed = [NSNumber numberWithInteger:0];
     painting.pack = [NSNumber numberWithInteger:[[paintingArray valueForKey:@"pack"] integerValue]];
     if (painting.pack == [NSNumber numberWithInt:1]) {
@@ -34,7 +36,13 @@
 
 +(NSArray *)loadPaintingsForPacks:(NSMutableArray *)packs andLevel:(NSInteger)level inManagedObjectContext: (NSManagedObjectContext *)context {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Painting"];
-    NSPredicate *predicate  = (level) ? [NSPredicate predicateWithFormat:@"ANY pack in %@ and ANY level = %d", packs, level] : [NSPredicate predicateWithFormat:@"ANY pack in %@", packs];
+    
+    NSPredicate *predicate  = (level)
+        ? ([packs count] == 1 && [[packs objectAtIndex:0] integerValue] == 2)
+            ? [NSPredicate predicateWithFormat:@"pack in %@ and level = %d or andlevel = %d", packs, level, level]
+            : [NSPredicate predicateWithFormat:@"pack in %@ and level = %d", packs, level]
+        :[NSPredicate predicateWithFormat:@"pack in %@", packs];
+    
     [request setPredicate:predicate];
     NSError *error = nil;
     NSArray *array;

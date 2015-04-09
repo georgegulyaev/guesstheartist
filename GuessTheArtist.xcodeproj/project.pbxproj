@@ -710,12 +710,10 @@
 		5E45FAB81A09125B00307E7D /* William Blake.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45FA031A09125A00307E7D /* William Blake.png */; };
 		5E45FB3B1A09166A00307E7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561B8198EE90D00D33E2B /* Main.storyboard */; };
 		5E64546F1ACE76F7002538C3 /* importAP.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E64546E1ACE76F7002538C3 /* importAP.json */; };
-		5E6454741ACEA45A002538C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6454731ACEA45A002538C3 /* Default@2x.png */; };
 		5E6A7FBF19A944B00055CC68 /* Artist+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */; };
 		5E6A80BF19ADF3630055CC68 /* prepopulated-painters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E6A80BE19ADF3630055CC68 /* prepopulated-painters.json */; };
 		5E6A81AB19AF7E860055CC68 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A81AA19AF7E860055CC68 /* Importer.m */; };
 		5E78F4B419B61E49003AE978 /* GTAHomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */; };
-		5E78F4B719B80519003AE978 /* GTALoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4B619B80519003AE978 /* GTALoadingViewController.m */; };
 		5E78F4BA19B9EA4D003AE978 /* GTAGuessedArtistsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4B919B9EA4D003AE978 /* GTAGuessedArtistsTVC.m */; };
 		5E78F4C019BA3202003AE978 /* GTAGuessedPaintingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4BF19BA3202003AE978 /* GTAGuessedPaintingsTVC.m */; };
 		5E78F4C319BA95FF003AE978 /* GTAShowGuessedPaintingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F4C219BA95FF003AE978 /* GTAShowGuessedPaintingVC.m */; };
@@ -747,6 +745,10 @@
 		5ECB981F1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB981E1A14CC8C00FA5070 /* GTAPacksPurchaseViewController.m */; };
 		5ECB98211A1668CF00FA5070 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECB98201A1668CF00FA5070 /* StoreKit.framework */; };
 		5ECB98241A1E002E00FA5070 /* GTAChooseGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB98231A1E002E00FA5070 /* GTAChooseGameViewController.m */; };
+		5ED79BE41AD35E6600ADC44A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED79BE11AD35E6600ADC44A /* Default-568h@2x.png */; };
+		5ED79BE51AD35E6600ADC44A /* Default-568h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED79BE21AD35E6600ADC44A /* Default-568h@3x.png */; };
+		5ED79BE61AD35E6600ADC44A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED79BE31AD35E6600ADC44A /* Default@2x.png */; };
+		5ED79BE81AD5ED0A00ADC44A /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED79BE71AD5D18300ADC44A /* MyriadPro-Bold.otf */; };
 		5EE561A7198EE90D00D33E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561A6198EE90D00D33E2B /* Foundation.framework */; };
 		5EE561AB198EE90D00D33E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE561AA198EE90D00D33E2B /* UIKit.framework */; };
 		5EE561B1198EE90D00D33E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE561AF198EE90D00D33E2B /* InfoPlist.strings */; };
@@ -1489,7 +1491,6 @@
 		5E45FA021A09125A00307E7D /* Wassily Kandinsky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wassily Kandinsky.png"; sourceTree = "<group>"; };
 		5E45FA031A09125A00307E7D /* William Blake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "William Blake.png"; sourceTree = "<group>"; };
 		5E64546E1ACE76F7002538C3 /* importAP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = importAP.json; sourceTree = "<group>"; };
-		5E6454731ACEA45A002538C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5E6A7FBD19A944B00055CC68 /* Artist+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Artist+Helper.h"; sourceTree = "<group>"; };
 		5E6A7FBE19A944B00055CC68 /* Artist+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Artist+Helper.m"; sourceTree = "<group>"; };
 		5E6A80BE19ADF3630055CC68 /* prepopulated-painters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "prepopulated-painters.json"; sourceTree = "<group>"; };
@@ -1497,8 +1498,6 @@
 		5E6A81AA19AF7E860055CC68 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Importer.m; sourceTree = "<group>"; };
 		5E78F4B219B61E49003AE978 /* GTAHomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAHomeScreenViewController.h; sourceTree = "<group>"; };
 		5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAHomeScreenViewController.m; sourceTree = "<group>"; };
-		5E78F4B519B80519003AE978 /* GTALoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTALoadingViewController.h; sourceTree = "<group>"; };
-		5E78F4B619B80519003AE978 /* GTALoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTALoadingViewController.m; sourceTree = "<group>"; };
 		5E78F4B819B9EA4D003AE978 /* GTAGuessedArtistsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAGuessedArtistsTVC.h; sourceTree = "<group>"; };
 		5E78F4B919B9EA4D003AE978 /* GTAGuessedArtistsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAGuessedArtistsTVC.m; sourceTree = "<group>"; };
 		5E78F4BE19BA3202003AE978 /* GTAGuessedPaintingsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTAGuessedPaintingsTVC.h; path = ../GTAGuessedPaintingsTVC.h; sourceTree = "<group>"; };
@@ -1603,6 +1602,10 @@
 		5ECB98201A1668CF00FA5070 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5ECB98221A1E002E00FA5070 /* GTAChooseGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAChooseGameViewController.h; sourceTree = "<group>"; };
 		5ECB98231A1E002E00FA5070 /* GTAChooseGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAChooseGameViewController.m; sourceTree = "<group>"; };
+		5ED79BE11AD35E6600ADC44A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5ED79BE21AD35E6600ADC44A /* Default-568h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@3x.png"; sourceTree = "<group>"; };
+		5ED79BE31AD35E6600ADC44A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5ED79BE71AD5D18300ADC44A /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		5EE561A3198EE90D00D33E2B /* GuessTheArtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheArtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE561A6198EE90D00D33E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EE561A8198EE90D00D33E2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -2276,8 +2279,6 @@
 			children = (
 				5EB0E5BE1AC59D890048E346 /* GTALevelsCollectionViewController.h */,
 				5EB0E5BF1AC59D890048E346 /* GTALevelsCollectionViewController.m */,
-				5E78F4B519B80519003AE978 /* GTALoadingViewController.h */,
-				5E78F4B619B80519003AE978 /* GTALoadingViewController.m */,
 				5E78F4B219B61E49003AE978 /* GTAHomeScreenViewController.h */,
 				5E78F4B319B61E49003AE978 /* GTAHomeScreenViewController.m */,
 				5ECB98221A1E002E00FA5070 /* GTAChooseGameViewController.h */,
@@ -2552,9 +2553,11 @@
 		5EE5619A198EE90D00D33E2B = {
 			isa = PBXGroup;
 			children = (
-				5E6454731ACEA45A002538C3 /* Default@2x.png */,
 				5EB0E4D81ABC5A700048E346 /* GTADownloadQueue.h */,
 				5EB0E4D91ABC5A710048E346 /* GTADownloadQueue.m */,
+				5ED79BE11AD35E6600ADC44A /* Default-568h@2x.png */,
+				5ED79BE21AD35E6600ADC44A /* Default-568h@3x.png */,
+				5ED79BE31AD35E6600ADC44A /* Default@2x.png */,
 				5EB0E5111ABCEC7A0048E346 /* SSZipArchive */,
 				5E44A0B01AB8E3700044DA32 /* AFNetworking */,
 				5EE561AC198EE90D00D33E2B /* GuessTheArtist */,
@@ -2628,6 +2631,7 @@
 				5EE561B4198EE90D00D33E2B /* GuessTheArtist-Prefix.pch */,
 				5E78F63C19C7B85A003AE978 /* MyriadPro-Regular.otf */,
 				5E78F63419C3B3C0003AE978 /* MyriadPro-It.otf */,
+				5ED79BE71AD5D18300ADC44A /* MyriadPro-Bold.otf */,
 				5E78F63219C3592D003AE978 /* MyriadPro-SemiboldIt.otf */,
 				5E78F4C419BBDEF2003AE978 /* MyriadPro-BoldIt.otf */,
 			);
@@ -2732,6 +2736,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED79BE81AD5ED0A00ADC44A /* MyriadPro-Bold.otf in Resources */,
 				5E229C391ACA1986003EAD01 /* 682.jpg in Resources */,
 				5E229CC11ACA1A3B003EAD01 /* 17.jpg in Resources */,
 				5E229B871ACA1973003EAD01 /* 941.jpg in Resources */,
@@ -2928,6 +2933,7 @@
 				5E22994C1ACA1954003EAD01 /* 92.jpg in Resources */,
 				5E78F63D19C7B874003AE978 /* MyriadPro-Regular.otf in Resources */,
 				5E2299411ACA1954003EAD01 /* 60.jpg in Resources */,
+				5ED79BE41AD35E6600ADC44A /* Default-568h@2x.png in Resources */,
 				5E2299791ACA1954003EAD01 /* 424.jpg in Resources */,
 				5E229B3B1ACA1973003EAD01 /* 272.jpg in Resources */,
 				5E229A7E1ACA1962003EAD01 /* 790.jpg in Resources */,
@@ -3095,12 +3101,12 @@
 				5E22996E1ACA1954003EAD01 /* 349.jpg in Resources */,
 				5E229C531ACA1986003EAD01 /* 749.jpg in Resources */,
 				5E229A471ACA1962003EAD01 /* 214.jpg in Resources */,
+				5ED79BE51AD35E6600ADC44A /* Default-568h@3x.png in Resources */,
 				5E229B861ACA1973003EAD01 /* 783.jpg in Resources */,
 				5E229B311ACA1973003EAD01 /* 164.jpg in Resources */,
 				5E229A7F1ACA1962003EAD01 /* 795.jpg in Resources */,
 				5E229C591ACA1986003EAD01 /* 805.jpg in Resources */,
 				5E229B2E1ACA1973003EAD01 /* 161.jpg in Resources */,
-				5E6454741ACEA45A002538C3 /* Default@2x.png in Resources */,
 				5E45FAAC1A09125B00307E7D /* Paul Gauguin.png in Resources */,
 				5E2299481ACA1954003EAD01 /* 88.jpg in Resources */,
 				5E45FA9B1A09125B00307E7D /* Henri-Edmond Cross.png in Resources */,
@@ -3397,6 +3403,7 @@
 				5E229C5E1ACA1986003EAD01 /* 810.jpg in Resources */,
 				5E229A5B1ACA1962003EAD01 /* 506.jpg in Resources */,
 				5E229A971ACA1962003EAD01 /* 885.jpg in Resources */,
+				5ED79BE61AD35E6600ADC44A /* Default@2x.png in Resources */,
 				5E229A3A1ACA1962003EAD01 /* 112.jpg in Resources */,
 				5E229C091ACA1986003EAD01 /* 15.jpg in Resources */,
 				5E229B391ACA1973003EAD01 /* 172.jpg in Resources */,
@@ -3468,7 +3475,6 @@
 				5EE561BD198EE90D00D33E2B /* GTAGameplayViewController.m in Sources */,
 				5E44A0C61AB8E3700044DA32 /* AFHTTPSessionManager.m in Sources */,
 				5E78F4BA19B9EA4D003AE978 /* GTAGuessedArtistsTVC.m in Sources */,
-				5E78F4B719B80519003AE978 /* GTALoadingViewController.m in Sources */,
 				5EB0E5C01AC59D890048E346 /* GTALevelsCollectionViewController.m in Sources */,
 				5E78F4C319BA95FF003AE978 /* GTAShowGuessedPaintingVC.m in Sources */,
 				5EE561B7198EE90D00D33E2B /* GTAAppDelegate.m in Sources */,
@@ -3620,7 +3626,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3638,7 +3643,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

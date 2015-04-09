@@ -56,14 +56,28 @@
 //get artists list for packs: 0 - base pack, 1 - apprentice pack, 2 - master pack
 + (NSMutableArray *)getArtistsForPacks:(NSMutableArray *)pack andLevel:(NSInteger)level inManagedObjectContext:(NSManagedObjectContext *)context {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Artist"];
-    NSLog(@"Level: %d",level);
+    NSLog(@"Level: %d",(int)level);
     //request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
-    NSPredicate *predicate  = (level) ? [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@ and ANY paintings.level = %d", pack, level] : [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@", pack];
+    
+    /* if level exists - include it into predicate
+    /  if level exists and there's only 1 pack, then if this pack = 2 
+    /  (Apprentice pack) add paintings from Pack 1 for this level
+    */
+    
+    NSPredicate *predicate  = (level) ?
+        ([pack count] == 1 && [[pack objectAtIndex:0] integerValue] == 2) ?
+        [NSPredicate predicateWithFormat:@"SUBQUERY(paintings, $p, $p.pack in %@ AND $p.level = %d or $p.andlevel = %d).@count > 0", pack, level, level]
+                                                                         :
+        [NSPredicate predicateWithFormat:@"SUBQUERY(paintings, $p, $p.pack in %@ AND $p.level = %d).@count > 0", pack, level]
+                                       :
+        [NSPredicate predicateWithFormat:@"SUBQUERY(paintings, $p, $p.pack in %@).@count > 0", pack];
+    //NSPredicate *predicate  = (level) ? ([pack count] > 1) ? [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@ && ANY paintings.level == %d", pack, level] : [NSPredicate predicateWithFormat:@"SUBQUERY(paintings, $p, $p.pack = %d AND $p.level = %d).@count > 0", [pack objectAtIndex:0], level] : [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@", pack];
+    //original NSPredicate *predicate  = (level) ? [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@ && ANY paintings.level == %d", pack, level] : [NSPredicate predicateWithFormat:@"ANY paintings.pack in %@", pack];
     [request setPredicate:predicate];
     
     NSError *error = nil;
     NSArray *results = [context executeFetchRequest:request error:&error];
-    
+
     NSMutableArray *artistsArray = [[NSMutableArray alloc] init];
     if (results) {
         for (NSManagedObject *obj in results) {

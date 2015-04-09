@@ -98,21 +98,10 @@ NSString *const packMP = @"MP";
     BOOL btnCompareClicked;
 }
 
-//to do addTransactionObserver
-+ (GTAPacksPurchaseViewController *)sharedInstance
-{
-    static dispatch_once_t onceToken;
-    static GTAPacksPurchaseViewController * storeObserverSharedInstance;
-    
-    dispatch_once(&onceToken, ^{
-        storeObserverSharedInstance = [[GTAPacksPurchaseViewController alloc] init];
-    });
-    return storeObserverSharedInstance;
-}
-
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    
+    self.view.backgroundColor = self.fetchingView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_black2"]];
     
     self.btnBack.hidden = YES;
     [self.activityIndicator startAnimating];
@@ -123,11 +112,12 @@ NSString *const packMP = @"MP";
     
     [self.progressView_AP setProgress:0.0];
     [self.progressView_MP setProgress:0.0];
-
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"LOADED VIEW PACKS");
 }
 
 //Fetch products (Packs) from the App Store
@@ -170,25 +160,24 @@ NSString *const packMP = @"MP";
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packAPisDownloading"]) {
         NSLog(@"Downloading");
         if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packAPisPaused"]) {
-            [self.btnDownload_AP setTitle:@"Resume download" forState:UIControlStateNormal];
+            [self.btnDownload_AP setTitle:@"RESUME" forState:UIControlStateNormal];
             NSLog(@"Downloading but paused");
         } else {
-            [self.btnDownload_AP setTitle:@"Downloading" forState:UIControlStateNormal];
+            //[self.btnDownload_AP setTitle:@"Downloading" forState:UIControlStateNormal];
             NSLog(@"Downloading and active");
             self.btnDownload_AP.enabled = NO;
             [self initDownloadOperationForURL:PACK_APPRENTICE_URL_STRING andPackID:packAP];
-            [self startGravityBehaviorForView:self.downloadView_AP withNewContraints:YES];
+            [self startGravityBehaviorForView:self.downloadView_AP withNewConstraints:YES];
         }
     }
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packMPisDownloading"]) {
         if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packMPisPaused"])
-            [self.btnDownload_MP setTitle:@"Resume download" forState:UIControlStateNormal];
+            [self.btnDownload_MP setTitle:@"RESUME" forState:UIControlStateNormal];
         else {
-            [self.btnDownload_MP setTitle:@"Downloading" forState:UIControlStateNormal];
+            //[self.btnDownload_MP setTitle:@"Downloading" forState:UIControlStateNormal];
             self.btnDownload_MP.enabled = NO;
-            NSLog(@"bs1");
             [self initDownloadOperationForURL:PACK_MASTER_URL_STRING andPackID:packMP];
-            [self startGravityBehaviorForView:self.downloadView_MP withNewContraints:YES];
+            [self startGravityBehaviorForView:self.downloadView_MP withNewConstraints:YES];
         }
     }
     //Pack downloaded. Show `Install pack` button
@@ -203,11 +192,11 @@ NSString *const packMP = @"MP";
     //Pack installed. Change `Install` to `Installed`
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packAPisInstalled"]) {
         self.btnInstall_AP.hidden = self.btnInstall_AP.enabled = NO;
-        [self.btnInstall_AP setTitle: @"Installed" forState:UIControlStateNormal];
+        [self.btnInstall_AP setTitle: @"INSTALLED" forState:UIControlStateNormal];
     }
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packMPisInstalled"]) {
         self.btnInstall_MP.hidden = self.btnInstall_MP.enabled = NO;
-        [self.btnInstall_MP setTitle: @"Installed" forState:UIControlStateNormal];
+        [self.btnInstall_MP setTitle: @"INSTALLED" forState:UIControlStateNormal];
     }
 }
 
@@ -215,14 +204,15 @@ NSString *const packMP = @"MP";
 
 //When download button is pressed show notification about downloading pack size (MB)
 - (void)downloadPack_AP {
-     NSLog(@"init AP");
+    NSLog(@"init AP");
     //Show notification view only for the first time
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"AlertForAPisShown"])
         [self showDownloadSizeAlertView:packAP];
     else { //or start download process animating drop-down download window
         [self startGravityBehaviorForView:self.downloadView_AP];
         [self initDownloadOperationForURL:PACK_APPRENTICE_URL_STRING andPackID:packAP];
-        [self.btnDownload_AP setTitle: @"Downloading" forState:UIControlStateNormal];
+        self.btnDownload_AP.enabled = NO;
+        //[self.btnDownload_AP setTitle: @"DOWNLOADING..." forState:UIControlStateDisabled];
     }
 }
 
@@ -232,7 +222,8 @@ NSString *const packMP = @"MP";
     else {
         [self startGravityBehaviorForView:self.downloadView_MP];
         [self initDownloadOperationForURL:PACK_MASTER_URL_STRING andPackID:packMP];
-        [self.btnDownload_MP setTitle: @"Downloading" forState:UIControlStateNormal];
+        self.btnDownload_AP.enabled = NO;
+        //[self.btnDownload_MP setTitle: @"DOWNLOADING..." forState:UIControlStateDisabled];
     }
 }
 
@@ -264,20 +255,20 @@ NSString *const packMP = @"MP";
         if (alertView.tag == 1) { //AP
             [self initDownloadOperationForURL:PACK_APPRENTICE_URL_STRING andPackID:packAP];
             [self startGravityBehaviorForView:self.downloadView_AP];
-            [self.btnDownload_AP setTitle: @"Downloading" forState:UIControlStateNormal];
+            //[self.btnDownload_AP setTitle: @"DOWNLOADING..." forState:UIControlStateDisabled];
             self.btnDownload_AP.enabled = NO;
         } else if (alertView.tag == 2) { //MP
             [self initDownloadOperationForURL:PACK_MASTER_URL_STRING andPackID:packMP];
             [self startGravityBehaviorForView:self.downloadView_MP];
-            [self.btnDownload_MP setTitle:@"Downloading" forState:UIControlStateNormal];
+            //[self.btnDownload_MP setTitle:@"DOWNLOADING..." forState:UIControlStateNormal];
             self.btnDownload_AP.enabled = NO;
         }
     } else { //If canceled
         if (alertView.tag == 1) {
-            [self.btnDownload_AP setTitle: @"Download" forState:UIControlStateNormal];
+            //[self.btnDownload_AP setTitle: @"Download" forState:UIControlStateNormal];
             self.btnDownload_AP.enabled = YES;
         } else if (alertView.tag == 2) {
-            [self.btnDownload_MP setTitle: @"Download" forState:UIControlStateNormal];
+            //[self.btnDownload_MP setTitle: @"Download" forState:UIControlStateNormal];
             self.btnDownload_MP.enabled = YES;
         }
     }
@@ -317,15 +308,15 @@ NSString *const packMP = @"MP";
     //update UI
     if ([packName isEqualToString:packAP]) {
         self.btnInstall_AP.enabled = NO;
-        [self.btnInstall_AP setTitle:@"Installing" forState:UIControlStateNormal];
+        [self.btnInstall_AP setTitle:@"INSTALLING..." forState:UIControlStateDisabled];
     } else if ([packName isEqualToString:packMP]) {
         self.btnInstall_MP.enabled = NO;
-        [self.btnInstall_MP setTitle:@"Installing" forState:UIControlStateNormal];
+        [self.btnInstall_MP setTitle:@"INSTALLING..." forState:UIControlStateDisabled];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInstallUI:) name:@"ImportNewPackNotification" object:packName];
     [Importer importNewPack:packName withContext:[CoreDataManager sharedInstance].managedObjectContext];
-
+    
 }
 
 //Installation completion selector
@@ -338,10 +329,10 @@ NSString *const packMP = @"MP";
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     if ([passedPackName isEqualToString:packAP]) {
-        [self.btnInstall_AP setTitle:@"Installed" forState:UIControlStateNormal];
+        [self.btnInstall_AP setTitle:@"INSTALLED" forState:UIControlStateDisabled];
         self.btnInstall_AP.enabled = NO;
     } else if ([passedPackName isEqualToString:packMP]) {
-        [self.btnInstall_MP setTitle:@"Installed" forState:UIControlStateNormal];
+        [self.btnInstall_MP setTitle:@"INSTALLED" forState:UIControlStateDisabled];
         self.btnInstall_MP.enabled = NO;
     }
 }
@@ -399,7 +390,7 @@ NSString *const packMP = @"MP";
 -(void)initDownloadOperationForURL: (NSString *)urlString andPackID: (NSString *)packID {
     //Setting download path and download URL
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-
+    
     NSString *targetPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[urlString lastPathComponent]];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
@@ -435,19 +426,19 @@ NSString *const packMP = @"MP";
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:[NSString stringWithFormat:@"pack%@isPaused", packID]];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-
+    
     
     //Update UI
     if ([packID isEqualToString:packAP]) {
-        [self.btnDownload_AP setTitle:@"Downloading" forState:UIControlStateNormal];
+        //[self.btnDownload_AP setTitle:@"Downloading" forState:UIControlStateNormal];
         self.btnDownload_AP.enabled = self.btnResumeDownload_AP.enabled = NO;
         self.btnPauseDownload_AP.enabled = YES;
     } else {
-        [self.btnDownload_MP setTitle:@"Downloading" forState:UIControlStateNormal];
+        //[self.btnDownload_MP setTitle:@"Downloading" forState:UIControlStateNormal];
         self.btnDownload_MP.enabled = self.btnResumeDownload_MP.enabled = NO;
         self.btnPauseDownload_MP.enabled = YES;
     }
-
+    
     
     NSLog(@"Executing operations: %lu", (unsigned long)[GTADownloadQueue sharedInstance].operationCount);
     
@@ -475,17 +466,17 @@ NSString *const packMP = @"MP";
             self.btnInstall_MP.hidden = false;
         }
         
-
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) { //Error handler
         NSLog(@"Error: %@", error);
         [self showErrorAlertView:error];
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:[NSString stringWithFormat:@"pack%@isDownloading", packID]];
         [[NSUserDefaults standardUserDefaults] synchronize];
         if ([packID isEqualToString:packAP]) {
-            [self.btnDownload_AP setTitle: @"Download" forState:UIControlStateNormal];
+            //[self.btnDownload_AP setTitle: @"Download" forState:UIControlStateNormal];
             self.btnDownload_AP.enabled = YES;
         } else {
-            [self.btnDownload_MP setTitle: @"Download" forState:UIControlStateNormal];
+            //[self.btnDownload_MP setTitle: @"Download" forState:UIControlStateNormal];
             self.btnDownload_MP.enabled = YES;
         }
     }];
@@ -530,7 +521,7 @@ NSString *const packMP = @"MP";
 //AP pause dowbload button action for download drop-down view
 - (IBAction)pauseDownload_AP:(id)sender {
     [self pauseDownloadOperation: packAP];
-
+    
 }
 
 //MP resume dowbload button action for download drop-down view
@@ -554,11 +545,11 @@ NSString *const packMP = @"MP";
             [[NSUserDefaults standardUserDefaults] synchronize];
             //Update UI
             if ([packID isEqualToString:packAP]) {
-                [self.btnDownload_AP setTitle: @"Downloading" forState:UIControlStateNormal];
+                //[self.btnDownload_AP setTitle: @"Downloading" forState:UIControlStateNormal];
                 self.btnDownload_AP.enabled = self.btnResumeDownload_AP.enabled = NO;
                 self.btnPauseDownload_AP.enabled = YES;
             } else {
-                [self.btnDownload_MP setTitle: @"Downloading" forState:UIControlStateNormal];
+                //[self.btnDownload_MP setTitle: @"Downloading" forState:UIControlStateNormal];
                 self.btnDownload_MP.enabled = self.btnResumeDownload_MP.enabled = NO;
                 self.btnPauseDownload_MP.enabled = YES;
             }
@@ -577,11 +568,11 @@ NSString *const packMP = @"MP";
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 //Update UI
                 if ([packID isEqualToString:packAP]) {
-                    [self.btnDownload_AP setTitle: @"Resume download" forState:UIControlStateNormal];
+                    [self.btnDownload_AP setTitle: @"RESUME" forState:UIControlStateNormal];
                     self.btnDownload_AP.enabled = self.btnResumeDownload_AP.enabled = YES;
                     self.btnPauseDownload_AP.enabled = NO;
                 } else {
-                    [self.btnDownload_MP setTitle: @"Resume download" forState:UIControlStateNormal];
+                    [self.btnDownload_MP setTitle: @"RESUME" forState:UIControlStateNormal];
                     self.btnDownload_MP.enabled = self.btnResumeDownload_MP.enabled = YES;
                     self.btnPauseDownload_MP.enabled = NO;
                 }
@@ -593,7 +584,7 @@ NSString *const packMP = @"MP";
 
 //UIDynamicBehavior for Download drop-down views implementation
 - (void)startGravityBehaviorForView: (UIView *)view {
-    //change View constraint from -50 to 0 to hold view within the screen
+    
     if (!self.animator)
         self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
@@ -608,28 +599,28 @@ NSString *const packMP = @"MP";
     CGPoint point = CGPointMake(self.scrollView.frame.origin.x + self.scrollView.frame.size.width, self.scrollView.frame.origin.y);
     [collisionBehavior addBoundaryWithIdentifier:@"scrollView" fromPoint:self.scrollView.frame.origin toPoint:point];
     [self.animator addBehavior:collisionBehavior];
-
+    
     //change View constraint from -50 to 0 to hold view within the screen
     [view.superview.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *c, NSUInteger idx, BOOL *stop) {
-        if (c.constant == -50.0f && c.firstItem == view)
+        if (c.constant == -49.0f && c.firstItem == view)
             c.constant = 0;
     }];
 }
 
 //UIDynamicBehavior for Download drop-down views implementation withour Effect
-- (void)startGravityBehaviorForView: (UIView *)view withNewContraints:(BOOL)withNewConstraints {
-
+- (void)startGravityBehaviorForView: (UIView *)view withNewConstraints:(BOOL)withNewConstraints {
+    
     if (withNewConstraints)
         //change View constraint from -50 to 0 to hold view within the screen
         [view.superview.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *c, NSUInteger idx, BOOL *stop) {
-           if (c.constant == -50.0f && c.firstItem == view)
-               c.constant = 0;
+            if (c.constant == -49.0f && c.firstItem == view)
+                c.constant = 0;
         }];
 }
 
 //Segue to Home view controller
 - (IBAction)btnBack:(id)sender {
-    [self performSegueWithIdentifier:@"PacksToHome" sender:sender];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //Compare button implementaion
@@ -687,7 +678,7 @@ NSString *const packMP = @"MP";
                 notificationObserverIsActive = true;
                 NSLog(@"Observer added");
             }
-
+            
             [[SKPaymentQueue defaultQueue] addPayment:payment];
         }
     } else { //if parentral access is startDownloadsted
@@ -746,9 +737,9 @@ NSString *const packMP = @"MP";
             case SKPaymentTransactionStateFailed: {
                 NSLog(@"Fuck: %ld, %@", (long)[transaction.error code], transaction.error.localizedDescription);
                 UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Payment error"
-                  message:transaction.error.localizedDescription delegate:
-                 self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-                 [alertView show];
+                                                                   message:transaction.error.localizedDescription delegate:
+                                          self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alertView show];
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 NSLog(@"Transaction Finished with failure");
                 [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
@@ -791,12 +782,12 @@ NSString *const packMP = @"MP";
 
 -(void)request:(SKRequest *)request didFailWithError:(NSError *)error {
     NSLog(@"request to AppStore failed");
-
+    
     /*[[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"fetchCompleted"
-                                                  object:nil];
-    */
-     [self.activityIndicator stopAnimating];
+     name:@"fetchCompleted"
+     object:nil];
+     */
+    [self.activityIndicator stopAnimating];
     NSLog(@"%@",error.localizedDescription);
     self.fetchingLabel.text = @"Cannot connect to iTunes Store";
     self.btnBack.hidden = NO;
@@ -822,14 +813,17 @@ NSString *const packMP = @"MP";
                 [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
                 [numberFormatter setLocale:product.priceLocale];
                 self.labelPrice_AP.text = [numberFormatter stringFromNumber:product.price];
-            } else if ([product.productIdentifier isEqualToString:PACK_MASTER]) {
+            } /*
+            //Coming soon
+            else if ([product.productIdentifier isEqualToString:PACK_MASTER]) {
                 //price localization
                 NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
                 [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
                 [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
                 [numberFormatter setLocale:product.priceLocale];
                 self.labelPrice_MP.text = [numberFormatter stringFromNumber:product.price];
-            }
+                
+            }*/
         }
         [self fetchCompleted];
     } else {
@@ -855,7 +849,7 @@ NSString *const packMP = @"MP";
     NSString *extractPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:bundleID];
     NSError *error;
     NSLog(@"Directory is: %@", extractPath);
-     NSLog(@"Sorce file is: %@", sourcePath);
+    NSLog(@"Sorce file is: %@", sourcePath);
     if ([fileManager fileExistsAtPath:extractPath] == NO) {
         
         if ([fileManager createDirectoryAtPath:extractPath withIntermediateDirectories:YES attributes:nil error:&error] == NO) {
@@ -882,4 +876,7 @@ NSString *const packMP = @"MP";
     }
 }
 
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

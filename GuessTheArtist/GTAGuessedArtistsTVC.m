@@ -66,10 +66,10 @@
     [self.btnMainPage.titleLabel setFont:[UIFont fontWithName:@"MyriadPro-BoldIt" size:16]];
 }
 
-- (void)viewDidUnload {
-    self.fetchedResultsController = nil;
-    self.tableView.delegate = nil;
-    self.tableView.dataSource = nil;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_black2"]];
+    [self.tableView reloadData];
 }
 
 
@@ -92,7 +92,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:YES];
-    [self.tableView removeFromSuperview];
+    //[self.tableView removeFromSuperview];
 }
 
 #pragma mark - Table view data source
@@ -114,7 +114,7 @@
 - (void)configureCell:(CustomTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Artist *artist = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-
+    //cell.backgroundView.backgroundColor = [UIColor clearColor];
     cell.labelTitle.text = [[NSString stringWithFormat:@"%@", artist.name] uppercaseString];
     cell.labelDetail.text = [NSString stringWithFormat:@"%ld paintings", (unsigned long)[artist.paintings count]];
     
@@ -125,8 +125,8 @@
     
     //customize fonts and colors
     cell.backgroundView = nil;
-    cell.backgroundColor = [UIColor blackColor];
-    cell.contentView.backgroundColor = cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:1.0];
+    cell.backgroundColor = [UIColor clearColor];
+    //cell.contentView.backgroundColor = cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:11/255.0 green:12/255.0 blue:20/255.0 alpha:0.8];
 
     // set selection color
     UIView *myBackView = [[UIView alloc] initWithFrame:cell.frame];
@@ -195,7 +195,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(CustomTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
         default:
             break;
@@ -233,5 +233,12 @@
     }
 }
 
+- (IBAction)unwindToArtistsGuessed:(UIStoryboardSegue *)unwindSegue
+{
+}
+
+- (IBAction)back:(id)sender {
+    [self performSegueWithIdentifier:@"GuessedToHome" sender:nil];
+}
 
 @end

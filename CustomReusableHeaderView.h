@@ -11,5 +11,6 @@
 @interface CustomReusableHeaderView : UICollectionReusableView
 
 @property (weak, nonatomic) IBOutlet UILabel* labelHeader;
+@property (weak, nonatomic) IBOutlet UIButton *btnPacks;
 
 @end
