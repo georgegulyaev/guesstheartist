@@ -130,7 +130,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:YES];
+    [super viewWillAppear:NO];
     [self.collectionView reloadData];
 }
 

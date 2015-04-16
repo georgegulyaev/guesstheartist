@@ -19,7 +19,7 @@
 @implementation GTAChooseGameViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
+    [super viewWillAppear:NO];
     
     [[UILabel appearanceWhenContainedIn:[GTAChooseGameViewController class], nil]
      setFont:[UIFont fontWithName:@"MyriadPro-BoldIt" size:17]];
@@ -35,6 +35,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:NO];
+    [self.view removeFromSuperview];
 }
 
 #pragma mark - Navigation

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Importer.h"
+#import "GTAAudioPlayer.h"
 
 @interface GTAGameplayViewController : UIViewController
 

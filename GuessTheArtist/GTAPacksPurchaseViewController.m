@@ -99,7 +99,7 @@ NSString *const packMP = @"MP";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
+    [super viewWillAppear:NO];
     
     self.view.backgroundColor = self.fetchingView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_black2"]];
     
@@ -879,4 +879,5 @@ NSString *const packMP = @"MP";
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

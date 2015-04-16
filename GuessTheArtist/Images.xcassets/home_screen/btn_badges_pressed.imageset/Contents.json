@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "btn_badges_normal.png"
+      "filename" : "badges_noirm.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "btn_badges_normal@2x.png"
+      "filename" : "badges_norm@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "badges_normal@3x.png"
     }
   ],
   "info" : {

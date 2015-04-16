@@ -10,13 +10,13 @@
 #import "GTAHomeScreenViewController.h"
 #import "CoreDataManager.h"
 #import "ImageFinder.h"
+#import "GTABadgeDistributor.h"
+#import "GTAEndGameViewController.h"
+#import "GTAAppDelegate.h"
 
 #define iphone5 ([UIScreen mainScreen].bounds.size.height == 568)
 #define iphone4 ([UIScreen mainScreen].bounds.size.height == 480)
-
-NSString const *gameModeZen = @"ZEN";
-NSString const *gameModeFever = @"FEVER";
-float const secondsLeft = 12;
+float const secondsLeft = 12; //Seconds given to guess an artwork in Fever mode
 
 @interface GTAGameplayViewController ()
 //Main view
@@ -46,59 +46,67 @@ float const secondsLeft = 12;
 @property (weak, nonatomic) IBOutlet UIView *factView;
 @property (weak, nonatomic) IBOutlet UIImageView *factImgBubble;
 
-
 @property BOOL menuIsOpened;
 
 //gesture recognizers
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *menuBgViewTap;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
+@property (strong, nonatomic) GTABadgeDistributor *badgeDistributor;
 
 @property (weak, nonatomic) Painting *currentPainting;
 @property NSInteger currentArtworkNumber;
 
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (void)swiped:(UISwipeGestureRecognizer *)sender;
+- (void)prepareGameUI;
+- (void)startGame;
+- (void)showArtworkToGuess:(int)artworkID;
+- (void)checkSolution: (UIButton *)sender;
+- (void)updateBadgeDistributorArtworks;
+- (void)showFactView;
+- (void)showBonusView;
+- (void)countDownStart;
+- (void)countDown;
+- (void)destroyTimerIfNeeded;
+- (void)animateBeforeNextRound;
+- (void)animateBeforeFinishingTheGame;
+- (void)animateBeforeNewGame;
+- (void)reduceLives;
+- (IBAction)menuOpenClose:(id)sender;
+- (IBAction)restartGame:(id)sender;
+- (IBAction)quitGame:(id)sender;
+- (IBAction)hideTwoRandomAnswers:(id)sender;
+- (IBAction)skipTheStill:(id)sender;
+- (void)updateUserDefaultsScore;
+- (void)updateUserDefaultsNumberOfPaintings: (NSUInteger)total;
+- (void)replaceLeftConstraintOnView:(UIView *)view withConstant:(float)constant;
+- (void)animateConstraintsOpen;
+- (void)animateConstraintsClose;
+- (BOOL) canBecomeFirstResponder;
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event;
+
 @end
 
-@implementation GTAGameplayViewController {
-    int scoreNumber;
-    NSString *scoreChanged;
-    NSTimer *timer;
-    BOOL feverMode;
-    BOOL viewDidDisappear;
-    float secondsCounter;
-    int totalScore;
+@implementation GTAGameplayViewController
+{
+    int scoreNumber; //Fever game score counter
+    NSTimer *timer; //Fever mode timer
+    BOOL feverMode; //game mode
+    BOOL viewDidDisappear; //flag for Timer deactivation
+    float secondsCounter; //Seconds-left counter for Zen mode
+    int totalScore; //current game total score for Zen mode
+    float timeFor3in5; //time to track 3 artworks guessed in 5 seconds
+    int artworks3in5; //number of artworks guessed in 5 seconds in a row
+    int artworksWOHints; //number of artworks guessed w/o hints in a row
     NSUInteger totalPaintingsAmount;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
-    if (iphone4) {
-        self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone4"];
-        NSLog(@"iphone4");
-    } else if (iphone5) {
-        self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
-        NSLog(@"iphone5");
-    }
-
-    /* setting the progress bar depending on the game type: ZEN/FEVER
-    /  if pack variable is available, then ZEN mode selected
-    */
-    if (self.pack) { //ZEN mode selected
-        self.progressBar.hidden = YES;
-        feverMode = false;
-        totalScore = 0;
-    } else { //FeverMode selected
-        self.progressBar.hidden = NO;
-        self.progressBar.trackTintColor = [UIColor redColor];
-        feverMode = true;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countDownStart) name:@"appIsActive" object:nil];
-    }
-    
-    /* start the game with the 1st artwork */
-    [self startGame:0];
-    
+ 
     /* setting Gesture recognizers */
     self.menuBgViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(menuOpenClose:)];
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swiped:)];
@@ -106,39 +114,93 @@ float const secondsLeft = 12;
     [self.view addGestureRecognizer:swipe];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:YES];
+- (void)viewWillAppear:(BOOL)animated
+{
+
+    [super viewWillAppear:NO];
+
+
+    self.badgeDistributor = [[GTABadgeDistributor alloc] init];
+    
+    self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
+    if (iphone4)
+    {
+        self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone4"];
+        NSLog(@"iphone4");
+    }
+    else if (iphone5)
+    {
+        self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
+        NSLog(@"iphone5");
+    }
+    
+    /* setting the progress bar depending on the game type: ZEN/FEVER
+     /  if pack variable is available, then ZEN mode selected
+     /  settings score and time counters
+     */
+    if (self.pack) //ZEN mode selected
+    {
+        self.progressBar.hidden = YES;
+        feverMode = false;
+        totalScore = 0;
+    } else //FeverMode selected
+    {
+        self.progressBar.hidden = NO;
+        self.progressBar.trackTintColor = [UIColor redColor];
+        feverMode = true;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countDownStart) name:@"appIsActive" object:nil];
+        timeFor3in5 = artworks3in5 = artworksWOHints = 0;
+    }
+    
+    /* start the game with the 1st artwork */
+    [self startGame];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    //if (!unwindSegueExecuted)
+        //[[GTAAudioPlayer sharedInstance] play];
+    
+    [super viewWillDisappear:NO];
     if (feverMode)
         [self destroyTimerIfNeeded];
-    [self.paintingView removeFromSuperview];
-    [self.reflection removeFromSuperview];
-    [self.rootImageView removeFromSuperview];
     self.paintings = nil;
     self.artistsAnswers = nil;
     self.lights = nil;
     self.progressBar = nil;
-    self.buttons = nil;
+    self.buttons = NULL;
+    [self.bgScoreView removeFromSuperview];
+    [self.paintingView removeFromSuperview];
+    [self.reflection removeFromSuperview];
+    [self.rootImageView removeFromSuperview];
+    [self.view removeFromSuperview];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated
+{
     [super viewDidDisappear:YES];
     viewDidDisappear = true;
 
 }
 
-- (void)swiped:(UISwipeGestureRecognizer *)sender {
+- (void)swiped:(UISwipeGestureRecognizer *)sender
+{
     if (self.btnSkip.enabled && !self.menuIsOpened)
         [self skipTheStill:nil];
 }
 
 
+#pragma mark Game process
+
 - (void)prepareGameUI {
     if (feverMode)
         [self destroyTimerIfNeeded];
+    
     [self replaceLeftConstraintOnView:self.menuView withConstant:-76.0];
     
     /* setting buttons default color */
-    for (UIButton *btn in self.buttons) {
+    for (UIButton *btn in self.buttons)
+    {
         btn.hidden = NO;
         btn.backgroundColor = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:0.6];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
@@ -148,9 +210,9 @@ float const secondsLeft = 12;
     }
     
     /* keeping lights off */
-    for (UIImageView *light in self.lights) {
+    for (UIImageView *light in self.lights)
         light.alpha = 0;
-    }
+    
     /* setting artwork canvas content mode */
     self.paintingView.alpha = 0;
     self.paintingView.contentMode = UIViewContentModeScaleAspectFit;
@@ -161,8 +223,10 @@ float const secondsLeft = 12;
     self.menuBgView.alpha = 0;
 }
 
-/* starting the game */
-- (void)startGame:(int)artworkNumber {
+/* Starting the game */
+- (void)startGame
+{
+    //[[GTAAudioPlayer sharedInstance] pause];
     /* get artists list depending on number of packs included */
 
     NSMutableArray *arrayOfPacksIDs = nil;
@@ -176,7 +240,6 @@ float const secondsLeft = 12;
         if ([[NSUserDefaults standardUserDefaults] boolForKey:@"packMPisSelected"])
             [arrayOfPacksIDs addObject:@3];
     }
-    NSLog(@"Level: %d", (int)self.level);
     
     /* If the game just began, then get Artists list */
     if (!self.artistsAnswers)
@@ -185,13 +248,15 @@ float const secondsLeft = 12;
         self.artistsAnswers = [Artist shuffleArray:self.artistsAnswers];
     
     /* If the game just began, then get Paintings list */
-    if (!self.paintings) {
+    if (!self.paintings)
+    {
         self.paintings = [Painting loadPaintingsForPacks:arrayOfPacksIDs andLevel:self.level inManagedObjectContext:[CoreDataManager sharedInstance].managedObjectContext];
     } else //or just shuffle the existing list of artists
         self.paintings = (NSArray *)[Painting shuffleArray:[[NSMutableArray alloc] initWithArray:self.paintings]];
    
     /* count total number of paintings for ZenMode levels VC */
-    if (!feverMode) {
+    if (!feverMode)
+    {
         if (![[NSUserDefaults standardUserDefaults] integerForKey:@"pack%@level%@PaintingsTotal"])
            totalPaintingsAmount = [self.paintings count];
            [self updateUserDefaultsNumberOfPaintings:totalPaintingsAmount];
@@ -203,20 +268,21 @@ float const secondsLeft = 12;
     
     /* set initial number of lifes to 3 */
     self.livesLeft = 3;
-    for (UIImageView *lifeImg in self.livesIcons) {
+    for (UIImageView *lifeImg in self.livesIcons)
         lifeImg.alpha = 1.0;
-    }
+    
     /* set start score to 0 */
     self.score.text = self.scorePanelLabel.text =  @"0";
     
     /* start game by showing first Artwork to guess */
-    self.currentArtworkNumber = artworkNumber;
+    self.currentArtworkNumber = 0;
     [self showArtworkToGuess: (int)self.currentArtworkNumber];
 }
 
 
 /* showing current artwork to guess */
-- (void)showArtworkToGuess:(int)artworkID {
+- (void)showArtworkToGuess:(int)artworkID
+{
     
     [self prepareGameUI];
     
@@ -231,7 +297,8 @@ float const secondsLeft = 12;
     
     /* display answers as button.text tagging the right answer with tag=1 */
     int i = 0;
-    for (UIButton *btn in self.buttons) {
+    for (UIButton *btn in self.buttons)
+    {
         [btn setTitle:[artistsAnswers objectAtIndex:i] forState:UIControlStateNormal];
         if ([correctAnswerArtistName isEqualToString:[artistsAnswers objectAtIndex:i]])
             [btn setTag:1];
@@ -274,53 +341,54 @@ float const secondsLeft = 12;
 
 
 /* Check selected answer */
-- (void)checkSolution: (UIButton *)sender {
-    
+- (void)checkSolution: (UIButton *)sender
+{
     if (feverMode)
         [self destroyTimerIfNeeded];
     
+    /* close hints menu if opened */
     if (self.menuIsOpened)
         [self menuOpenClose:nil];
+    
     /*show right answer button in green */
-    for (UIButton *button in self.buttons) {
+    for (UIButton *button in self.buttons)
         button.userInteractionEnabled = NO;
-    }
     
     UIColor *green = [UIColor colorWithRed:3.0/255.0 green:144.0/255.0 blue:9.0/255.0 alpha:0.6];
     UIColor *red = [UIColor colorWithRed:185.0/255.0 green:0 blue:0 alpha:0.6];
-    if (sender.tag == 1) { //if right answer selected
+    if (sender.tag == 1)
+    { //if right answer selected
         
-        scoreNumber += 25; //increase score to 25 by default
+        scoreNumber += 25; //increase score by 25 by default
         
-        totalScore += 1; //increase current game total score
+        if (!feverMode) //if Zen Mode
+            totalScore += 1; //increase current game total score for ZenMode
+        else { //if FeverMode
+            [self updateBadgeDistributorArtworks]; //update FastArtworksData
+        }
         
         [sender setBackgroundColor:green]; //set answer button to green
         
         //to-do move to -addBonus method
-        /* update bonus view constraints */
-        self.score.textColor = [UIColor greenColor];
-        [self.livesView.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
-            
-            if (constraint.secondItem == self.bgScoreView && constraint.firstAttribute == NSLayoutAttributeTrailing) {
-                [constraint setConstant:103];
-            }
-        }];
-        
         [self showBonusView];
+        
         [self showFactView];
         
         /* mark painting as guessed */
-        if (self.currentPainting.guessed != [NSNumber numberWithInt:1]) {
+        if (self.currentPainting.guessed != [NSNumber numberWithInt:1])
+        {
             self.currentPainting.guessed = [NSNumber numberWithInt:1];
             NSError *err;
             [[CoreDataManager sharedInstance].managedObjectContext save:&err];
         }
     } else { //if wrong answer selected
-        if (sender) {
+        if (sender)
+        {
             [sender setBackgroundColor:red]; //set answer button to red
             
             /*show right answer button in green */
-            for (UIButton *button in self.buttons) {
+            for (UIButton *button in self.buttons)
+            {
                 if (button.tag == 1) {
                     [button setBackgroundColor:green];
                     break;
@@ -329,6 +397,11 @@ float const secondsLeft = 12;
         }
         /* reduce lives by disabling one of the lives icons */
         [self reduceLives];
+        
+        if (feverMode) {
+            timeFor3in5 = artworks3in5 = artworksWOHints = 0;
+        }
+
     }
     /* update score value */
     [UIView animateWithDuration:0.7 animations:^{
@@ -347,8 +420,42 @@ float const secondsLeft = 12;
         [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(animateBeforeFinishingTheGame) userInfo:nil repeats:NO];
 }
 
-/* bonus score view animation */
+#pragma mark updating Badges Data
+- (void)updateBadgeDistributorArtworks
+{
+    //update FastArtworks data
+    if (self.badgeDistributor.numberOfFastArtworksGuessed < 1000 && (secondsLeft - secondsCounter <= 2)) //if artwork was guessed in less than 2 sec
+        self.badgeDistributor.numberOfFastArtworksGuessed += 1;
+    
+    //update 3 artworks in 5 seconds value
+    if (self.badgeDistributor.numberOf3ArtworksIn5seconds < 1) {
+        if (secondsLeft - secondsCounter <= 5) {
+            if (timeFor3in5 + (secondsLeft - secondsCounter) <= 5) {
+                timeFor3in5 += secondsLeft - secondsCounter;
+                artworks3in5 += 1;
+            } else {
+                timeFor3in5 = secondsLeft - secondsCounter;
+                artworks3in5 = 1;
+            }
+            if (artworks3in5 == 3) {
+                self.badgeDistributor.numberOf3ArtworksIn5seconds = 1;
+            }
+        }
+    }
+    
+    //update artworks guessed in a row w/o hints value
+    if (self.badgeDistributor.numberOfArtworksWOHints < 100) {
+        artworksWOHints += 1;
+        if (self.badgeDistributor.numberOfArtworksWOHints < artworksWOHints)
+            self.badgeDistributor.numberOfArtworksWOHints = artworksWOHints;
+    }
+}
+
+#pragma mark Bonuses and Scores and Facts animations
+
+/* Fact view animation */
 - (void)showFactView {
+    NSLog(@"Dali");
     //preparing view constrant for animation
     __block float constr = 0;
     [self.view.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
@@ -361,7 +468,7 @@ float const secondsLeft = 12;
     
     [UIView animateWithDuration:0.3 animations:^{
         /* animate prepared constrant */
-        [self.factView layoutIfNeeded];
+        [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         /* animate constraints */
         [UIView animateWithDuration:0.2 delay:0.2 options:UIViewAnimationOptionTransitionNone animations:^{
@@ -373,8 +480,8 @@ float const secondsLeft = 12;
                     [constraint setConstant:constr];
                 }
             }];
-            [UIView animateWithDuration:0.3 delay:1.0 options:UIViewAnimationOptionTransitionNone animations:^{
-                [self.factView layoutIfNeeded];
+            [UIView animateWithDuration:0.2 delay:1.0 options:UIViewAnimationOptionTransitionNone animations:^{
+                [self.view layoutIfNeeded];
             } completion:^(BOOL finished) {
                 self.factImgBubble.alpha = 0;
             }];
@@ -385,6 +492,16 @@ float const secondsLeft = 12;
 /* bonus score view animation */
 - (void)showBonusView
 {
+    self.score.textColor = [UIColor greenColor];
+    /* update bonus view constraints */
+    __block float constr = 0;
+    [self.livesView.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
+        
+        if (constraint.secondItem == self.bgScoreView && constraint.firstAttribute == NSLayoutAttributeTrailing) {
+            constr = constraint.constant;
+            [constraint setConstant:constr + 33.0f];
+        }
+    }];
     [UIView animateWithDuration:0.3 animations:^{
         /* animate bonus view */
         self.bgScoreView.alpha = 1;
@@ -398,7 +515,7 @@ float const secondsLeft = 12;
             [self.livesView.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
                 
                 if (constraint.secondItem == self.bgScoreView && constraint.firstAttribute == NSLayoutAttributeTrailing) {
-                    [constraint setConstant:70.0];
+                    [constraint setConstant:constr];
                 }
                 /* update score color */
                 self.score.textColor = [UIColor whiteColor];
@@ -407,10 +524,10 @@ float const secondsLeft = 12;
     }];
 }
 
+#pragma mark Timer
 
 /* start 15 seconds countdown updating Progress view */
 - (void)countDownStart {
-    NSLog(@"start");
     if (!timer && !viewDidDisappear) {
         self.progressBar.progress = 1;
         //float time = 1.0f;
@@ -471,8 +588,6 @@ float const secondsLeft = 12;
 
 /* Animation of lights and Artwork image before showing GameOver screen */
 - (void)animateBeforeFinishingTheGame {
-    if (feverMode)
-        [self destroyTimerIfNeeded];
     
     if ([self.paintings count] < self.currentArtworkNumber + 1) {
         self.currentArtworkNumber= -1;
@@ -518,7 +633,7 @@ float const secondsLeft = 12;
                 self.paintingView.alpha = self.reflection.alpha = 0;
             } completion:^(BOOL finished) {
                 scoreNumber = 0;
-                [self startGame:0];
+                [self startGame];
             }];
         }];
     }];
@@ -530,14 +645,12 @@ float const secondsLeft = 12;
     
     switch (self.livesLeft) {
         case 2: {
-            NSLog(@"Lives2: %d", self.livesLeft);
             [UIImageView animateWithDuration:0.5 animations:^{
                 [[self.livesIcons objectAtIndex:0] setAlpha:0];
             }];
             break;
         }
         case 1: {
-            NSLog(@"Lives1: %d", self.livesLeft);
             [UIImageView animateWithDuration:0.5 animations:^{
                 [[self.livesIcons objectAtIndex:1] setAlpha:0];
             }];
@@ -597,13 +710,19 @@ float const secondsLeft = 12;
     tempArray = [Painting shuffleArray:tempArray]; //refactor
     [[self.buttons objectAtIndex:[[tempArray objectAtIndex:0] intValue]] setHidden:YES];
     [[self.buttons objectAtIndex:[[tempArray objectAtIndex:1] intValue]] setHidden:YES];
+    
+    //reset artworksWOHints number
+    if (feverMode)
+        artworksWOHints = 0;
 }
 
 /* Skip the artwork hint button pressed */
 - (IBAction)skipTheStill:(id)sender {
     
-    if (feverMode)
+    if (feverMode) {
         [self destroyTimerIfNeeded];
+        artworksWOHints = 0;
+    }
     
     //add if skipIsAvailable marker
     self.btnSkip.enabled = NO;
@@ -611,13 +730,22 @@ float const secondsLeft = 12;
     if (sender)
         [self menuOpenClose:sender];
     [self animateBeforeNextRound];
+
 }
 
 /* Quit game action */
 - (IBAction)quitGame:(id)sender {
-    if (!feverMode)
+    if (feverMode) {
         [self destroyTimerIfNeeded];
-    [self dismissViewControllerAnimated:YES completion:nil];
+        //update number of total games played if game score is more than 300
+        if (self.badgeDistributor.numberOfGamesPlayed < 500 && scoreNumber >= 300)
+            self.badgeDistributor.numberOfGamesPlayed += 1;
+    } else {
+        if (self.badgeDistributor.numberOfGamesPlayed < 1 && scoreNumber >= 300)
+            self.badgeDistributor.numberOfGamesPlayed += 1;
+    }
+    [self performSegueWithIdentifier:@"GameplayToEnd" sender:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /* 
@@ -673,7 +801,8 @@ float const secondsLeft = 12;
 }
 
 /* Animating of the sliding menu closing */
-- (void)animateConstraintsClose {
+- (void)animateConstraintsClose
+{
     [UIView animateWithDuration:0.4 animations:^{
         [self.view layoutIfNeeded];
         self.menuBgView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
@@ -689,16 +818,27 @@ float const secondsLeft = 12;
 #pragma mark - motion gestures
 
 /* Device shaking implementation */
-- (BOOL) canBecomeFirstResponder {
+- (BOOL) canBecomeFirstResponder
+{
     return YES;
 }
 
 /* Activate 50/50 hint on shake */
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
     if (motion == UIEventSubtypeMotionShake)
         if (self.btn50_50.enabled && !self.menuIsOpened)
             [self hideTwoRandomAnswers:nil];
 }
 
+- (IBAction)unwindToGameplay:(UIStoryboardSegue *)unwindSegue
+{
+
+}
+
+-(BOOL) canPerformUnwindSegueAction:(SEL)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender {
+
+    return NO;
+}
 
 @end

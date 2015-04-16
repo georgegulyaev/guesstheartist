@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageFrame;
 @property (weak, nonatomic) IBOutlet UILabel *labelGuessed;
 @property (weak, nonatomic) IBOutlet UIImageView *imageLight;
+
 @end

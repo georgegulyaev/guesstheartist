@@ -67,7 +67,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
+    [super viewWillAppear:NO];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_black2"]];
     [self.tableView reloadData];
 }

@@ -48,21 +48,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:NO];
+    
     NSLog(@"%f", [UIScreen mainScreen].bounds.size.width);
     //[self.rootImageView setContentMode:UIViewContentModeScaleAspectFill];
     if (iphone4) {
         NSLog(@"iphone 4");
         self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone4"];
     } else if (iphone5orHigher) {
-         NSLog(@"iphone 5");
+        NSLog(@"iphone 5");
         self.rootImageView.image = [UIImage imageNamed:@"bg_main_iphone5"];
     }
-
+    
     self.infoView.hidden = YES; //•
     self.infoTitle.text = self.painting.title;
     
     self.paintingTitle.text =  [NSString stringWithFormat:@"%C• %@ • %C%C%C", 0x00A0, self.infoTitle.text, 0x00A0, 0x00A0, 0x00A0];
-
+    
     self.infoYear.text = (self.painting.year) ? self.painting.year : @"No information.";
     self.infoStyle.text = self.painting.style;
     self.infoLocation.text = (self.painting.location) ? self.painting.location : @"No information.";
@@ -73,8 +80,9 @@
     self.paintingView.image = self.image;
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:YES];
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:NO];
     self.view = nil;
     [self.view removeFromSuperview];
 }
@@ -86,7 +94,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)openInfo:(id)sender {
+- (IBAction)openInfo:(id)sender
+{
     [UIImageView animateWithDuration:0.6 animations:^{
         [UIImageView animateWithDuration:0.2 animations:^{
             [[self.lights objectAtIndex:0] setAlpha:0.0];
@@ -116,7 +125,8 @@
     }];
 }
 
-- (IBAction)closeInfo:(id)sender {
+- (IBAction)closeInfo:(id)sender
+{
     
     [UIImageView animateWithDuration:1.0 animations:^{
         self.infoView.alpha = 0;
@@ -166,12 +176,14 @@
                                    NULL); // you generally won't need a contextInfo here
 }
 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo: (void *) contextInfo {
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo: (void *) contextInfo
+{
     if (!error)
         NSLog(@"Image saved");
     
 }
-- (IBAction)back:(id)sender {
+- (IBAction)back:(id)sender
+{
     [self performSegueWithIdentifier:@"GuessedPaintingInfoToGuessedPaintings" sender:nil];
 }
 
